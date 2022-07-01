@@ -21,7 +21,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        "facebook_url",
+        "github_url",
+        "linkedin_url",
+        "twitter_url",
     ];
+
+    protected $appends = ["image_path"];
+
+    // Get the path of image
+    public function getImagePathAttr(){
+        return asset("uploads/" . $this->image);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
