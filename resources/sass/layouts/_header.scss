@@ -1,0 +1,43 @@
+// Header
+.header{
+    // Header info
+    .header-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        // User Image
+        .user-image{
+
+        }
+        // User Info
+        .user-info{
+            h1{
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            p{
+
+            }
+            ul{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                li{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    background-color: #222;
+                    color: #fff;
+                    text-align: center;
+                    margin-right: 0.5rem;
+                    margin-left: 0.5rem;
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
