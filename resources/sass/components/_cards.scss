@@ -1,0 +1,17 @@
+// Cards
+.card{
+    // Article Card
+    &.card-article{
+        // Card Header
+        // .card-header{}
+        // // Card Body
+        // .card-body{}
+        // Card Footer
+        .card-footer{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+    // End of Article Card
+}
