@@ -320,7 +320,7 @@ class TagSeeder extends Seeder
 
         foreach ($tags as $tag) {
             Tag::create([
-                'tag' => $tag['name']
+                'name' => $tag['name']
             ]);
         }
     }
