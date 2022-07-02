@@ -23,8 +23,10 @@
     <body>
         <div id="app">
 
-            {{-- Navbar --}}
-            @include('include.navbar')
+            @section('navbar')
+                {{-- Navbar --}}
+                @include('include.navbar')
+            @show
 
             @section('header')
                 {{-- header --}}
