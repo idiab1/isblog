@@ -1,0 +1,25 @@
+// Navbar
+.navbar{
+    // Navbar Brand
+    .navbar-brand{
+        font-weight: 700;
+        color: $dark-color;
+        &:hover{
+            color: $dark-color;
+        }
+    }
+
+    // Nav links
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                color: $dark-color;
+                &:hover{
+                    color: $dark-color;
+                }
+            }
+        }
+    }
+}
+
+// End of Navbar
