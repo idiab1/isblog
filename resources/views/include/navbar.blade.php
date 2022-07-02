@@ -18,9 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">{{ __('Article') }}</a>
                 </li>
-                <!-- About -->
+                <!-- Tags -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">{{ __('About me') }}</a>
+                    <a class="nav-link" href="{{ route('tags.index') }}">{{ __('Tags') }}</a>
                 </li>
             </ul>
 
