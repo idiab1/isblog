@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', '/home', 301);;
-
 Auth::routes(["register"=> false]);
 
+// -->>> Home route
+Route::redirect('/', '/home', 301);;
 Route::get('/home', [HomeController::class, "index"])->name('home');
 
+// -->>> Tags route
+Route::get('/tags', [TagController::class, "index"])->name('home');
