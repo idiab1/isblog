@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,4 +23,4 @@ Route::redirect('/', '/home', 301);;
 Route::get('/home', [HomeController::class, "index"])->name('home');
 
 // -->>> Tags route
-Route::get('/tags', [TagController::class, "index"])->name('home');
+Route::get('/tags', [TagController::class, "index"])->name('tags.index');
