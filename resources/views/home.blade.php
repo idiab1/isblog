@@ -66,7 +66,7 @@
         <!-- Articles Content -->
         <div class="articles-content">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-12 col-md-4">
                     <!-- card -->
                     <div class="card card-article">
                         <!-- Card Header -->
