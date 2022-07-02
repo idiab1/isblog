@@ -10266,10 +10266,11 @@ textarea.form-control-lg {
   padding: 0.35rem 0.5rem;
   margin-right: 0.25rem;
   margin-left: 0.25rem;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.07rem;
   font-weight: 500;
   line-height: 1.2;
-  background-color: #c49300;
+  background-color: #FF8C32;
 }
 .card.card-article .card-body ul li:first-of-type {
   margin-left: 0rem;
@@ -10319,6 +10320,20 @@ textarea.form-control-lg {
 }
 .card.card-article .card-footer .user-info a:hover {
   text-decoration: underline;
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: #06113C;
+}
+.navbar .navbar-brand:hover {
+  color: #06113C;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #06113C;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #06113C;
 }
 
 .header {
@@ -10408,4 +10423,11 @@ textarea.form-control-lg {
 .homepage .articles-content {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.tagspage .tags-content {
+  text-align: center;
+}
+.tagspage .tags-content a {
+  margin: 0 10px 23px 10px;
 }
