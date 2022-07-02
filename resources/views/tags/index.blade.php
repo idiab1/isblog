@@ -33,31 +33,10 @@
                             <a href="#" class="btn btn-secondary">{{$tag->name}}</a>
                         @endforeach
                     @endif
-                    {{-- <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tagtag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tagtagtagtag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tagtag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tagss</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tagtag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tagtagtagtag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tag</a>
-                    <a href="#" class="btn btn-secondary">tagtag</a>
-                    <a href="#" class="btn btn-secondary">tag</a> --}}
-
                 </div>
                 <!-- ./tags-content -->
             </div>
         </div>
-
 
     </div>
     <!-- ./container -->
