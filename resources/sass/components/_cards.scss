@@ -20,10 +20,11 @@
                     padding: 0.35rem 0.5rem;
                     margin-right: 0.25rem;
                     margin-left: 0.25rem;
-                    font-size: .75rem;
+                    font-size: 0.7rem;
+                    letter-spacing: .07rem;
                     font-weight: 500;
                     line-height: 1.2;
-                    background-color: #c49300;
+                    background-color: $orange-color;
                     &:first-of-type{
                         margin-left: 0rem;
                     }
