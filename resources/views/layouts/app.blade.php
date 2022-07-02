@@ -24,6 +24,11 @@
             {{-- Navbar --}}
             @include('include.navbar')
 
+            @section('header')
+                {{-- header --}}
+                @include('include.header')
+            @show
+
             {{-- Main --}}
             <main class="py-4">
                 @yield('content')
