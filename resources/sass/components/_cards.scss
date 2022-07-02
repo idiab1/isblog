@@ -2,15 +2,82 @@
 .card{
     // Article Card
     &.card-article{
+        box-shadow: 0 0 10px 0px rgb(0 0 0 / 10%);
+        border-color: transparent;
         // Card Header
-        // .card-header{}
-        // // Card Body
-        // .card-body{}
+        .card-header{
+            padding: 0;
+            background-color: transparent;
+        }
+        // Card Body
+        .card-body{
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-bottom: 0.7rem;
+                li{
+                    padding: 0.35rem 0.5rem;
+                    margin-right: 0.25rem;
+                    margin-left: 0.25rem;
+                    font-size: .75rem;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    background-color: #c49300;
+                    &:first-of-type{
+                        margin-left: 0rem;
+                    }
+                    a{
+                        color: #000;
+                        text-decoration: none;
+                    }
+                }
+            }
+            h2{
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            p{
+                margin: 0;
+                font-size: .85rem;
+                color: #595858;
+            }
+        }
         // Card Footer
         .card-footer{
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            background-color: transparent;
+            border-top: 1px solid rgb(0 0 0 / 8%);
+            // Image
+            .image{
+                width: 30px;
+                height: 30px;
+                @include prefixer(border-radius, 50%, webkit moz ms o);
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border: 3px solid #8c8cfa;
+                    @include prefixer(border-radius, 50%, webkit moz ms o);
+                }
+            }
+            // User info
+            .user-info{
+                margin-left: 10px;
+                margin-right: 10px;
+                a{
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: .85rem;
+                    color: #000;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
     // End of Article Card
