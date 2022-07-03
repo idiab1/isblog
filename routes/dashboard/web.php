@@ -16,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () {
 
+    // -->>> Admin Home Route
+    Route::get('/', function () {
+        return "Admin Home";
+    })->name("admin.home");
 });
