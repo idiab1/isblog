@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        "is_admin",
         "facebook_url",
         "github_url",
         "linkedin_url",
@@ -32,6 +33,10 @@ class User extends Authenticatable
     // Get the path of image
     public function getImagePathAttr(){
         return asset("uploads/" . $this->image);
+    }
+
+    public function IsAdmin(){
+        return $this->is_admin == 1;
     }
 
     /**
