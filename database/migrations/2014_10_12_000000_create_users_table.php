@@ -21,6 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('image')->nullable()->default('default.png');
 
+            $table->boolean('is_admin')->default(0);
+
+
             $table->string('facebook_url')->nullable();
             $table->string('github_url')->nullable();
             $table->string('linkedin_url')->nullable();
