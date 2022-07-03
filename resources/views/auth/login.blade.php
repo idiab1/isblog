@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+{{-- Title --}}
+@section('page_name') Homepage @endsection
+
 {{-- Navbar --}}
 @section('navbar') @endsection
 

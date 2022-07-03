@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+{{-- Title --}}
+@section('page_name') Homepage @endsection
+
 {{-- Header Info --}}
 @section('header-info')
     <h1>{{App\Models\Setting::first()->name}}</h1>
