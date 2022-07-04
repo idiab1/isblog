@@ -138,6 +138,7 @@
                     <!-- model body -->
                     <div class="modal-body">
                         @csrf
+                        @method("POST")
                         <!-- Name -->
                         <div class="form-group">
                             <label class="form-label" for="name">Name</label>
@@ -184,6 +185,7 @@
                     <!-- model body -->
                     <div class="modal-body">
                         @csrf
+                        @method("POST")
                         <!-- Name -->
                         <div class="form-group">
                             <label class="form-label" for="name">Name</label>
