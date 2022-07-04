@@ -65,7 +65,7 @@
                     <!-- model body -->
                     <div class="modal-body">
                         @csrf
-
+                        @method("PUT")
                         <!-- Name -->
                         <div class="form-group">
                             <label class="form-label" for="name">Name</label>
@@ -103,7 +103,7 @@
                     <!-- model footer -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
                     </div>
                     <!-- ./model-footer -->
 
