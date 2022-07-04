@@ -42,6 +42,79 @@
 
     </main>
 
+    <!-- Modal -->
+    <div class="modal fade" id="setting-{{App\Models\Setting::first()->id}}" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <!-- model dialog -->
+        <div class="modal-dialog">
+            <!-- model dialog -->
+            <div class="modal-content">
+                <!-- model header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Settings</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- ./model-header -->
+
+                <!-- form -->
+                <form action="{{route("settings.update", ["id" => App\Models\Setting::first()->id])}}"
+                    method="POST">
+
+                    <!-- model body -->
+                    <div class="modal-body">
+                        @csrf
+
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" type="text" name="name" id="name"
+                                value="{{App\Models\Setting::first()->name}}">
+                        </div>
+
+                        <!-- Linkedin -->
+                        <div class="input-group mb-3">
+                            <!-- Icon -->
+                            <span class="input-group-text" id="linkedin_url">
+                                <i class="fab fa-linkedin"></i>
+                            </span>
+                            <!-- Input -->
+                            <input class="form-control" type="text" aria-label="linkedin_url"
+                                aria-describedby="linkedin_url" name="linkedin_url"
+                                value="{{App\Models\Setting::first()->linkedin_url}}">
+                        </div>
+
+                        <!-- Github -->
+                        <div class="input-group">
+                            <!-- Icon -->
+                            <span class="input-group-text" id="github_url">
+                                <i class="fab fa-github-square"></i>
+                            </span>
+                            <!-- Input -->
+                            <input class="form-control" type="text" aria-label="github_url"
+                                aria-describedby="github_url" name="github_url"
+                                value="{{App\Models\Setting::first()->github_url}}">
+                        </div>
+
+                    </div>
+                    <!-- ./model-body -->
+
+                    <!-- model footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                    <!-- ./model-footer -->
+
+                </form>
+                <!-- ./form -->
+
+            </div>
+                <!-- ./model-content -->
+        </div>
+        <!-- ./model-dialog -->
+    </div>
 
     <!--   Core JS Files   -->
     <script src="{{asset("dashboard/js/core/popper.min.js")}}"></script>
