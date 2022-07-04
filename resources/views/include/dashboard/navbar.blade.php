@@ -66,17 +66,17 @@
                 <!-- Menu -->
                 <ul class="dropdown-menu mt-3" aria-labelledby="plusDropdown">
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{route("categories.create")}}">
                         {{ __('Categories') }}
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{route("categories.create")}}">
                         {{ __('Articles') }}
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{route("tags.create")}}">
                         {{ __('Tags') }}
                         </a>
                     </li>
