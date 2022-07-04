@@ -42,7 +42,7 @@
 
     </main>
 
-    <!-- Modal -->
+    <!-- Setting Modal -->
     <div class="modal fade" id="setting-{{App\Models\Setting::first()->id}}" data-bs-backdrop="static"
         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
         aria-hidden="true">
