@@ -133,7 +133,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("tags.create")}}" method="POST">
+                <form action="{{route("tags.store")}}" method="POST">
 
                     <!-- model body -->
                     <div class="modal-body">
@@ -179,7 +179,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("categories.create")}}" method="POST">
+                <form action="{{route("categories.store")}}" method="POST">
 
                     <!-- model body -->
                     <div class="modal-body">
