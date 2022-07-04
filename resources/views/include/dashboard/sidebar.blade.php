@@ -62,11 +62,34 @@
                 <span class="nav-link-text ms-1">Tags</span>
             </a>
             </li>
+            <!-- Profile -->
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs
+                    font-weight-bolder opacity-6">
+                    Profile
+                </h6>
+            </li>
+            <!-- Logout -->
+            <li class="nav-item">
+                <a class="nav-link " href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
 
+
+                    <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-arrow-right-from-bracket text-info text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">{{ __('Logout') }}</span>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                    class="d-none">
+                    @csrf
+                </form>
+            </li>
         </ul>
     </div>
     <!-- Sidebar Footer -->
-    <div class="sidenav-footer">
+    {{-- <div class="sidenav-footer">
         <ul class="navbar-nav">
 
             <!-- Profile -->
@@ -94,7 +117,7 @@
                 </form>
             </li>
         </ul>
-    </div>
+    </div> --}}
     <!-- ./sidebar-footer -->
 </aside>
 <!-- ./sidebar -->
