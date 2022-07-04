@@ -33,4 +33,13 @@ Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () 
     ])->parameters([
         "tags" => "id"
     ]);
+
+    // -->>> Setting Route
+    Route::resource('settings', SettingController::class)->only([
+        "edit", "update"
+    ])->parameters([
+        "settings" => "id"
+    ]);
+
+
 });
