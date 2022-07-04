@@ -41,27 +41,41 @@
 
             <!-- Articles -->
             <li class="nav-item">
-            <a class="nav-link " href="#">
-                <!-- Icon -->
-                <div class="icon icon-shape icon-sm border-radius-md text-center
-                    me-2 d-flex align-items-center justify-content-center">
-                <i class="fas fa-file text-info text-sm opacity-10"></i>
-                </div>
-                <span class="nav-link-text ms-1">Articles</span>
-            </a>
+                <a class="nav-link " href="#">
+                    <!-- Icon -->
+                    <div class="icon icon-shape icon-sm border-radius-md text-center
+                        me-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-file text-info text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Articles</span>
+                </a>
             </li>
 
             <!-- Tags -->
             <li class="nav-item">
                 <a class="nav-link " href="{{route("tags.index")}}">
                     <!-- Icon -->
-                <div class="icon icon-shape icon-sm border-radius-md text-center
-                    me-2 d-flex align-items-center justify-content-center">
-                <i class="fas fa-tags text-danger text-sm opacity-10"></i>
-                </div>
-                <span class="nav-link-text ms-1">Tags</span>
-            </a>
+                    <div class="icon icon-shape icon-sm border-radius-md text-center
+                        me-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-tags text-danger text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Tags</span>
+                </a>
             </li>
+
+            <!-- Settings -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{route("settings.edit", ["id" => App\Models\Setting::first()->id])}}"
+                    data-bs-toggle="modal" data-bs-target="#setting-{{App\Models\Setting::first()->id}}">
+                    <!-- Icon -->
+                    <div class="icon icon-shape icon-sm border-radius-md text-center
+                        me-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-cogs text-secondary text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Setting</span>
+                </a>
+            </li>
+
             <!-- Profile -->
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs
