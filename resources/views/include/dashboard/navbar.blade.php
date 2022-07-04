@@ -30,7 +30,7 @@
             <!-- Profile -->
             <li class="nav-item dropdown d-flex align-items-center">
                 <!-- Profile Link -->
-                <a href="#" class="nav-link text-white font-weight-bold px-0 dropdown-toggle" href="#"
+                <a href="#" class="nav-link text-white font-weight-bold px-0 dropdown-toggle"
                     id="profileDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <!-- Icon -->
@@ -53,16 +53,46 @@
                 </ul>
             </li>
 
-          <!-- Burger Icon -->
-          <li class="nav-item d-xl-none ps-3 pe-3 d-flex align-items-center">
-            <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
-              <div class="sidenav-toggler-inner">
-                <i class="sidenav-toggler-line bg-white"></i>
-                <i class="sidenav-toggler-line bg-white"></i>
-                <i class="sidenav-toggler-line bg-white"></i>
-              </div>
-            </a>
-          </li>
+            <!-- Add Button -->
+            <li class="nav-item dropdown d-flex align-items-center ps-3">
+                <!-- Profile Link -->
+                <a href="#" class="nav-link btn btn-danger btn-add-plus text-white dropdown-toggle"
+                    id="plusDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <!-- Icon -->
+                    <i class="fas fa-plus me-sm-1"></i>
+                    {{-- <span class="d-sm-inline d-none">{{Auth::user()->name}}</span> --}}
+                </a>
+                <!-- Menu -->
+                <ul class="dropdown-menu mt-3" aria-labelledby="plusDropdown">
+                    <li>
+                        <a class="dropdown-item" href="#">
+                        {{ __('Categories') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                        {{ __('Articles') }}
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                        {{ __('Tags') }}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Burger Icon -->
+            <li class="nav-item d-xl-none ps-3 pe-3 d-flex align-items-center">
+                <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
+                    <div class="sidenav-toggler-inner">
+                        <i class="sidenav-toggler-line bg-white"></i>
+                        <i class="sidenav-toggler-line bg-white"></i>
+                        <i class="sidenav-toggler-line bg-white"></i>
+                    </div>
+                </a>
+            </li>
 
           <!-- Notification Icon -->
           {{-- <li class="nav-item dropdown pe-2 d-flex align-items-center">
