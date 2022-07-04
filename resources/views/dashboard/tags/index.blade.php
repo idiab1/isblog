@@ -37,18 +37,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @php
+                                    {{-- @php
                                         $id = 1
-                                    @endphp
-                                    @foreach ($tags as $tag)
+                                    @endphp --}}
+                                    @foreach ($tags as $index => $tag)
                                         <tr>
-                                            <td>{{$id++}}</td>
+                                            <td>{{$index + 1}}</td>
                                             <td>
                                                 {{$tag->name}}
                                             </td>
                                             <td>
                                                 <!-- Edit button -->
-                                                <a class="btn btn-edit mr-3" href="{{route("tags.edit", ["id" => $tag->id])}}">
+                                                <a class="btn btn-edit mr-3" href="{{route("tags.edit", ["id" => $tag->id])}}" data-bs-toggle="modal"
+                                                    data-bs-target="#tagUpdate{{$tag->id}}">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
 
@@ -63,6 +64,55 @@
                                                 </form>
                                             </td>
                                         </tr>
+
+                                        <!-- Create tag Modal -->
+                                        <div class="modal fade text-left" id="tagUpdate{{$tag->id}}" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <!-- model dialog -->
+                                            <div class="modal-dialog">
+                                                <!-- model dialog -->
+                                                <div class="modal-content">
+                                                    <!-- model header -->
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">{{$tag->name . "'s"}}</h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <!-- ./model-header -->
+
+                                                    <!-- form -->
+                                                    <form action="{{route("tags.update", ["id" => $tag->id])}}" method="POST">
+
+                                                        <!-- model body -->
+                                                        <div class="modal-body">
+                                                            @csrf
+                                                            @method("PUT")
+                                                            <!-- Name -->
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="name">Name</label>
+                                                                <input class="form-control" type="text" name="name" id="name"
+                                                                    value="{{$tag->name}}">
+                                                            </div>
+
+                                                        </div>
+                                                        <!-- ./model-body -->
+
+                                                        <!-- model footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Send</button>
+                                                        </div>
+                                                        <!-- ./model-footer -->
+                                                    </form>
+                                                    <!-- ./form -->
+
+                                                </div>
+                                                    <!-- ./model-content -->
+                                            </div>
+                                            <!-- ./model-dialog -->
+                                        </div>
+
                                     @endforeach
 
                                 </tbody>
