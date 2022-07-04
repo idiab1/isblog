@@ -66,7 +66,8 @@
                 <!-- Menu -->
                 <ul class="dropdown-menu mt-3" aria-labelledby="plusDropdown">
                     <li>
-                        <a class="dropdown-item" href="{{route("categories.create")}}">
+                        <a class="dropdown-item" href="{{route("categories.create")}}" data-bs-toggle="modal"
+                            data-bs-target="#categoryCreate">
                         {{ __('Categories') }}
                         </a>
                     </li>
