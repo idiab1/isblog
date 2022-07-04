@@ -23,4 +23,4 @@ Route::redirect('/', '/home', 301);;
 Route::get('/home', [HomeController::class, "index"])->name('home');
 
 // -->>> Tags route
-Route::get('/tags', [TagController::class, "index"])->name('tags.index');
+Route::get('/tags', [TagController::class, "index"])->name('tags');
