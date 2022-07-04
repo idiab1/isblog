@@ -98,6 +98,9 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Get Setting row by id
+        $tag = Tag::find($id);
+        $tag->delete();
+        return redirect()->back();
     }
 }
