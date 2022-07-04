@@ -76,7 +76,8 @@
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{route("tags.create")}}">
+                        <a class="dropdown-item" href="{{route("tags.create")}}" data-bs-toggle="modal"
+                            data-bs-target="#tagsCreate">
                         {{ __('Tags') }}
                         </a>
                     </li>
