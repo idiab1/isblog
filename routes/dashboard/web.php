@@ -20,4 +20,10 @@ Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () 
     // -->>> Admin Home Route
     Route::get('/home', [HomeController::class, "index"])->name("admin.home");
 
+    // -->>> Tags Route
+    Route::resource('tags', TagController::class)->except([
+        "show"
+    ])->parameters([
+        "tags" => "id"
+    ]);
 });
