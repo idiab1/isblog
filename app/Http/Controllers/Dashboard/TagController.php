@@ -81,7 +81,13 @@ class TagController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Get Setting row by id
+        $tag = Tag::find($id);
+        $tag->update([
+            "name" => $request->name,
+        ]);
+
+        return redirect()->back();
     }
 
     /**
