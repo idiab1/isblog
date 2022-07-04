@@ -82,7 +82,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Get Setting row by id
+        $category = Category::find($id);
+        $category->update([
+            "name" => $request->name,
+        ]);
+
+        return redirect()->back();
     }
 
     /**
