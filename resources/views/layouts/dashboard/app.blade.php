@@ -162,7 +162,51 @@
         <!-- ./model-dialog -->
     </div>
 
+    <!-- Create category Modal -->
+    <div class="modal fade" id="categoryCreate" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <!-- model dialog -->
+        <div class="modal-dialog">
+            <!-- model dialog -->
+            <div class="modal-content">
+                <!-- model header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Create category</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- ./model-header -->
 
+                <!-- form -->
+                <form action="{{route("categories.create")}}" method="POST">
+
+                    <!-- model body -->
+                    <div class="modal-body">
+                        @csrf
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" type="text" name="name" id="name">
+                        </div>
+
+                    </div>
+                    <!-- ./model-body -->
+
+                    <!-- model footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                    <!-- ./model-footer -->
+                </form>
+                <!-- ./form -->
+
+            </div>
+                <!-- ./model-content -->
+        </div>
+        <!-- ./model-dialog -->
+    </div>
 
 
     <!--   Core JS Files   -->
