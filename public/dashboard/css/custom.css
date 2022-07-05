@@ -1,3 +1,28 @@
+/* Navbar */
+.navbar .dropdown .dropdown-menu{
+    margin-top: 15px !important;
+}
+.navbar .dropdown{
+    text-transform: capitalize;
+}
+.navbar .dropdown .dropdown-menu .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e6e6e6;
+}
+.navbar .dropdown .dropdown-menu .profile .image img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 3px solid #5e72e4;
+
+}
+/* Navbar */
+
 /* Table */
 div.dataTables_wrapper div.dataTables_paginate ul.pagination li:first-of-type a,
 div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
@@ -13,3 +38,9 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
 
 /* End of table */
 
+/* Buttons */
+.btn{
+    margin-bottom: 0;
+}
+
+/* End of Buttons */
