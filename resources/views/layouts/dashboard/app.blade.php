@@ -23,6 +23,9 @@
     <!-- CSS Files -->
     <link rel="stylesheet" id="pagestyle" href="{{asset("dashboard/css/argon-dashboard.css?v=2.0.4")}}" />
 
+    <!-- CSS custom -->
+    <link rel="stylesheet" href="{{asset("dashboard/css/custom.css")}}" />
+
     {{-- Other Styles --}}
     @yield('styles')
 </head>
