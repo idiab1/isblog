@@ -1,7 +1,7 @@
 <!-- Navbar -->
-<nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
+<nav class="navbar navbar-main navbar-expand-lg px-0 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
     <!-- Container Fluid -->
-    <div class="container-fluid py-1 px-3">
+    <div class="container py-1">
         <!-- End of Navbar -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
@@ -86,7 +86,7 @@
             </li>
 
             <!-- Burger Icon -->
-            <li class="nav-item d-xl-none p-3 pe-3 d-flex align-items-center">
+            <li class="nav-item d-xl-none p-3 pe-0 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
                     <div class="sidenav-toggler-inner">
                         <i class="sidenav-toggler-line bg-white"></i>
@@ -173,5 +173,8 @@
         </ul>
       </div>
     </div>
+    <!-- ./container-fluid -->
 </nav>
+
+
 <!-- End of Navbar -->
