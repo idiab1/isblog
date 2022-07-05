@@ -1,0 +1,15 @@
+/* Table */
+div.dataTables_wrapper div.dataTables_paginate ul.pagination li:first-of-type a,
+div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
+    border-radius: 15px !important;
+    -webkit-border-radius: 15px !important;
+    -moz-border-radius: 15px !important;
+    -ms-border-radius: 15px !important;
+    -o-border-radius: 15px !important;
+    margin: 0 15px;
+    width: 65px;
+}
+
+
+/* End of table */
+
