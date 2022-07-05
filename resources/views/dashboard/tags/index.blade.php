@@ -48,7 +48,7 @@
                                             </td>
                                             <td>
                                                 <!-- Edit button -->
-                                                <a class="btn btn-edit mr-3" href="{{route("tags.edit", ["id" => $tag->id])}}" data-bs-toggle="modal"
+                                                <a class="btn btn-edit me-3 btn-sm" href="{{route("tags.edit", ["id" => $tag->id])}}" data-bs-toggle="modal"
                                                     data-bs-target="#tagUpdate{{$tag->id}}">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
@@ -58,7 +58,7 @@
                                                     method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button class="btn btn-delete" type="submit">
+                                                    <button class="btn btn-delete btn-sm" type="submit">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                 </form>
