@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #e6e6e6;
+    background-color: #06153c;
 }
 .navbar .dropdown .dropdown-menu .profile .image img{
     border-radius: 50%;
@@ -19,7 +19,10 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border: 3px solid #5e72e4;
-
+}
+.navbar .dropdown .dropdown-menu .profile .info span{
+    font-weight: 700;
+    color: #f8f9fa;
 }
 /* Navbar */
 
@@ -42,5 +45,19 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
 .btn{
     margin-bottom: 0;
 }
-
+.btn-add-plus{
+    background-color: #06153c;
+}
+.btn-add-plus:hover,
+.btn-add-plus:focus{
+    background-color: #06153c;
+}
+.btn-delete{
+    color: #e6e6e6;
+    background-color: #D82148;
+}
+.btn-edit{
+    color: #e6e6e6;
+    background-color: #39A388;
+}
 /* End of Buttons */
