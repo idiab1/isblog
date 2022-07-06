@@ -10,7 +10,6 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="{{asset("libs/datatables-bs4/css/dataTables.bootstrap4.min.css")}}">
     <link rel="stylesheet" href="{{asset("libs/datatables-responsive/css/responsive.bootstrap4.min.css")}}">
-    <link rel="stylesheet" href="{{asset("libs/datatables-buttons/css/buttons.bootstrap4.min.css")}}">
     <!-- Select2 -->
     <link rel="stylesheet" href="{{asset("libs/select2/css/select2.min.css")}}" />
 
@@ -88,7 +87,8 @@
                                                     <!-- ./model-header -->
 
                                                     <!-- form -->
-                                                    <form action="{{route("articles.update", ["id" => $article->id])}}" method="POST">
+                                                    <form action="{{route("articles.update", ["id" => $article->id])}}" method="POST"
+                                                        enctype="multipart/form-data">
 
                                                         <!-- model body -->
                                                         <div class="modal-body">
