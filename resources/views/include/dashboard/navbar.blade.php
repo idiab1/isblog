@@ -6,7 +6,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                 <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white"
-                    href="javascript:;">{{App\Models\Setting::first()->name}}</a></li>
+                    href="{{route("admin.home")}}">{{App\Models\Setting::first()->name}}</a></li>
                 <li class="breadcrumb-item text-sm text-white active" aria-current="page">@yield('page_name', "Unknown page")</li>
             </ol>
             <h6 class="font-weight-bolder text-white mb-0">@yield('page_name', "Unknown page")</h6>
@@ -40,6 +40,19 @@
                 <!-- Profile Menu -->
                 <ul class="dropdown-menu mt-3" aria-labelledby="profileDropdown">
                     <li>
+                        <div class="profile py-2">
+                            <!-- Image -->
+                            <div class="image mb-2">
+                                <img class="img-fluid" src="{{asset("uploads/" . Auth::user()->image)}}" alt="User Image"
+                                    width="30px">
+                            </div>
+                            <!-- Info -->
+                            <div class="info">
+                                <span>{{Auth::user()->name}}</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
@@ -56,7 +69,7 @@
             <!-- Add Button -->
             <li class="nav-item dropdown d-flex align-items-center ps-3">
                 <!-- Profile Link -->
-                <a href="#" class="nav-link btn btn-danger btn-add-plus text-white dropdown-toggle"
+                <a href="#" class="nav-link btn btn-add-plus text-white dropdown-toggle"
                     id="plusDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <!-- Icon -->
