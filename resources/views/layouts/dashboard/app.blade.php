@@ -41,7 +41,12 @@
         {{-- Navbar --}}
         @include('include.dashboard.navbar')
 
-        @yield('content')
+        <div class="content">
+            @yield('content')
+        </div>
+
+        {{-- Footer --}}
+        @include('include.dashboard.footer')
 
     </main>
 
