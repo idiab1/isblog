@@ -23,6 +23,9 @@
     <!-- CSS Files -->
     <link rel="stylesheet" id="pagestyle" href="{{asset("dashboard/css/argon-dashboard.css?v=2.0.4")}}" />
 
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset("libs/select2/css/select2.min.css")}}" />
+
     <!-- CSS custom -->
     <link rel="stylesheet" href="{{asset("dashboard/css/custom.css")}}" />
 
@@ -248,19 +251,25 @@
             <div class="modal-content">
                 <!-- model header -->
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add New Admin</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Create a new article</h5>
                     <button type="button" class="btn-close"
                         data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("users.store")}}" method="POST">
+                <form action="{{route("users.store")}}" method="POST" >
 
                     <!-- model body -->
                     <div class="modal-body">
                         @csrf
                         @method("POST")
+                        <!-- image -->
+                        <div class="form-group">
+                            <label class="form-label" for="image">Image</label>
+                            <input class="form-control" type="file" name="image" id="image" required>
+                        </div>
+
                         <!-- Name -->
                         <div class="form-group">
                             <label class="form-label" for="name">Name</label>
@@ -278,6 +287,15 @@
                             <label class="form-label" for="tags">Tags</label>
                             <input class="form-control" type="tags" name="tags[]" id="tags"
                                 required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tag">{{__('Tags')}}</label>
+                            <select class="form-control select2 searchable" name="tags[]" id="tag" multiple required>
+                                @foreach (App\Models\Tag::all() as $tag)
+                                    <option value="{{$tag->id}}">{{$tag->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
 
@@ -348,6 +366,8 @@
 
 
     <!--   Core JS Files   -->
+    <script src="{{asset("libs/jquery/js/jquery-3.5.1.js")}}"></script>
+    <script src="{{asset("libs/select2/js/select2.min.js")}}"></script>
     <script src="{{asset("dashboard/js/core/popper.min.js")}}"></script>
     <script src="{{asset("dashboard/js/core/bootstrap.min.js")}}"></script>
     <script src="{{asset("dashboard/js/plugins/perfect-scrollbar.min.js")}}"></script>
@@ -449,6 +469,15 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{asset("dashboard/js/argon-dashboard.min.js?v=2.0.4")}}"></script>
+
+    <script>
+
+        $('.select2').select2();
+
+        // $(document).ready(function(){
+
+        // });
+    </script>
 
     {{-- Other scripts --}}
     @yield('scripts')
