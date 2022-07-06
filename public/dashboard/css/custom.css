@@ -24,7 +24,13 @@
     font-weight: 700;
     color: #f8f9fa;
 }
-/* Navbar */
+/* End of Navbar */
+
+/* Sidebar */
+.navbar-vertical.navbar-expand-xs .navbar-collapse {
+    height: 100%;
+}
+/* End of Sidebar */
 
 /* Table */
 div.dataTables_wrapper div.dataTables_paginate ul.pagination li:first-of-type a,
