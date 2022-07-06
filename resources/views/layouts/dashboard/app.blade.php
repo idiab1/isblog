@@ -258,7 +258,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("users.store")}}" method="POST" >
+                <form action="{{route("articles.store")}}" method="POST" enctype="multipart/form-data">
 
                     <!-- model body -->
                     <div class="modal-body">
@@ -267,7 +267,7 @@
                         <!-- image -->
                         <div class="form-group">
                             <label class="form-label" for="image">Image</label>
-                            <input class="form-control" type="file" name="image" id="image" required>
+                            <input class="form-control" type="file" name="image" id="image">
                         </div>
 
                         <!-- Name -->
@@ -282,22 +282,25 @@
                             <textarea class="form-control" name="full_text" id="full_text" required></textarea>
                         </div>
 
-                        <!-- tags -->
+                        <!-- Category -->
                         <div class="form-group">
-                            <label class="form-label" for="tags">Tags</label>
-                            <input class="form-control" type="tags" name="tags[]" id="tags"
-                                required>
+                            <label class="form-label" for="category">{{__('Category')}}</label>
+                            <select class="form-control select2" name="category_id" id="category" multiple required>
+                                @foreach (App\Models\Category::all() as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
 
+                        <!-- tags -->
                         <div class="form-group">
-                            <label for="tag">{{__('Tags')}}</label>
-                            <select class="form-control select2 searchable" name="tags[]" id="tag" multiple required>
+                            <label class="form-label" for="tags">{{__('Tags')}}</label>
+                            <select class="form-control select2 searchable" name="tags[]" id="tags" multiple required>
                                 @foreach (App\Models\Tag::all() as $tag)
                                     <option value="{{$tag->id}}">{{$tag->name}}</option>
                                 @endforeach
                             </select>
                         </div>
-
 
                     </div>
                     <!-- ./model-body -->
