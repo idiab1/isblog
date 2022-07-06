@@ -37,7 +37,12 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
     margin: 0 15px;
     width: 65px;
 }
-
+.page-link.active,
+.active>.page-link {
+    font-weight: 700;
+    text-align: center;
+    color: #000000 !important;
+}
 
 /* End of table */
 
