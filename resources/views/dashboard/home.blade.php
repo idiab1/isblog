@@ -20,11 +20,9 @@
                                     <p class="text-sm mb-0 text-uppercase font-weight-bold">
                                         Tags
                                     </p>
-                                    <h5 class="font-weight-bolder">{{App\Models\Tag::count()}}</h5>
-                                    <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
-                                        since yesterday
-                                    </p>
+                                    <h5 class="font-weight-bolder">{{$tagsCount}}</h5>
+                                    <a class="text-primary text-sm font-weight-bolder"
+                                        href="{{route("tags.index")}}">Show More</a>
                                 </div>
                             </div>
                         <div class="col-4 text-end">
@@ -51,12 +49,10 @@
                                         Users
                                     </p>
                                     <h5 class="font-weight-bolder">
-                                        {{App\Models\User::count()}}
+                                        {{$usersCount}}
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+3%</span>
-                                        since last week
-                                    </p>
+                                    <a class="text-danger text-sm font-weight-bolder"
+                                        href="">Show More</a>
                                 </div>
                                 <!-- ./Numbers -->
                             </div>
@@ -84,19 +80,17 @@
                                 <div class="numbers">
                                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Articles</p>
                                     <h5 class="font-weight-bolder">
-                                        {{App\Moldes\Article::count()}}
+                                        {{$articlesCount}}
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-danger text-sm font-weight-bolder">-2%</span>
-                                        since last quarter
-                                    </p>
+                                    <a class="text-success text-sm font-weight-bolder"
+                                        href="">Show More</a>
                                 </div>
                                 <!-- ./numbers -->
                             </div>
                             <div class="col-4 text-end">
                                 <!-- Icon -->
-                                <div class="fas fa-newspaper bg-gradient-success shadow-success text-center rounded-circle">
-                                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                                <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
+                                    <i class="fas fa-newspaper text-lg opacity-10" aria-hidden="true"></i>
                                 </div>
                                 <!-- ./icon -->
                             </div>
@@ -115,11 +109,10 @@
                                 <div class="numbers">
                                     <p class="text-sm mb-0 text-uppercase font-weight-bold">Administrators</p>
                                     <h5 class="font-weight-bolder">
-                                        {{App\Models\User::where("is_admin", 1)->count()}}
+                                        {{$adminsCount}}
                                     </h5>
-                                    <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
-                                    </p>
+                                    <a class="text-warning text-sm font-weight-bolder"
+                                        href="{{route("tags.index")}}">Show More</a>
                                 </div>
                                 <!-- ./numbers -->
                             </div>
@@ -394,7 +387,7 @@
                         <i class="ni ni-satisfied text-white opacity-10"></i>
                       </div>
                       <div class="d-flex flex-column">
-                        <h6 class="mb-1 text-dark text-sm">Happy users</h6>
+                        <h6 class="mb-1 text-dark text-sm">Hy users</h6>
                         <span class="text-xs font-weight-bold">+ 430</span>
                       </div>
                     </div>
