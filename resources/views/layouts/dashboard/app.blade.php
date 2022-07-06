@@ -171,7 +171,7 @@
         <!-- ./model-dialog -->
     </div>
 
-    <!-- Create Tags Modal -->
+    <!-- Create admin Modal -->
     <div class="modal fade" id="userCreate" data-bs-backdrop="static"
         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
         aria-hidden="true">
@@ -219,6 +219,67 @@
                             <input class="form-control" type="password" name="password_confirmation"
                                 id="password_confirm" required>
                         </div>
+
+                    </div>
+                    <!-- ./model-body -->
+
+                    <!-- model footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                    <!-- ./model-footer -->
+                </form>
+                <!-- ./form -->
+
+            </div>
+                <!-- ./model-content -->
+        </div>
+        <!-- ./model-dialog -->
+    </div>
+
+    <!-- Create articles Modal -->
+    <div class="modal fade" id="articleCreate" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <!-- model dialog -->
+        <div class="modal-dialog">
+            <!-- model dialog -->
+            <div class="modal-content">
+                <!-- model header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add New Admin</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- ./model-header -->
+
+                <!-- form -->
+                <form action="{{route("users.store")}}" method="POST">
+
+                    <!-- model body -->
+                    <div class="modal-body">
+                        @csrf
+                        @method("POST")
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" type="text" name="name" id="name" required>
+                        </div>
+
+                        <!-- full text -->
+                        <div class="form-group">
+                            <label class="form-label" for="full_text">Full Text</label>
+                            <textarea class="form-control" name="full_text" id="full_text" required></textarea>
+                        </div>
+
+                        <!-- tags -->
+                        <div class="form-group">
+                            <label class="form-label" for="tags">Tags</label>
+                            <input class="form-control" type="tags" name="tags[]" id="tags"
+                                required>
+                        </div>
+
 
                     </div>
                     <!-- ./model-body -->
