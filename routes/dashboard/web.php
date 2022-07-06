@@ -41,6 +41,11 @@ Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () 
         "tags" => "id"
     ]);
 
+    // -->>> Articles Route
+    Route::resource('articles', ArticleController::class)->parameters([
+        "articles" => "id"
+    ]);
+
     // -->>> Setting Route
     Route::resource('settings', SettingController::class)->only([
         "edit", "update"
