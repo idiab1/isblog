@@ -384,8 +384,6 @@
         </div> --}}
 
 
-        {{-- Footer --}}
-        @include('include.dashboard.footer')
     </div>
 </section>
 <!-- ./homepage -->
