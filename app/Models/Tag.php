@@ -11,12 +11,14 @@ class Tag extends Model
     protected $fillable = ["name"];
 
     /**
-     * Get the article that owns the Tag
+     * The article that belong to the Tag
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function article()
     {
-        return $this->belongsTo(Article::class);
+        return $this->belongsToMany(Article::class);
     }
+
+
 }
