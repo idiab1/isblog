@@ -285,7 +285,7 @@
                         <!-- Category -->
                         <div class="form-group">
                             <label class="form-label" for="category">{{__('Category')}}</label>
-                            <select class="form-control select2" name="category_id" id="category" multiple required>
+                            <select class="form-control select2" name="category_id" id="category" required>
                                 @foreach (App\Models\Category::all() as $category)
                                     <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach
