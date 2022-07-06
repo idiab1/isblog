@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
+use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,7 +17,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view("dashboard.home");
+        // Get count of articles
+        $articlesCount = Article::count();
+        // Get count of admins
+        $adminsCount = User::where("is_admin", 1)->count();
+        // Get count of Users
+        $usersCount = User::count();
+        // Get count of Tags
+        $tagsCount = Tag::count();
+        return view("dashboard.home", compact("articlesCount", "adminsCount", "usersCount", "tagsCount"));
     }
 
     /**
