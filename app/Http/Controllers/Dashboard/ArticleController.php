@@ -17,7 +17,7 @@ class ArticleController extends Controller
     {
         // Get all articles from database
         $articles = Article::all();
-        return view("dashboad.articles.index", compact("articles"));
+        return view("dashboard.articles.index", compact("articles"));
     }
 
     /**
@@ -38,7 +38,28 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        // Validate on all data coming from request
+        $this->validate($request, [
+            "name" => ["required", "string"],
+            "full_text" => ["required"],
+            "category_id" => ["required"],
+        ]);
+
+
+        $article = Article::create([
+            "name" => $request->name,
+            "full_text" => $request->full_text,
+            "category_id" => $request->category_id,
+        ]);
+
+        $article->tags()->attach($request->tags);
+
+
+
+
+        return redirect()->route("articles.index");
+
     }
 
     /**
