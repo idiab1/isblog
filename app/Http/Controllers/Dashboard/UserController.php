@@ -106,6 +106,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Get select on user by id
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->back();
     }
 }
