@@ -171,6 +171,73 @@
         <!-- ./model-dialog -->
     </div>
 
+    <!-- Create Tags Modal -->
+    <div class="modal fade" id="userCreate" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <!-- model dialog -->
+        <div class="modal-dialog">
+            <!-- model dialog -->
+            <div class="modal-content">
+                <!-- model header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Add New Admin</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- ./model-header -->
+
+                <!-- form -->
+                <form action="{{route("users.store")}}" method="POST">
+
+                    <!-- model body -->
+                    <div class="modal-body">
+                        @csrf
+                        @method("POST")
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" type="text" name="name" id="name" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label class="form-label" for="name">Email</label>
+                            <input class="form-control" type="text" name="email" id="email" required>
+                        </div>
+
+                        <!-- password -->
+                        <div class="form-group">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" name="password" id="password"
+                                required>
+                        </div>
+
+                        <!-- confirm password -->
+                        <div class="form-group">
+                            <label class="form-label" for="password_confirm">Confirm Password</label>
+                            <input class="form-control" type="password" name="password_confirmation"
+                                id="password_confirm" required>
+                        </div>
+
+                    </div>
+                    <!-- ./model-body -->
+
+                    <!-- model footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                    <!-- ./model-footer -->
+                </form>
+                <!-- ./form -->
+
+            </div>
+                <!-- ./model-content -->
+        </div>
+        <!-- ./model-dialog -->
+    </div>
+
     <!-- Create category Modal -->
     <div class="modal fade" id="categoryCreate" data-bs-backdrop="static"
         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
