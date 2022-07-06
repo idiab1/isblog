@@ -8,108 +8,133 @@
 @section('content')
 <!-- Homepage -->
 <section class="homepage section">
-    <div class="container-fluid py-4">
-        {{-- <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Money</p>
-                      <h5 class="font-weight-bolder">
-                        $53,000
-                      </h5>
-                      <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+55%</span>
-                        since yesterday
-                      </p>
+    <!-- Container -->
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <div class="card">
+                    <div class="card-body p-3">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="numbers">
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">
+                                        Tags
+                                    </p>
+                                    <h5 class="font-weight-bolder">{{App\Models\Tag::count()}}</h5>
+                                    <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        since yesterday
+                                    </p>
+                                </div>
+                            </div>
+                        <div class="col-4 text-end">
+                            <div class="icon icon-shape bg-gradient-primary shadow-primary
+                                text-center rounded-circle">
+                                <i class="fas fa-tags text-lg opacity-10"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                      <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Users</p>
-                      <h5 class="font-weight-bolder">
-                        2,300
-                      </h5>
-                      <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+3%</span>
-                        since last week
-                      </p>
+            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <!-- Card -->
+                <div class="card">
+                    <!-- card body -->
+                    <div class="card-body p-3">
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- Numbers -->
+                                <div class="numbers">
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">
+                                        Users
+                                    </p>
+                                    <h5 class="font-weight-bolder">
+                                        {{App\Models\User::count()}}
+                                    </h5>
+                                    <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+3%</span>
+                                        since last week
+                                    </p>
+                                </div>
+                                <!-- ./Numbers -->
+                            </div>
+                            <div class="col-4 text-end">
+                                <!-- Icon -->
+                                <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
+                                    <i class="fas fa-users text-lg opacity-10" aria-hidden="true"></i>
+                                </div>
+                                <!-- ./icon -->
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                      <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
+                    <!-- ./card-body -->
                 </div>
-              </div>
+                <!-- ./card -->
             </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">New Clients</p>
-                      <h5 class="font-weight-bolder">
-                        +3,462
-                      </h5>
-                      <p class="mb-0">
-                        <span class="text-danger text-sm font-weight-bolder">-2%</span>
-                        since last quarter
-                      </p>
+            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <!-- Card -->
+                <div class="card">
+                    <!-- Card body -->
+                    <div class="card-body p-3">
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- Numbers -->
+                                <div class="numbers">
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Articles</p>
+                                    <h5 class="font-weight-bolder">
+                                        {{App\Moldes\Article::count()}}
+                                    </h5>
+                                    <p class="mb-0">
+                                        <span class="text-danger text-sm font-weight-bolder">-2%</span>
+                                        since last quarter
+                                    </p>
+                                </div>
+                                <!-- ./numbers -->
+                            </div>
+                            <div class="col-4 text-end">
+                                <!-- Icon -->
+                                <div class="fas fa-newspaper bg-gradient-success shadow-success text-center rounded-circle">
+                                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                                </div>
+                                <!-- ./icon -->
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                      <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
+                    <!-- ./card-body -->
                 </div>
-              </div>
+                <!-- ./card -->
             </div>
-          </div>
-          <div class="col-xl-3 col-sm-6">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Sales</p>
-                      <h5 class="font-weight-bolder">
-                        $103,430
-                      </h5>
-                      <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
-                      </p>
+            <div class="col-xl-3 col-sm-6">
+                <div class="card">
+                    <div class="card-body p-3">
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- Numbers -->
+                                <div class="numbers">
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Administrators</p>
+                                    <h5 class="font-weight-bolder">
+                                        {{App\Models\User::where("is_admin", 1)->count()}}
+                                    </h5>
+                                    <p class="mb-0">
+                                        <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
+                                    </p>
+                                </div>
+                                <!-- ./numbers -->
+                            </div>
+                            <div class="col-4 text-end">
+                                <!-- Icon -->
+                                <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
+                                    <i class="fas fa-users-gear text-lg opacity-10" aria-hidden="true"></i>
+                                </div>
+                                <!-- ./icon -->
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                      <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div> --}}
+        </div>
         {{-- <div class="row mt-4">
           <div class="col-lg-7 mb-lg-0 mb-4">
             <div class="card z-index-2 h-100">
@@ -385,6 +410,7 @@
 
 
     </div>
+    <!-- ./container -->
 </section>
 <!-- ./homepage -->
 @endsection
