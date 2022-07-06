@@ -20,6 +20,13 @@ Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () 
     // -->>> Admin Home Route
     Route::get('/home', [HomeController::class, "index"])->name("admin.home");
 
+    // -->>> users Route
+    Route::resource('users', UserController::class)->except([
+        "show"
+    ])->parameters([
+        "users" => "id"
+    ]);
+
     // -->>> Categories Route
     Route::resource('categories', CategoryController::class)->except([
         "show"
