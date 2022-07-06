@@ -18,7 +18,11 @@ class CreateAtriclesTable extends Migration
             $table->string('name', 100);
             $table->text('full_text');
             $table->string('image')->nullable();
+
+            $table->integer('category_id')->unsigned();
+
             $table->timestamps();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
