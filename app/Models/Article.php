@@ -9,23 +9,26 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["title", "full_text", "tag_id"];
+    protected $fillable = ["name", "full_text"];
     protected $appends = ["image_path"];
+
 
     // Get the path of image
     public function getImagePathAttr(){
         return asset("uploads/articles/" . $this->image);
     }
 
+
     /**
-     * Get all of the tags for the Article
+     * The tags that belong to the Article
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function tags()
     {
-        return $this->hasMany(Tag::class);
+        return $this->belongsToMany(Tag::class);
     }
+
 
     /**
      * Get the category associated with the Article
