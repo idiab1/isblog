@@ -52,6 +52,29 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
 
 /* End of table */
 
+/* Form */
+form label{
+    display: block;
+}
+.select2-container{
+    width: 100% !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #5e72e4;
+    border: 1px solid #fff;
+    color: #212529;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: .07rem;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #5e72e4;
+    color: white;
+}
+/* End of form */
+
+
 /* Buttons */
 .btn{
     margin-bottom: 0;
