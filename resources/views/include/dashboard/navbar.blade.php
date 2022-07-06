@@ -91,7 +91,8 @@
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{route("categories.create")}}">
+                        <a class="dropdown-item" href="{{route("articles.create")}}" data-bs-toggle="modal"
+                            data-bs-target="#articleCreate">
                         {{ __('Articles') }}
                         </a>
                     </li>
