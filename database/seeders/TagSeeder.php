@@ -25,7 +25,7 @@ class TagSeeder extends Seeder
                 "name" => "beginners"
             ],
             [
-                "name" => "react"
+                "name" => "react.js"
             ],
             [
                 "name" => "programming"
@@ -43,7 +43,7 @@ class TagSeeder extends Seeder
                 "name" => "codenewbie"
             ],
             [
-                "name" => "node"
+                "name" => "node.js"
             ],
             [
                 "name" => "html"
@@ -94,13 +94,13 @@ class TagSeeder extends Seeder
                 "name" => "docker"
             ],
             [
-                "name" => "angular"
+                "name" => "angular.js"
             ],
             [
                 "name" => "opensource"
             ],
             [
-                "name" => "vue"
+                "name" => "vue.js"
             ],
             [
                 "name" => "cloud"
@@ -205,10 +205,7 @@ class TagSeeder extends Seeder
                 "name" => "coding"
             ],
             [
-                "name" => "nextjs"
-            ],
-            [
-                "name" => "cpp"
+                "name" => "next.js"
             ],
             [
                 "name" => "challenge"
@@ -223,7 +220,7 @@ class TagSeeder extends Seeder
                 "name" => "kotlin"
             ],
             [
-                "name" => "ux"
+                "name" => "ui/ux"
             ],
             [
                 "name" => "codequality"
@@ -295,9 +292,6 @@ class TagSeeder extends Seeder
                 "name" => "code"
             ],
             [
-                "name" => "a11y"
-            ],
-            [
                 "name" => "technology"
             ],
             [
@@ -309,13 +303,6 @@ class TagSeeder extends Seeder
             [
                 "name" => "deeplearning"
             ],
-            [
-                "name" => "remote"
-            ],
-            [
-                "name" => "terraform"
-            ],
-
         ];
 
         foreach ($tags as $tag) {
