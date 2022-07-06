@@ -52,7 +52,7 @@
                                         {{$usersCount}}
                                     </h5>
                                     <a class="text-danger text-sm font-weight-bolder"
-                                        href="">Show More</a>
+                                        href="{{route("users.index")}}">Show More</a>
                                 </div>
                                 <!-- ./Numbers -->
                             </div>
@@ -112,7 +112,7 @@
                                         {{$adminsCount}}
                                     </h5>
                                     <a class="text-warning text-sm font-weight-bolder"
-                                        href="{{route("tags.index")}}">Show More</a>
+                                        href="{{route("users.index")}}">Show More</a>
                                 </div>
                                 <!-- ./numbers -->
                             </div>
