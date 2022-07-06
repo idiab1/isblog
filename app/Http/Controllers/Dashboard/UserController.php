@@ -39,7 +39,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // // Validate on all data
+        $this->validate($request, [
+            'name' => ['required', 'string'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'confirmed'],
+        ]);
+
+        User::create([
+            "name" => $request->name,
+            "email" => $request->email,
+            "is_admin" => 1,
+            "password" => Hash::make($request->name),
+        ]);
+        return redirect()->route("users.index");
     }
 
     /**
@@ -75,13 +88,6 @@ class UserController extends Controller
     {
         // Get select on user by id
         $user = User::find($id);
-        // // Validate on all data
-        // $this->validate($request, [
-        //     'name' => ['required', 'string'],
-        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-        //     'password' => ['required', 'string', 'confirmed'],
-        // ]);
-
         $user->update([
             "name" => $request->name,
             "email" => $request->email,
