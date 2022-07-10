@@ -83,7 +83,7 @@
                                         {{$articlesCount}}
                                     </h5>
                                     <a class="text-success text-sm font-weight-bolder"
-                                        href="">Show More</a>
+                                        href="{{route("articles.index")}}">Show More</a>
                                 </div>
                                 <!-- ./numbers -->
                             </div>
