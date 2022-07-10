@@ -19,10 +19,10 @@
 <!-- Tags Page -->
 <section class="tags-page section">
     <!-- Container Fluid -->
-    <div class="container-fluid py-4">
+    <div class="container py-4">
         @if ($tags->count() > 0)
             <div class="row">
-                <div class="col-11 mx-auto">
+                <div class="col-12 mx-auto">
                     <!-- Card -->
                     <div class="card">
                         <!-- /.card-header -->
