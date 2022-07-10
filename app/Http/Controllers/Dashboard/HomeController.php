@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Category;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -25,7 +26,11 @@ class HomeController extends Controller
         $usersCount = User::count();
         // Get count of Tags
         $tagsCount = Tag::count();
-        return view("dashboard.home", compact("articlesCount", "adminsCount", "usersCount", "tagsCount"));
+        // Get all categories from database
+        $categories = Category::all();
+        return view("dashboard.home", compact(
+            "categories", "articlesCount", "adminsCount", "usersCount", "tagsCount"
+        ));
     }
 
     /**
