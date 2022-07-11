@@ -10,8 +10,7 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="{{asset("libs/datatables-bs4/css/dataTables.bootstrap4.min.css")}}">
     <link rel="stylesheet" href="{{asset("libs/datatables-responsive/css/responsive.bootstrap4.min.css")}}">
-    <!-- Select2 -->
-    <link rel="stylesheet" href="{{asset("libs/select2/css/select2.min.css")}}" />
+    <link rel="stylesheet" href="{{asset("libs/select2-bootstrap4-theme/select2-bootstrap4.min.css")}}">
 
 @endsection
 
@@ -91,7 +90,7 @@
                                                         @if ($article->image)
                                                             <!-- Article Image -->
                                                             <div class="article-image">
-                                                                <img class="img-fluid" src="{{asset("uploads/articles" . $article->image)}}" alt="Article Image">
+                                                                <img class="img-fluid" src="{{asset("uploads/articles/" . $article->image)}}" alt="Article Image">
                                                             </div>
                                                         @endif
 
@@ -175,10 +174,11 @@
                                                             <!-- Category -->
                                                             <div class="form-group">
                                                                 <label class="form-label" for="category">{{__('Category')}}</label>
-                                                                <select class="form-control select2" name="category_id" id="category" required>
+                                                                <select class="form-control select2bs4 select2" name="category_id" id="category" required>
+                                                                    <option>{{__('All of categories')}}</option>
                                                                     @foreach (App\Models\Category::all() as $category)
                                                                         <option value="{{$category->id}}"
-                                                                            {{$category->id == $article->category_id ? "selected" : "" }}>
+                                                                            {{$category->id == $article->category_id ? "selected" : ""}} >
                                                                             {{$category->name}}
                                                                         </option>
                                                                     @endforeach
@@ -188,13 +188,18 @@
                                                             <!-- tags -->
                                                             <div class="form-group">
                                                                 <label class="form-label" for="tags">{{__('Tags')}}</label>
-                                                                <select class="form-control select2 searchable" name="tags[]" id="tags" multiple required>
+                                                                <select class="form-control select2bs4 select2 searchable" name="tags[]" id="tags" multiple required>
                                                                     @foreach (App\Models\Tag::all() as $tag)
                                                                         <option value="{{$tag->id}}"
+                                                                            @foreach ($article->tags as $tag_id)
+                                                                                {{$tag->id == $tag_id->id ? "selected" : ""}}
+                                                                            @endforeach
                                                                             >
                                                                             {{$tag->name}}
                                                                         </option>
+
                                                                     @endforeach
+
                                                                 </select>
                                                             </div>
 
@@ -255,7 +260,6 @@
                     <!-- End of Empty -->
                 </div>
             </div>
-
         @endif
     </div>
     <!-- /.container-fluid -->
@@ -268,6 +272,7 @@
 @section('scripts')
     <!-- DataTables  & Plugins -->
     <script src="{{asset("libs/jquery/js/jquery-3.5.1.js")}}"></script>
+    <script src="{{asset('libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset("libs/select2/js/select2.min.js")}}"></script>
     <script src="{{asset("libs/datatables/jquery.dataTables.min.js")}}"></script>
     <script src="{{asset("libs/datatables-bs4/js/dataTables.bootstrap4.min.js")}}"></script>
@@ -290,10 +295,11 @@
 
     <script>
 
-        $('.select2').select2();
-
-        // $(document).ready(function(){
-
-        // });
+        $(function () {
+            // $(".select2").select2();
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+        })
     </script>
 @endsection
