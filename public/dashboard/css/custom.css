@@ -105,6 +105,10 @@ form label{
 .btn{
     margin-bottom: 0;
 }
+.btn-show{
+    color: #fff;
+    background-color: #06153c;
+}
 .btn-add-plus{
     background-color: #06153c;
 }
