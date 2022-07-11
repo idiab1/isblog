@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
-
-    protected $fillable = ["name", "full_text", "category_id"];
+    protected $guarded = ['id'];
+    protected $fillable = ["name", "full_text", "category_id", "image"];
     protected $appends = ["image_path"];
 
 
     // Get the path of image
-    public function getImagePathAttr(){
+    public function getImagePathAttribute(){
         return asset("uploads/articles/" . $this->image);
     }
 
