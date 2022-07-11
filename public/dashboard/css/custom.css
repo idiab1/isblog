@@ -100,6 +100,18 @@ form label{
 }
 /* End of form */
 
+/* Empty Section */
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.empty .info{
+    margin-top: 15px;
+}
+/* End of Empty Section */
+
 
 /* Buttons */
 .btn{
