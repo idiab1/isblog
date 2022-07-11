@@ -53,6 +53,9 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
 /* End of table */
 
 /* Modal */
+.modal-article .modal-content .article-image{
+    margin-bottom: 20px;
+}
 .modal-article .modal-content .description{
     padding-bottom: 1rem;
 }
