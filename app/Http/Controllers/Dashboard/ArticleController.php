@@ -57,17 +57,23 @@ class ArticleController extends Controller
                 $constraint->aspectRatio();
             })->save("uploads/articles/" . $request->image->hashName());
             // save(public_path('uploads/articles/' . $request->image->hashName()));
+            // save("uploads/articles/" . $request->image->hashName());
 
             $request_date["image"] = $request->image->hashName();
 
-            // dd($request);
+            // $dirpath = public_path('uploads/articles/');
+            // $name = $request['image']->getClientOriginalExtension();
+            // $filename = time().'.'.$name;
+            // $file=$request['image']->move($dirpath, $filename);
+
+            // dd($request_date["image"]);
 
             // Save
             $article = Article::create([
                 "name"          => $request->name,
                 "full_text"     => $request->full_text,
                 "category_id"   => $request->category_id,
-                'image'         => $request->image->hashName(),
+                'image'         => $request_date["image"],
             ]);
 
             $article->tags()->attach($request->tags);
@@ -116,7 +122,41 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd($request->all());
+
+        // Get Article by id
+        $article = Article::find($id);
+
+        $request_date = $request->all();
+
+        if($request->has("image")){
+            if($article->image){
+                Storage::disk("public")->delete('uploads/articles/' . $article->image);
+            }
+
+            Image::make($request->image)->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save("uploads/articles/" . $request->image->hashName());
+            // save(public_path('uploads/articles/' . $request->image->hashName()));
+
+            $request_date["image"] = $request->image->hashName();
+
+            $article->update([
+                'image'         => $request->image->hashName(),
+            ]);
+
+        }
+
+        $article->update([
+            "name"          => $request->name,
+            "full_text"     => $request->full_text,
+            "category_id"   => $request->category_id,
+        ]);
+
+        $article->tags()->sync($request->tags);
+
+
+        return redirect()->route("articles.index");
     }
 
     /**
@@ -130,7 +170,7 @@ class ArticleController extends Controller
         // Get article by id
         $article = Article::find($id);
         if($article->image){
-            Storage::disk("public")->delete('uploads/articles/' . $article->image);
+            Storage::disk("public_uploads")->delete('uploads/articles/' . $article->image);
             $article->delete();
             return redirect()->back();
         }
