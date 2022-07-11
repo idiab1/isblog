@@ -55,9 +55,12 @@ class ArticleController extends Controller
 
             Image::make($request->image)->resize(300, null, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save(public_path('uploads/articles/' . $request->image->hashName()));
+            })->save("uploads/articles/" . $request->image->hashName());
+            // save(public_path('uploads/articles/' . $request->image->hashName()));
 
             $request_date["image"] = $request->image->hashName();
+
+            // dd($request);
 
             // Save
             $article = Article::create([
@@ -77,10 +80,6 @@ class ArticleController extends Controller
 
             $article->tags()->attach($request->tags);
         }
-
-
-
-
 
         return redirect()->route("articles.index");
 
@@ -128,6 +127,14 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Get article by id
+        $article = Article::find($id);
+        if($article->image){
+            Storage::disk("public")->delete('uploads/articles/' . $article->image);
+            $article->delete();
+            return redirect()->back();
+        }
+        $article->delete();
+        return redirect()->back();
     }
 }
