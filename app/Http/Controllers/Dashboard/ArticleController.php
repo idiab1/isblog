@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -38,22 +40,44 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
+        // dd($request->image);
         // Validate on all data coming from request
         $this->validate($request, [
             "name" => ["required", "string"],
             "full_text" => ["required"],
             "category_id" => ["required"],
+            "image" => ["image"]
         ]);
 
+        $request_date = $request->all();
 
-        $article = Article::create([
-            "name" => $request->name,
-            "full_text" => $request->full_text,
-            "category_id" => $request->category_id,
-        ]);
+        if($request->image){
 
-        $article->tags()->attach($request->tags);
+            Image::make($request->image)->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('uploads/articles/' . $request->image->hashName()));
+
+            $request_date["image"] = $request->image->hashName();
+
+            // Save
+            $article = Article::create([
+                "name"          => $request->name,
+                "full_text"     => $request->full_text,
+                "category_id"   => $request->category_id,
+                'image'         => $request->image->hashName(),
+            ]);
+
+            $article->tags()->attach($request->tags);
+        }else{
+            $article = Article::create([
+                "name"          => $request->name,
+                "full_text"     => $request->full_text,
+                "category_id"   => $request->category_id,
+            ]);
+
+            $article->tags()->attach($request->tags);
+        }
+
 
 
 
