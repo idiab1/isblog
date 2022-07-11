@@ -70,6 +70,62 @@
                                             </td>
                                         </tr>
 
+                                        <!-- Show article Modal -->
+                                        <div class="modal modal-article fade text-left" id="articleShow{{$article->id}}" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <!-- model dialog -->
+                                            <div class="modal-dialog">
+                                                <!-- model dialog -->
+                                                <div class="modal-content">
+                                                    <!-- model header -->
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">{{$article->name . "'s"}}</h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <!-- ./model-header -->
+
+                                                    <!-- model body -->
+                                                    <div class="modal-body">
+                                                        @if ($article->image)
+                                                            <!-- Article Image -->
+                                                            <div class="article-image">
+                                                                <img class="img-fluid" src="{{asset("uploads/articles" . $article->image)}}" alt="Article Image">
+                                                            </div>
+                                                        @endif
+
+                                                        <!-- Article Description -->
+                                                        <div class="description">
+                                                            <p class="m-0">{{$article->full_text}}</p>
+                                                        </div>
+                                                        <!-- Tags -->
+                                                        <ul class="list-unstyled m-0">
+                                                            {{-- {{$article->tags}} --}}
+                                                            @if ($article->tags()->count() > 0)
+                                                                @foreach ($article->tags as $tag)
+                                                                    <li>
+                                                                        <a href="#">{{"#".$tag->name}}</a>
+                                                                    </li>
+                                                                @endforeach
+                                                            @endif
+                                                        </ul>
+
+                                                    </div>
+                                                    <!-- ./model-body -->
+                                                    <!-- model footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Send</button>
+                                                    </div>
+                                                    <!-- ./model-footer -->
+
+                                                </div>
+                                                    <!-- ./model-content -->
+                                            </div>
+                                            <!-- ./model-dialog -->
+                                        </div>
+
                                         <!-- Update article Modal -->
                                         <div class="modal fade text-left" id="articleUpdate{{$article->id}}" data-bs-backdrop="static"
                                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
@@ -159,7 +215,6 @@
                                             </div>
                                             <!-- ./model-dialog -->
                                         </div>
-
 
 
                                     @endforeach
