@@ -127,32 +127,38 @@ class ArticleController extends Controller
 
         if($request->has("image")){
             if($article->image){
-                Storage::disk("public")->delete('uploads/articles/' . $article->image);
+                Storage::disk("public_uploads")->delete('/articles/' . $article->image);
             }
 
             Image::make($request->image)->resize(300, null, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save("uploads/articles/" . $request->image->hashName());
+            })->save(public_path('uploads/articles/' . $request->image->hashName()));
+            // save("uploads/articles/" . $request->image->hashName());
             // save(public_path('uploads/articles/' . $request->image->hashName()));
 
             $request_date["image"] = $request->image->hashName();
 
             $article->update([
-                'image'         => $request->image->hashName(),
+                "name"          => $request->name,
+                "full_text"     => $request->full_text,
+                "category_id"   => $request->category_id,
+                "image"         => $request->image->hashName(),
             ]);
 
+            $article->tags()->sync($request->tags);
+            return redirect()->route("articles.index");
+
+        }else{
+            $article->update([
+                "name"          => $request->name,
+                "full_text"     => $request->full_text,
+                "category_id"   => $request->category_id,
+            ]);
+
+            $article->tags()->sync($request->tags);
+            return redirect()->route("articles.index");
         }
 
-        $article->update([
-            "name"          => $request->name,
-            "full_text"     => $request->full_text,
-            "category_id"   => $request->category_id,
-        ]);
-
-        $article->tags()->sync($request->tags);
-
-
-        return redirect()->route("articles.index");
     }
 
     /**
