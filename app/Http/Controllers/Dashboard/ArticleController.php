@@ -52,32 +52,26 @@ class ArticleController extends Controller
         $request_date = $request->all();
 
         if($request->image){
-
             Image::make($request->image)->resize(300, null, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save("uploads/articles/" . $request->image->hashName());
+            })->save(public_path('uploads/articles/' . $request->image->hashName()));
             // save(public_path('uploads/articles/' . $request->image->hashName()));
             // save("uploads/articles/" . $request->image->hashName());
 
             $request_date["image"] = $request->image->hashName();
-
-            // $dirpath = public_path('uploads/articles/');
-            // $name = $request['image']->getClientOriginalExtension();
-            // $filename = time().'.'.$name;
-            // $file=$request['image']->move($dirpath, $filename);
-
-            // dd($request_date["image"]);
-
             // Save
             $article = Article::create([
                 "name"          => $request->name,
                 "full_text"     => $request->full_text,
                 "category_id"   => $request->category_id,
-                'image'         => $request_date["image"],
+                "image"         => $request->image->hashName(),
             ]);
 
             $article->tags()->attach($request->tags);
+            return redirect()->route("articles.index");
+
         }else{
+            // Save
             $article = Article::create([
                 "name"          => $request->name,
                 "full_text"     => $request->full_text,
@@ -85,9 +79,9 @@ class ArticleController extends Controller
             ]);
 
             $article->tags()->attach($request->tags);
-        }
+            return redirect()->route("articles.index");
 
-        return redirect()->route("articles.index");
+        }
 
     }
 
