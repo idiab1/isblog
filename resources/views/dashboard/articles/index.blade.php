@@ -52,8 +52,7 @@
                                                 </a>
 
                                                 <!-- Edit button -->
-                                                <a class="btn btn-edit me-3 btn-sm" href="{{route("articles.edit", ["id" => $article->id])}}" data-bs-toggle="modal"
-                                                    data-bs-target="#articleUpdate{{$article->id}}">
+                                                <a class="btn btn-edit me-3 btn-sm" href="{{route("articles.edit", ["id" => $article->id])}}">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
 
