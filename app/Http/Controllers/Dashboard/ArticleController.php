@@ -164,9 +164,7 @@ class ArticleController extends Controller
         // Get article by id
         $article = Article::find($id);
         if($article->image){
-            Storage::disk("public_uploads")->delete('uploads/articles/' . $article->image);
-            $article->delete();
-            return redirect()->back();
+            Storage::disk("public_uploads")->delete('/articles/' . $article->image);
         }
         $article->delete();
         return redirect()->back();
