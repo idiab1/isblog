@@ -334,41 +334,43 @@
           </div>
 
           <div class="col-lg-5">
-            <div class="card">
-              <div class="card-header pb-0 p-3">
-                <h6 class="mb-0">Categories</h6>
-              </div>
-              <div class="card-body p-3">
-                <ul class="list-group">
+                <!-- Card -->
+                <div class="card">
+                    <!-- Card Header -->
+                    <div class="card-header pb-0 p-3">
+                        <h6 class="mb-0">Categories</h6>
+                    </div>
+                    <!-- ./card-header -->
+                    <!-- Card Body -->
+                    <div class="card-body pb-0 p-3">
+                        <ul class="list-group">
 
-                    @foreach ($categories as $category)
-                        <li class="list-group-item border-0 d-flex justify-content-between
-                            ps-0 mb-2 border-radius-lg">
-                            <div class="d-flex align-items-center">
-                                <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                                    <i class="fas fa-circle-dot text-white opacity-10"></i>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    <h6 class="mb-1 text-dark text-sm">{{$category->name}}</h6>
-                                    <span class="text-xs">250 in stock,
-                                        <span class="font-weight-bold">{{$category->article()->count()}}</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <button class="btn btn-link btn-icon-only btn-rounded btn-sm
-                                    text-dark icon-move-right my-auto">
-                                    <i class="ni ni-bold-right" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </li>
-
-                    @endforeach
+                            @foreach ($categories as $category)
+                                <li class="list-group-item border-0 d-flex justify-content-between
+                                    ps-0 mb-2 border-radius-lg">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon icon-shape icon-sm me-3 bg-gradient-dark
+                                            shadow text-center">
+                                            <i class="fas fa-circle-dot text-white opacity-10"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">{{$category->name}}</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                            @endforeach
 
 
-                </ul>
-              </div>
-            </div>
+                        </ul>
+                    </div>
+                    <!-- ./card-body -->
+                    <!-- Card Footer -->
+                    <div class="card-footer p-1 text-center">
+                        <a class="text-secondary text-sm font-weight-bolder"
+                            href="{{route("categories.index")}}">All Categories</a>
+                    </div>
+                    <!-- ./card-footer -->
+                </div>
           </div>
         </div>
 
