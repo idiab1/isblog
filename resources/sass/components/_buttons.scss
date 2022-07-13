@@ -1,0 +1,11 @@
+// Crayons Button
+.crayons-btn{
+    background-color: $navy-color;
+    border-color: $navy-color;
+    font-size: 1.2rem;
+    &:hover, &:focus{
+        background-color: $navy-color;
+        border-color: $navy-color;
+        box-shadow: none;
+    }
+}
