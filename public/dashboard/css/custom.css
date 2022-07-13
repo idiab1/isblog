@@ -36,7 +36,72 @@
 .card ul li .icon-sm{
     line-height: 1.5;
 }
-
+.card-article .card-header {
+    height: 250px;
+}
+.card-article .card-header img{
+    height: 250px;
+    width: 100%;
+}
+.card-article .card-body ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.7rem;
+}
+.card-article .card-body ul li {
+    padding: 0.35rem 0.5rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.08rem;
+    font-weight: 600;
+    line-height: 1.2;
+    background-color: #FF8C32;
+}
+.card-article .card-body ul li:first-of-type {
+    margin-left: 0rem;
+}
+.card-article .card-body ul li a {
+    color: #000;
+    text-decoration: none;
+}
+.card-article .card-body h2{
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.card-article .card-footer{
+    padding: 0.5rem 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.card-article .card-footer .image{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.card-article .card-footer .image img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 3px solid #8c8cfa;
+}
+.card-article .card-footer .user-info{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.card-article .card-footer .user-info a {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #000;
+    text-transform: capitalize;
+    text-decoration: none;
+}
 /* End of Card */
 
 /* Table */
