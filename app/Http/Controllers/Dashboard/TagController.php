@@ -58,7 +58,9 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        //
+        // Get data of tag from database
+        $tag = Tag::find($id);
+        return view("dashboard.tags.show", compact("tag"));
     }
 
     /**
