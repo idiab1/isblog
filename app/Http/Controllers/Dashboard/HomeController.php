@@ -28,14 +28,21 @@ class HomeController extends Controller
         // Get count of Tags
         $tagsCount = Tag::count();
         // Get all categories from database
-        $categories = Category::all();
+        $categories = DB::table('categories')->orderBy('created_at', 'desc')->take(5)->get();
+        // Get all tags from database
+        $tags = Tag::with("articles")
+            ->orderBy('id', 'asc')
+            ->take(5)
+            ->get();
         // Get last Five records from articles table then send to home dashboard
         $articles = Article::with("tags")
             ->orderBy('created_at', 'desc')
             ->take(5)
             ->get();
         return view("dashboard.home", compact(
-            "categories", "articlesCount", "adminsCount", "usersCount", "tagsCount", "articles"
+            "articlesCount", "adminsCount", "usersCount", "tagsCount",
+            "articles", "categories", "tags"
+
         ));
     }
 
