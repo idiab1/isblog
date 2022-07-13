@@ -24,3 +24,11 @@ Route::get('/home', [HomeController::class, "index"])->name('home');
 
 // -->>> Tags route
 Route::get('/tags', [TagController::class, "index"])->name('tags');
+
+
+// -->>> Articles Route
+Route::resource('articles', ArticleController::class)->parameters([
+    "articles" => "id"
+])->names([
+    "index" => "front.articles.index",
+]);
