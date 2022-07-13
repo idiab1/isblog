@@ -173,7 +173,7 @@
                 @if ($articles->count() <= 6)
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a class="btn crayons-btn btn-sm" href="{{route("articles.index")}}">
+                            <a class="btn crayons-btn btn-sm" href="{{route("front.articles.index")}}">
                                 All Articles
                             </a>
                         </div>
