@@ -10283,10 +10283,28 @@ textarea.form-control-lg {
   font-weight: 700;
   font-size: 1.3rem;
 }
-.card.card-article .card-body p {
+.card.card-article .card-body .info {
+  display: flex;
+  align-items: center;
+}
+.card.card-article .card-body .info p {
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
   font-size: 0.85rem;
   color: #595858;
+}
+.card.card-article .card-body .info a {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+.card.card-article .card-body .info a:hover {
+  color: #8c8cfa;
 }
 .card.card-article .card-footer {
   display: flex;
