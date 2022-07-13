@@ -206,7 +206,7 @@
 
             <div class="col-lg-4">
                 <!-- Card -->
-                <div class="card mb-5">
+                <div class="card mb-4">
                     <!-- Card Header -->
                     <div class="card-header pb-0 p-3">
                         <h6 class="mb-0">Categories</h6>
@@ -247,24 +247,36 @@
                 <div class="card">
                     <!-- Card Header -->
                     <div class="card-header pb-0 p-3">
-                        <h6 class="mb-0">Categories</h6>
+                        <h6 class="mb-0">Tags</h6>
                     </div>
                     <!-- ./card-header -->
                     <!-- Card Body -->
                     <div class="card-body pb-0 p-3">
                         <ul class="list-group">
 
-                            @foreach ($categories as $category)
+                            @foreach ($tags as $tag)
                                 <li class="list-group-item border-0 d-flex justify-content-between
                                     ps-0 mb-2 border-radius-lg">
                                     <div class="d-flex align-items-center">
                                         <div class="icon icon-shape icon-sm me-3 bg-gradient-dark
                                             shadow text-center">
-                                            <i class="fas fa-circle-dot text-white opacity-10"></i>
+                                            <i class="fas fa-hashtag text-white opacity-10"></i>
                                         </div>
                                         <div class="d-flex flex-column">
-                                            <h6 class="mb-1 text-dark text-sm">{{$category->name}}</h6>
+                                            <h6 class="mb-1 text-dark text-sm">{{$tag->name}}</h6>
                                         </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a class="btn btn-link btn-icon-only btn-rounded btn-sm
+                                            text-dark icon-move-right my-auto"
+                                            href="{{route("tags.show", ["id" => $tag->id])}}">
+                                            {{-- <i class="ni ni-bold-right" aria-hidden="true"></i> --}}
+                                            <span class="text-xs">
+                                                <span class="font-weight-bold badge bg-primary">
+                                                    {{$tag->articles()->count()}}
+                                                </span>
+                                            </span>
+                                        </a>
                                     </div>
                                 </li>
                             @endforeach
@@ -276,7 +288,7 @@
                     <!-- Card Footer -->
                     <div class="card-footer p-1 text-center">
                         <a class="text-secondary text-sm font-weight-bolder"
-                            href="{{route("categories.index")}}">All Categories</a>
+                            href="{{route("tags.index")}}">All Tags</a>
                     </div>
                     <!-- ./card-footer -->
                 </div>
