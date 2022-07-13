@@ -134,12 +134,12 @@
                 @if ($articles->count() > 0)
                     <div class="row">
                         @foreach ($articles as $article)
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 mb-4">
                             <!-- card -->
                             <div class="card card-article">
                                 @if ($article->image)
                                     <!-- Card Header -->
-                                    <div class="card-header">
+                                    <div class="card-header p-0">
                                         <img src="{{asset("uploads/articles/" . $article->image)}}"
                                             alt="Image article">
                                     </div>
@@ -153,14 +153,19 @@
                                         @if ($article->tags()->count() > 0)
                                             @foreach ($article->tags as $tag)
                                                 <li>
-                                                    <a href="#">{{"#".$tag->name}}</a>
+                                                    <a href="{{route("tags.show", ["id" => $tag->id])}}">{{"#".$tag->name}}</a>
                                                 </li>
                                             @endforeach
                                         @endif
                                     </ul>
                                     <!-- ./tags -->
                                     <h2>{{$article->name}}</h2>
-                                    <p>{{$article->full_text}}</p>
+                                    <div class="info">
+                                        <p class="m-0">{{$article->full_text}}</p>
+                                        @if (strlen($article->full_text)> 13)
+                                            <a href="#">Show More</a>
+                                        @endif
+                                    </div>
                                 </div>
                                 <!-- ./card-body -->
                                 <!-- Card Footer -->
