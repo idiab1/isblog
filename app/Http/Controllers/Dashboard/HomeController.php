@@ -37,7 +37,7 @@ class HomeController extends Controller
         // Get last Five records from articles table then send to home dashboard
         $articles = Article::with("tags")
             ->orderBy('created_at', 'desc')
-            ->take(5)
+            ->take(6)
             ->get();
         return view("dashboard.home", compact(
             "articlesCount", "adminsCount", "usersCount", "tagsCount",
