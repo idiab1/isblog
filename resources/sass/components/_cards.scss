@@ -7,7 +7,13 @@
         // Card Header
         .card-header{
             padding: 0;
+            height: 200px;
+            overflow: hidden;
             background-color: transparent;
+            img{
+                height: 100%;
+                width: 100%;
+            }
         }
         // Card Body
         .card-body{
@@ -37,6 +43,7 @@
             h2{
                 font-weight: 700;
                 font-size: 1.3rem;
+                text-transform: capitalize;
             }
             // Info
             .info{
@@ -58,7 +65,7 @@
                     text-decoration: none;
                     color: #000;
                     &:hover{
-                        color: #8c8cfa;
+                        color: $navy-color;
                     }
                 }
             }
@@ -79,7 +86,7 @@
                 img{
                     width: 100%;
                     height: 100%;
-                    border: 3px solid #8c8cfa;
+                    border: 3px solid $navy-color;
                     @include prefixer(border-radius, 50%, webkit moz ms o);
                 }
             }
