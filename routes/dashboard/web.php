@@ -35,9 +35,7 @@ Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () 
     ]);
 
     // -->>> Tags Route
-    Route::resource('tags', TagController::class)->except([
-        "show"
-    ])->parameters([
+    Route::resource('tags', TagController::class)->parameters([
         "tags" => "id"
     ]);
 
