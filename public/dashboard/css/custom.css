@@ -82,6 +82,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #595858;
+
 }
 .card-article .card-body .info a{
     display: block;
