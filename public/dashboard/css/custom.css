@@ -37,11 +37,11 @@
     line-height: 1.5;
 }
 .card-article .card-header {
-    height: 250px;
+    height: 200px;
     overflow: hidden;
 }
 .card-article .card-header img{
-    height: 250px;
+    height: 100%;
     width: 100%;
 }
 .card-article .card-body ul {
@@ -71,6 +71,22 @@
     font-weight: 700;
     font-size: 1.3rem;
     text-transform: capitalize;
+}
+.card-article .card-body .info{
+    display: flex;
+    align-items: center;
+
+}
+.card-article .card-body .info p{
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-article .card-body .info a{
+    display: block;
+    font-size: .8rem;
+    font-weight: 700;
 }
 .card-article .card-footer{
     padding: 0.5rem 1rem;
