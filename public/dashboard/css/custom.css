@@ -32,6 +32,13 @@
 }
 /* End of Sidebar */
 
+/* Card */
+.card ul li .icon-sm{
+    line-height: 1.5;
+}
+
+/* End of Card */
+
 /* Table */
 div.dataTables_wrapper div.dataTables_paginate ul.pagination li:first-of-type a,
 div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
