@@ -38,11 +38,31 @@
                 font-weight: 700;
                 font-size: 1.3rem;
             }
-            p{
-                margin: 0;
-                font-size: .85rem;
-                color: #595858;
+            // Info
+            .info{
+                display: flex;
+                align-items: center;
+                p{
+                    width: 170px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin: 0;
+                    font-size: .85rem;
+                    color: #595858;
+                }
+                a{
+                    display: block;
+                    font-size: .8rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: #000;
+                    &:hover{
+                        color: #8c8cfa;
+                    }
+                }
             }
+
         }
         // Card Footer
         .card-footer{
