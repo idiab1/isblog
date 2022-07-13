@@ -24,6 +24,7 @@ Route::get('/home', [HomeController::class, "index"])->name('home');
 
 // -->>> Tags route
 Route::get('/tags', [TagController::class, "index"])->name('tags');
+Route::get('/tags/{id}', [TagController::class, "show"])->name('front.tags.show');
 
 
 // -->>> Articles Route
