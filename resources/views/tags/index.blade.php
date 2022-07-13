@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+{{-- Title --}}
+@section('page_name') Tags @endsection
+
 {{-- Styles --}}
 @section('styles')
     <style>
