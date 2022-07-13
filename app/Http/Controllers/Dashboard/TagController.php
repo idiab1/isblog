@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TagController extends Controller
 {
@@ -60,7 +61,14 @@ class TagController extends Controller
     {
         // Get data of tag from database
         $tag = Tag::find($id);
-        return view("dashboard.tags.show", compact("tag"));
+        // Get all categories from database
+        $categories = DB::table('categories')->orderBy('created_at', 'desc')->take(5)->get();
+        // Get all tags from database
+        $tags = Tag::with("articles")
+            ->orderBy('id', 'asc')
+            ->take(5)
+            ->get();
+        return view("dashboard.tags.show", compact("tag", "categories", "tags"));
     }
 
     /**
