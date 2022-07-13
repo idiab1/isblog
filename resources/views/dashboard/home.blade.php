@@ -128,212 +128,121 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-lg-7 mb-lg-0 mb-4">
-            <div class="card z-index-2 h-100">
-              <div class="card-header pb-0 pt-3 bg-transparent">
-                <h6 class="text-capitalize">Sales overview</h6>
-                <p class="text-sm mb-0">
-                  <i class="fa fa-arrow-up text-success"></i>
-                  <span class="font-weight-bold">4% more</span> in 2021
-                </p>
-              </div>
-              <div class="card-body p-3">
-                <div class="chart">
-                  <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="card card-carousel overflow-hidden h-100 p-0">
-              <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
-                <div class="carousel-inner border-radius-lg h-100">
-                  <div class="carousel-item h-100 active" style="background-image: url('../assets/img/carousel-1.jpg');
-        background-size: cover;">
-                    <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                      <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                        <i class="ni ni-camera-compact text-dark opacity-10"></i>
-                      </div>
-                      <h5 class="text-white mb-1">Get started with Argon</h5>
-                      <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item h-100" style="background-image: url('../assets/img/carousel-2.jpg');
-        background-size: cover;">
-                    <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                      <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                        <i class="ni ni-bulb-61 text-dark opacity-10"></i>
-                      </div>
-                      <h5 class="text-white mb-1">Faster way to create web pages</h5>
-                      <p>That’s my skill. I’m not really specifically talented at anything except for the ability to learn.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item h-100" style="background-image: url('../assets/img/carousel-3.jpg');
-        background-size: cover;">
-                    <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                      <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                        <i class="ni ni-trophy text-dark opacity-10"></i>
-                      </div>
-                      <h5 class="text-white mb-1">Share with us your design tips!</h5>
-                      <p>Don’t be afraid to be wrong because you can’t learn anything from a compliment.</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-lg-7 mb-lg-0 mb-4">
-            <div class="card ">
-              <div class="card-header pb-0 p-3">
-                <div class="d-flex justify-content-between">
-                  <h6 class="mb-2">Sales by Country</h6>
-                </div>
-              </div>
-              <div class="table-responsive">
-                <table class="table align-items-center ">
-                  <tbody>
-                    <tr>
-                      <td class="w-30">
-                        <div class="d-flex px-2 py-1 align-items-center">
-                          <div>
-                            <img src="../assets/img/icons/flags/US.png" alt="Country flag">
-                          </div>
-                          <div class="ms-4">
-                            <p class="text-xs font-weight-bold mb-0">Country:</p>
-                            <h6 class="text-sm mb-0">United States</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                          <h6 class="text-sm mb-0">2500</h6>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Value:</p>
-                          <h6 class="text-sm mb-0">$230,900</h6>
-                        </div>
-                      </td>
-                      <td class="align-middle text-sm">
-                        <div class="col text-center">
-                          <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                          <h6 class="text-sm mb-0">29.9%</h6>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="w-30">
-                        <div class="d-flex px-2 py-1 align-items-center">
-                          <div>
-                            <img src="../assets/img/icons/flags/DE.png" alt="Country flag">
-                          </div>
-                          <div class="ms-4">
-                            <p class="text-xs font-weight-bold mb-0">Country:</p>
-                            <h6 class="text-sm mb-0">Germany</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                          <h6 class="text-sm mb-0">3.900</h6>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Value:</p>
-                          <h6 class="text-sm mb-0">$440,000</h6>
-                        </div>
-                      </td>
-                      <td class="align-middle text-sm">
-                        <div class="col text-center">
-                          <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                          <h6 class="text-sm mb-0">40.22%</h6>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="w-30">
-                        <div class="d-flex px-2 py-1 align-items-center">
-                          <div>
-                            <img src="../assets/img/icons/flags/GB.png" alt="Country flag">
-                          </div>
-                          <div class="ms-4">
-                            <p class="text-xs font-weight-bold mb-0">Country:</p>
-                            <h6 class="text-sm mb-0">Great Britain</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                          <h6 class="text-sm mb-0">1.400</h6>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Value:</p>
-                          <h6 class="text-sm mb-0">$190,700</h6>
-                        </div>
-                      </td>
-                      <td class="align-middle text-sm">
-                        <div class="col text-center">
-                          <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                          <h6 class="text-sm mb-0">23.44%</h6>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="w-30">
-                        <div class="d-flex px-2 py-1 align-items-center">
-                          <div>
-                            <img src="../assets/img/icons/flags/BR.png" alt="Country flag">
-                          </div>
-                          <div class="ms-4">
-                            <p class="text-xs font-weight-bold mb-0">Country:</p>
-                            <h6 class="text-sm mb-0">Brasil</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                          <h6 class="text-sm mb-0">562</h6>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Value:</p>
-                          <h6 class="text-sm mb-0">$143,960</h6>
-                        </div>
-                      </td>
-                      <td class="align-middle text-sm">
-                        <div class="col text-center">
-                          <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                          <h6 class="text-sm mb-0">32.14%</h6>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-5">
+        <div class="row mt-4">
+            <div class="col-lg-8 mb-lg-0 mb-4">
+                @if ($articles->count() > 0)
+                    <div class="row">
+                        @foreach ($articles as $article)
+                        <div class="col-12 col-md-6">
+                            <!-- card -->
+                            <div class="card card-article">
+                                @if ($article->image)
+                                    <!-- Card Header -->
+                                    <div class="card-header">
+                                        <img src="{{asset("uploads/articles/" . $article->image)}}"
+                                            alt="Image article">
+                                    </div>
+                                    <!-- ./card-header -->
+                                @endif
+
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <!-- Tags -->
+                                    <ul class="list-unstyled">
+                                        @if ($article->tags()->count() > 0)
+                                            @foreach ($article->tags as $tag)
+                                                <li>
+                                                    <a href="#">{{"#".$tag->name}}</a>
+                                                </li>
+                                            @endforeach
+                                        @endif
+                                    </ul>
+                                    <!-- ./tags -->
+                                    <h2>{{$article->name}}</h2>
+                                    <p>{{$article->full_text}}</p>
+                                </div>
+                                <!-- ./card-body -->
+                                <!-- Card Footer -->
+                                <div class="card-footer d-flex align-items-center">
+                                    <!-- Image -->
+                                    <div class="image">
+                                        <img class="img-fluid" src="{{asset("uploads/default.png")}}"
+                                            alt="User avatar" width="30px">
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="user-info">
+                                        <a href="#">User name</a>
+                                    </div>
+                                </div>
+                                <!-- ./card-footer -->
+                            </div>
+                            <!-- ./card -->
+                        </div>
+                        @endforeach
+                    <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                @else
+                    <div class="row">
+                        <div class="col-12 m-auto">
+                            <!-- Empty -->
+                            <div class="empty">
+                                <!-- Image -->
+                                <div class="image">
+                                    <img src="{{asset("images/empty.svg")}}" alt="">
+                                </div>
+                                <!-- End of Image -->
+                                <!-- Info -->
+                                <div class="info ">
+                                    <p>No Record Found</p>
+                                </div>
+                            </div>
+                            <!-- End of Empty -->
+                        </div>
+                    </div>
+                @endif
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Card -->
+                <div class="card mb-5">
+                    <!-- Card Header -->
+                    <div class="card-header pb-0 p-3">
+                        <h6 class="mb-0">Categories</h6>
+                    </div>
+                    <!-- ./card-header -->
+                    <!-- Card Body -->
+                    <div class="card-body pb-0 p-3">
+                        <ul class="list-group">
+
+                            @foreach ($categories as $category)
+                                <li class="list-group-item border-0 d-flex justify-content-between
+                                    ps-0 mb-2 border-radius-lg">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon icon-shape icon-sm me-3 bg-gradient-dark
+                                            shadow text-center">
+                                            <i class="fas fa-circle-dot text-white opacity-10"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">{{$category->name}}</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                            @endforeach
+
+
+                        </ul>
+                    </div>
+                    <!-- ./card-body -->
+                    <!-- Card Footer -->
+                    <div class="card-footer p-1 text-center">
+                        <a class="text-secondary text-sm font-weight-bolder"
+                            href="{{route("categories.index")}}">All Categories</a>
+                    </div>
+                    <!-- ./card-footer -->
+                </div>
+                <!-- ./card -->
                 <!-- Card -->
                 <div class="card">
                     <!-- Card Header -->
@@ -371,7 +280,8 @@
                     </div>
                     <!-- ./card-footer -->
                 </div>
-          </div>
+                <!-- ./card -->
+            </div>
         </div>
 
 
