@@ -170,6 +170,15 @@
                 <!-- /.col -->
                 </div>
                 <!-- /.row -->
+                @if ($articles->count() <= 6)
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <a class="btn crayons-btn btn-sm" href="{{route("articles.index")}}">
+                                All Articles
+                            </a>
+                        </div>
+                    </div>
+                @endif
             @else
                 <div class="row">
                     <div class="col-12 m-auto">
