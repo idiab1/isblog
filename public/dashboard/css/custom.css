@@ -38,6 +38,7 @@
 }
 .card-article .card-header {
     height: 250px;
+    overflow: hidden;
 }
 .card-article .card-header img{
     height: 250px;
