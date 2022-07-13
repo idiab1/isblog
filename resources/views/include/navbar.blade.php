@@ -16,7 +16,7 @@
                 </li>
                 <!-- Article -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">{{ __('Article') }}</a>
+                    <a class="nav-link" href="{{route("front.articles.index")}}">{{ __('Article') }}</a>
                 </li>
                 <!-- Tags -->
                 <li class="nav-item">
