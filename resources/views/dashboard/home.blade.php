@@ -134,60 +134,69 @@
                 @if ($articles->count() > 0)
                     <div class="row">
                         @foreach ($articles as $article)
-                        <div class="col-12 col-md-6 mb-4">
-                            <!-- card -->
-                            <div class="card card-article">
-                                @if ($article->image)
-                                    <!-- Card Header -->
-                                    <div class="card-header p-0">
-                                        <img src="{{asset("uploads/articles/" . $article->image)}}"
-                                            alt="Image article">
-                                    </div>
-                                    <!-- ./card-header -->
-                                @endif
+                            <div class="col-12 col-md-6 mb-4">
+                                <!-- card -->
+                                <div class="card card-article">
+                                    @if ($article->image)
+                                        <!-- Card Header -->
+                                        <div class="card-header p-0">
+                                            <img src="{{asset("uploads/articles/" . $article->image)}}"
+                                                alt="Image article">
+                                        </div>
+                                        <!-- ./card-header -->
+                                    @endif
 
-                                <!-- Card body -->
-                                <div class="card-body">
-                                    <!-- Tags -->
-                                    <ul class="list-unstyled">
-                                        @if ($article->tags()->count() > 0)
-                                            @foreach ($article->tags as $tag)
-                                                <li>
-                                                    <a href="{{route("tags.show", ["id" => $tag->id])}}">{{"#".$tag->name}}</a>
-                                                </li>
-                                            @endforeach
-                                        @endif
-                                    </ul>
-                                    <!-- ./tags -->
-                                    <h2>{{$article->name}}</h2>
-                                    <div class="info">
-                                        <p class="m-0">{{$article->full_text}}</p>
-                                        @if (strlen($article->full_text)> 13)
-                                            <a href="#">Show More</a>
-                                        @endif
+                                    <!-- Card body -->
+                                    <div class="card-body">
+                                        <!-- Tags -->
+                                        <ul class="list-unstyled">
+                                            @if ($article->tags()->count() > 0)
+                                                @foreach ($article->tags as $tag)
+                                                    <li>
+                                                        <a href="{{route("tags.show", ["id" => $tag->id])}}">{{"#".$tag->name}}</a>
+                                                    </li>
+                                                @endforeach
+                                            @endif
+                                        </ul>
+                                        <!-- ./tags -->
+                                        <h2>{{$article->name}}</h2>
+                                        <div class="info">
+                                            <p class="m-0">{{$article->full_text}}</p>
+                                            @if (strlen($article->full_text)> 13)
+                                                <a href="#">Show More</a>
+                                            @endif
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- ./card-body -->
-                                <!-- Card Footer -->
-                                <div class="card-footer d-flex align-items-center">
-                                    <!-- Image -->
-                                    <div class="image">
-                                        <img class="img-fluid" src="{{asset("uploads/default.png")}}"
-                                            alt="User avatar" width="30px">
-                                    </div>
+                                    <!-- ./card-body -->
                                     <!-- Card Footer -->
-                                    <div class="user-info">
-                                        <a href="#">User name</a>
+                                    <div class="card-footer d-flex align-items-center">
+                                        <!-- Image -->
+                                        <div class="image">
+                                            <img class="img-fluid" src="{{asset("uploads/default.png")}}"
+                                                alt="User avatar" width="30px">
+                                        </div>
+                                        <!-- Card Footer -->
+                                        <div class="user-info">
+                                            <a href="#">User name</a>
+                                        </div>
                                     </div>
+                                    <!-- ./card-footer -->
                                 </div>
-                                <!-- ./card-footer -->
+                                <!-- ./card -->
                             </div>
-                            <!-- ./card -->
-                        </div>
                         @endforeach
                     <!-- /.col -->
                     </div>
                     <!-- /.row -->
+                    @if ($articles->count() <= 6)
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <a class="btn btn-primary btn-sm" href="{{route("articles.index")}}">
+                                    All Articles
+                                </a>
+                            </div>
+                        </div>
+                    @endif
                 @else
                     <div class="row">
                         <div class="col-12 m-auto">
