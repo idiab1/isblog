@@ -9,27 +9,15 @@
     <!-- Social Links -->
     <ul class="list-unstyled">
         <li>
-            <!-- Facebook -->
-            <a class="" href="#">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </li>
-        <li>
             <!-- Github -->
-            <a class="" href="#">
+            <a href="{{App\Models\Setting::first()->github_url}}" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
         </li>
         <li>
             <!-- Linkin -->
-            <a class="" href="#">
+            <a href="{{App\Models\Setting::first()->linkedin_url}}" target="_blank">
                 <i class="fab fa-linkedin"></i>
-            </a>
-        </li>
-        <li>
-            <!-- twitter -->
-            <a class="" href="#">
-                <i class="fab fa-twitter"></i>
             </a>
         </li>
     </ul>
@@ -68,52 +56,141 @@
 
         <!-- Articles Content -->
         <div class="articles-content">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <!-- card -->
-                    <div class="card card-article">
-                        <!-- Card Header -->
-                        <div class="card-header"></div>
-                        <!-- ./card-header -->
+            @if ($articles->count() > 0)
+                <div class="row">
+                    @foreach ($articles as $article)
+                        <div class="col-12 col-md-4 mb-4">
+                            <!-- card -->
+                            <div class="card card-article">
+                                @if ($article->image)
+                                    <!-- Card Header -->
+                                    <div class="card-header p-0">
+                                        <img src="{{asset("uploads/articles/" . $article->image)}}"
+                                            alt="Image article">
+                                    </div>
+                                    <!-- ./card-header -->
+                                @endif
 
-                        <!-- Card body -->
-                        <div class="card-body">
-                            <!-- Tags -->
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#">#tag</a>
-                                </li>
-                                <li>
-                                    <a href="#">#tag</a>
-                                </li>
-                                <li>
-                                    <a href="#">#tag</a>
-                                </li>
-                                <li>
-                                    <a href="#">#tag</a>
-                                </li>
-                            </ul>
-                            <!-- ./tags -->
-                            <h2>Article Title</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, atque.</p>
+                                <!-- Card body -->
+                                <div class="card-body">
+                                    <!-- Tags -->
+                                    <ul class="list-unstyled">
+                                        @if ($article->tags()->count() > 0)
+                                            @foreach ($article->tags as $tag)
+                                                <li>
+                                                    <a href="{{route("tags.show", ["id" => $tag->id])}}">{{"#".$tag->name}}</a>
+                                                </li>
+                                            @endforeach
+                                        @endif
+                                    </ul>
+                                    <!-- ./tags -->
+                                    <h2>{{$article->name}}</h2>
+                                    <div class="info">
+                                        <p class="m-0">{{$article->full_text}}</p>
+                                        @if (strlen($article->full_text)> 13)
+                                            <a href="#" data-bs-toggle="modal"
+                                                data-bs-target="#articleShow{{$article->id}}">
+                                                Show More
+                                            </a>
+                                        @endif
+                                    </div>
+                                </div>
+                                <!-- ./card-body -->
+                                <!-- Card Footer -->
+                                <div class="card-footer d-flex align-items-center">
+                                    <!-- Image -->
+                                    <div class="image">
+                                        <img class="img-fluid" src="{{asset("uploads/default.png")}}"
+                                            alt="User avatar" width="30px">
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="user-info">
+                                        <a href="#">User name</a>
+                                    </div>
+                                </div>
+                                <!-- ./card-footer -->
+                            </div>
+                            <!-- ./card -->
+                            <!-- Show article Modal -->
+                            <div class="modal modal-article fade text-left" id="articleShow{{$article->id}}" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <!-- model dialog -->
+                                <div class="modal-dialog">
+                                    <!-- model dialog -->
+                                    <div class="modal-content">
+                                        <!-- model header -->
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">{{$article->name . "'s"}}</h5>
+                                            <button type="button" class="btn-close"
+                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <!-- ./model-header -->
+
+                                        <!-- model body -->
+                                        <div class="modal-body">
+                                            @if ($article->image)
+                                                <!-- Article Image -->
+                                                <div class="article-image">
+                                                    <img class="img-fluid" src="{{asset("uploads/articles/" . $article->image)}}" alt="Article Image">
+                                                </div>
+                                            @endif
+
+                                            <!-- Article Description -->
+                                            <div class="description">
+                                                <p class="m-0">{{$article->full_text}}</p>
+                                            </div>
+                                            <!-- Tags -->
+                                            <ul class="list-unstyled m-0">
+                                                {{-- {{$article->tags}} --}}
+                                                @if ($article->tags()->count() > 0)
+                                                    @foreach ($article->tags as $tag)
+                                                        <li>
+                                                            <a href="#">{{"#".$tag->name}}</a>
+                                                        </li>
+                                                    @endforeach
+                                                @endif
+                                            </ul>
+
+                                        </div>
+                                        <!-- ./model-body -->
+                                        <!-- model footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                        <!-- ./model-footer -->
+
+                                    </div>
+                                        <!-- ./model-content -->
+                                </div>
+                                <!-- ./model-dialog -->
+                            </div>
                         </div>
-                        <!-- ./card-body -->
-                        <!-- Card Footer -->
-                        <div class="card-footer">
+                    @endforeach
+                <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            @else
+                <div class="row">
+                    <div class="col-12 m-auto">
+                        <!-- Empty -->
+                        <div class="empty">
                             <!-- Image -->
                             <div class="image">
-                                <img class="img-fluid" src="{{asset("uploads/default.png")}}" alt="User avatar">
+                                <img src="{{asset("images/empty.svg")}}" alt="">
                             </div>
-                            <!-- Card Footer -->
-                            <div class="user-info">
-                                <a href="#">User name</a>
+                            <!-- End of Image -->
+                            <!-- Info -->
+                            <div class="info ">
+                                <p>No Record Found</p>
                             </div>
                         </div>
-                        <!-- ./card-footer -->
+                        <!-- End of Empty -->
                     </div>
-                    <!-- ./card -->
                 </div>
-            </div>
+            @endif
+
+
         </div>
         <!-- ./articles-content -->
     </div>
