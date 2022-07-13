@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -28,8 +29,13 @@ class HomeController extends Controller
         $tagsCount = Tag::count();
         // Get all categories from database
         $categories = Category::all();
+        // Get last Five records from articles table then send to home dashboard
+        $articles = Article::with("tags")
+            ->orderBy('created_at', 'desc')
+            ->take(5)
+            ->get();
         return view("dashboard.home", compact(
-            "categories", "articlesCount", "adminsCount", "usersCount", "tagsCount"
+            "categories", "articlesCount", "adminsCount", "usersCount", "tagsCount", "articles"
         ));
     }
 
