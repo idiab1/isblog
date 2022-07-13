@@ -10248,13 +10248,30 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.crayons-btn {
+  background-color: #8c8cfa;
+  border-color: #8c8cfa;
+  font-weight: 700;
+}
+.crayons-btn:hover, .crayons-btn:focus {
+  background-color: #8c8cfa;
+  border-color: #8c8cfa;
+  box-shadow: none;
+}
+
 .card.card-article {
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
   border-color: transparent;
 }
 .card.card-article .card-header {
   padding: 0;
+  height: 200px;
+  overflow: hidden;
   background-color: transparent;
+}
+.card.card-article .card-header img {
+  height: 100%;
+  width: 100%;
 }
 .card.card-article .card-body ul {
   display: flex;
@@ -10282,6 +10299,7 @@ textarea.form-control-lg {
 .card.card-article .card-body h2, .card.card-article .card-body .h2 {
   font-weight: 700;
   font-size: 1.3rem;
+  text-transform: capitalize;
 }
 .card.card-article .card-body .info {
   display: flex;
@@ -10359,7 +10377,7 @@ textarea.form-control-lg {
   height: 50vh;
   display: flex;
   align-items: center;
-  background-color: rgb(140, 140, 250);
+  background-color: #8c8cfa;
   border-bottom: 4px solid #444;
   /*
   .header-info{
