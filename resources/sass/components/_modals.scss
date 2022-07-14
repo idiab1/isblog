@@ -1,0 +1,39 @@
+// Modal article
+.modal-article{
+    // Modal Content
+    .modal-content{
+        // Image
+        .article-image{
+            margin-bottom: 20px;
+        }
+        // Description
+        .description{
+            padding-bottom: 1rem;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            li{
+                padding: 0.35rem 0.5rem;
+                margin-right: 0.25rem;
+                margin-left: 0.25rem;
+                font-size: 0.87rem;
+                letter-spacing: 0.07rem;
+                font-weight: 500;
+                line-height: 1.2;
+                background-color: #FF8C32;
+                &:first-of-type{
+                    margin-left: 0;
+                }
+                a {
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// End of Modal
+
