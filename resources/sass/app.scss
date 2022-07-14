@@ -25,6 +25,10 @@
 // Header
 @import './layouts/header';
 
+// Styles
+@import "./layouts/styles";
+
+
 // -->> Pages
 // Login
 @import "./pages/login";
@@ -34,3 +38,5 @@
 
 // Tag
 @import "./pages/tags";
+
+
