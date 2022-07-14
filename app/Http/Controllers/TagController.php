@@ -48,7 +48,12 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        //
+        // Get tag by id with articles related it
+        $tag = Tag::find($id);
+        // Get all tags from database
+        $tags = Tag::with("articles")->get();
+
+        return view("tags.show", compact("tag", "tags"));
     }
 
     /**
