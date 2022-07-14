@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 {{-- Title --}}
-@section('page_name') Tags @endsection
+@section('page_name') {{$tag->name . "'s"}} @endsection
 
 {{-- Styles --}}
 @section('styles')
@@ -18,7 +18,7 @@
 
 {{-- Header Info --}}
 @section('header-info')
-    <h1>Tags</h1>
+    <h1>{{$tag->name . "'s"}}</h1>
 @endsection
 
 {{-- Content --}}
@@ -27,6 +27,7 @@
 <section class="tags-page section">
     <!-- Container -->
     <div class="container">
+
         <!-- tags Content -->
         <div class="articles-content">
             @if ($tag->articles->count() > 0)
