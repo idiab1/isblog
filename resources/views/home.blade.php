@@ -78,7 +78,7 @@
                                         @if ($article->tags()->count() > 0)
                                             @foreach ($article->tags as $tag)
                                                 <li>
-                                                    <a href="{{route("tags.show", ["id" => $tag->id])}}">{{"#".$tag->name}}</a>
+                                                    <a href="{{route("front.tags.show", ["id" => $tag->id])}}">{{"#".$tag->name}}</a>
                                                 </li>
                                             @endforeach
                                         @endif
