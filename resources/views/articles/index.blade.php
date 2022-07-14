@@ -13,6 +13,11 @@
             background-color: #fff;
             border-bottom: none;
         }
+        h1{
+            font-size: 1.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     </style>
 @endsection
 
