@@ -33,7 +33,9 @@
                 <div class="tags-content">
                     @if ($tags->count() > 0)
                         @foreach ($tags as $tag)
-                            <a href="#" class="btn btn-secondary">{{$tag->name}}</a>
+                            <a class="btn crayons-btn" href="{{route("front.tags.show", ["id" => $tag->id])}}">
+                                {{$tag->name}}
+                            </a>
                         @endforeach
                     @endif
                 </div>
