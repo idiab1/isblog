@@ -16,6 +16,7 @@
         h1{
             font-size: 1.7rem;
             font-weight: bold;
+            margin-bottom: 0;
             text-transform: uppercase;
         }
     </style>
@@ -38,7 +39,7 @@
                 <div class="tags-content">
                     @if ($tags->count() > 0)
                         @foreach ($tags as $tag)
-                            <a class="btn crayons-btn" href="{{route("front.tags.show", ["id" => $tag->id])}}">
+                            <a class="btn btn-sm crayons-btn" href="{{route("front.tags.show", ["id" => $tag->id])}}">
                                 {{$tag->name}}
                             </a>
                         @endforeach
