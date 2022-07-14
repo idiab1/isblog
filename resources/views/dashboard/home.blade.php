@@ -334,7 +334,9 @@
                                             <i class="fas fa-hashtag text-white opacity-10"></i>
                                         </div>
                                         <div class="d-flex flex-column">
-                                            <h6 class="mb-1 text-dark text-sm">{{$tag->name}}</h6>
+                                            <a href="{{route("tags.show", ["id" => $tag->id])}}">
+                                                <h6 class="mb-1 text-dark text-sm">{{$tag->name}}</h6>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="d-flex">
