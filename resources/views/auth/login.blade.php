@@ -29,7 +29,7 @@
                                         @csrf
 
                                         <!-- email -->
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-4">
                                             <!-- Icon -->
                                             <span class="input-group-text" id="email">
                                                 <i class="fas fa-envelope"></i>
@@ -47,10 +47,10 @@
                                         </div>
 
                                         <!-- Password -->
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-4">
                                             <!-- Icon -->
                                             <span class="input-group-text" id="password">
-                                                <i class="fas fa-envelope"></i>
+                                                <i class="fas fa-lock"></i>
                                             </span>
                                             <!-- Input -->
                                             <input id="password" type="password" class="form-control
