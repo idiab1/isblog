@@ -51,7 +51,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="#"
+                                    data-bs-toggle="modal" data-bs-target="#profile-{{Auth::user()->id}}">
                                     {{ __('Setting') }}
                                 </a>
                             </li>
