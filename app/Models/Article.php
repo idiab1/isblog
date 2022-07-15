@@ -42,4 +42,16 @@ class Article extends Model
         return $this->hasOne(Category::class);
     }
 
+
+    /**
+     * Get the user that owns the Article
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }
