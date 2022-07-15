@@ -9,3 +9,17 @@
         box-shadow: none;
     }
 }
+
+// Login Button
+.login-btn{
+    color: #fff;
+    font-weight: 700;
+    background-color: $dark-blue;
+    border-color: $dark-blue;
+    &:focus, &:hover{
+        color: #fff;
+        box-shadow: none;
+        background-color: $dark-blue;
+        border-color: $dark-blue;
+    }
+}
