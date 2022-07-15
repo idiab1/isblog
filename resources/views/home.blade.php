@@ -30,7 +30,7 @@
     <!-- Container -->
     <div class="container">
         <!-- Some Tags -->
-        <div class="some-tags">
+        <div class="some-tags pt-4">
             <ul class="list-unstyled">
                 <li>
                     <a href="#">#tag</a>
