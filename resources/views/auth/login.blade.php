@@ -84,7 +84,7 @@
                                         </div>
 
                                         <div class="form-group text-center mb-0">
-                                            <button type="submit" class="btn crayons-btn">
+                                            <button type="submit" class="btn login-btn">
                                                 {{ __('Login') }}
                                             </button>
                                         </div>
