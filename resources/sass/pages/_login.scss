@@ -1,6 +1,80 @@
 // loign
 .login-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../images/pattern-background.svg) no-repeat;
+    background-color: #3e348f;
+    // Form Container
+    .form-container{
+        // Card Form
+        .card-form{
 
+            // Card Header
+            .card-header{
+                padding-top: 1.5rem;
+                border-bottom: none;
+                background-color: transparent;
+                h2{
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    color: $dark-blue;
+                }
+            }
+
+            // Card Body
+            .card-body{
+                padding: 2rem 1.2rem;
+                // Form
+                form{
+
+                    .input-group-text{
+                        background-color: transparent;
+                    }
+
+                    input{
+
+                        &:focus{
+                            box-shadow: none;
+                            border-color: none;
+                        }
+                    }
+                    a.btn-link{
+                        padding: 0;
+                        font-size: .9rem;
+                        color: $dark-blue;
+                        &:focus{
+                            box-shadow: none;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        // Card Info
+        .card-info{
+            height: 100%;
+            position: relative;
+            background: url("../../images/bg.jpg") center center no-repeat;
+            background-size: cover;
+
+            .card-body{
+                display: FLEX;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                h1{
+                    color: #fff;
+                }
+                p{
+                    color: #c1c1c1;
+                }
+            }
+        }
+    }
 }
 
 // End of loign

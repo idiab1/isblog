@@ -10259,6 +10259,19 @@ textarea.form-control-lg {
   box-shadow: none;
 }
 
+.login-btn {
+  color: #fff;
+  font-weight: 700;
+  background-color: #040534;
+  border-color: #040534;
+}
+.login-btn:focus, .login-btn:hover {
+  color: #fff;
+  box-shadow: none;
+  background-color: #040534;
+  border-color: #040534;
+}
+
 .card.card-article {
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
   border-color: transparent;
@@ -10489,6 +10502,62 @@ textarea.form-control-lg {
 }
 .empty .info p {
   margin-bottom: 0;
+}
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/images/pattern-background.svg?5a0ab6898fc956557d0047f46ed7df62) no-repeat;
+  background-color: #3e348f;
+}
+.login-page .form-container .card-form .card-header {
+  padding-top: 1.5rem;
+  border-bottom: none;
+  background-color: transparent;
+}
+.login-page .form-container .card-form .card-header h2, .login-page .form-container .card-form .card-header .h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #040534;
+}
+.login-page .form-container .card-form .card-body {
+  padding: 2rem 1.2rem;
+}
+.login-page .form-container .card-form .card-body form .input-group-text {
+  background-color: transparent;
+}
+.login-page .form-container .card-form .card-body form input:focus {
+  box-shadow: none;
+  border-color: none;
+}
+.login-page .form-container .card-form .card-body form a.btn-link {
+  padding: 0;
+  font-size: 0.9rem;
+  color: #040534;
+}
+.login-page .form-container .card-form .card-body form a.btn-link:focus {
+  box-shadow: none;
+}
+.login-page .form-container .card-info {
+  height: 100%;
+  position: relative;
+  background: url(/images/bg.jpg?2a24cd4753cecbd9d06a5dd3147a072b) center center no-repeat;
+  background-size: cover;
+}
+.login-page .form-container .card-info .card-body {
+  display: FLEX;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-page .form-container .card-info .card-body h1, .login-page .form-container .card-info .card-body .h1 {
+  color: #fff;
+}
+.login-page .form-container .card-info .card-body p {
+  color: #c1c1c1;
 }
 
 .homepage .some-tags ul {
