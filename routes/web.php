@@ -33,3 +33,6 @@ Route::resource('articles', ArticleController::class)->parameters([
 ])->names([
     "index" => "front.articles.index",
 ]);
+
+// -->>> Profile Route
+Route::put('profile/{id}', [ProfileController::class, "update"])->name("front.profile.update");
