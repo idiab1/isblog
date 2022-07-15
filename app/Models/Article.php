@@ -9,7 +9,9 @@ class Article extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
-    protected $fillable = ["name", "full_text", "category_id", "image"];
+    protected $fillable = [
+        "name", "full_text", "category_id", "image", "user_id"
+    ];
     protected $appends = ["image_path"];
 
 
