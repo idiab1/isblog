@@ -25,3 +25,55 @@
 
 
 // End of Empty
+
+// Avatar Upload
+.avatar-upload{
+    position: relative;
+    max-width: 165px;
+    margin: 15px auto;
+    .avatar-edit{
+        position: absolute;
+        right: 0px;
+        z-index: 1;
+        top: calc((100%/2) - 17px);
+        input{
+            display: none;
+        }
+        label{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            margin-bottom: 0;
+            border-radius: 100%;
+            background-color: $dark-blue;
+            color: #fff;
+            border: 1px solid transparent;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            font-weight: normal;
+            transition: all .2s ease-in-out;
+        }
+    }
+}
+// End of Avatar Upload
+
+// Avatar Preview
+.avatar-preview {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid $dark-blue;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    div {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+// End of Avatar Preview
