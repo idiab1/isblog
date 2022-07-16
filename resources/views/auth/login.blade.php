@@ -18,7 +18,7 @@
                 <!-- Form Container -->
                 <div class="form-container">
                     <div class="row">
-                        <div class="col-md-6 p-0">
+                        <div class="col-md-6 p-0 animate__animated animate__backInLeft">
                             <div class="card card-form">
                                 <div class="card-header">
                                     <h2 class="card-title text-center mb-0">{{ __('Login Please') }}</h2>
@@ -92,11 +92,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 p-0">
+                        <div class="col-md-6 p-0 animate__animated animate__backInRight">
                             <!-- Card Info -->
                             <div class="card card-info">
                                 <div class="card-body">
-                                    <h1>Welcome!</h1>
+                                    <h1 class="animate__animated animate__bounce animate__delay-2s">Welcome!</h1>
                                     <p class="m-0">Enter Your details and start journey with us.</p>
                                 </div>
                             </div>
