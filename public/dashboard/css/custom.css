@@ -44,17 +44,24 @@
     height: 100%;
     width: 100%;
 }
+.card-article .card-body{
+    padding: 1.2rem;
+}
 .card-article .card-body ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 0.7rem;
+    /* width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
 }
 .card-article .card-body ul li {
     padding: 0.35rem 0.5rem;
     margin-right: 0.25rem;
     margin-left: 0.25rem;
-    font-size: 0.7rem;
+    font-size: 0.73rem;
     letter-spacing: 0.08rem;
     font-weight: 600;
     line-height: 1.2;
@@ -71,6 +78,10 @@
     font-weight: 700;
     font-size: 1.3rem;
     text-transform: capitalize;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .card-article .card-body .info{
     display: flex;
