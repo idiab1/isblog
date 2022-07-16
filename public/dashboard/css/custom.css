@@ -161,29 +161,19 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
 .modal-article .modal-content .description{
     padding-bottom: 1rem;
 }
-.modal-article .modal-content ul{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.modal-article .modal-content ul li{
-    padding: 0.35rem 0.5rem;
+
+.tags-content a{
     margin-right: 0.25rem;
     margin-left: 0.25rem;
-    font-size: 0.87rem;
-    letter-spacing: 0.07rem;
-    font-weight: 500;
-    line-height: 1.2;
+    margin-bottom: 0.5rem;
     background-color: #FF8C32;
 }
-.modal-article .modal-content ul li:first-of-type{
+.tags-content a:hover{
+    background-color: #FF8C32;
+}
+.tags-content a:first-of-type{
     margin-left: 0;
 }
-.modal-article .modal-content ul li a {
-    color: #000;
-    text-decoration: none;
-}
-
 /* Avatar Preview */
 .avatar-upload {
     position: relative;
