@@ -151,11 +151,19 @@
                                         <!-- Tags -->
                                         <ul class="list-unstyled">
                                             @if ($article->tags()->count() > 0)
-                                                @foreach ($article->tags as $tag)
+                                                @foreach ($article->tags as $index => $tag)
                                                     <li>
-                                                        <a href="{{route("tags.show", ["id" => $tag->id])}}">{{"#".$tag->name}}</a>
+                                                        <a href="{{route("tags.show", ["id" => $tag->id])}}">
+                                                            {{"#".$tag->name}}
+                                                        </a>
                                                     </li>
+                                                    @if ($index == 2)
+                                                        @php
+                                                            break;
+                                                        @endphp
+                                                    @endif
                                                 @endforeach
+
                                             @endif
                                         </ul>
                                         <!-- ./tags -->
