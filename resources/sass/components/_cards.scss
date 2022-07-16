@@ -40,10 +40,22 @@
                     }
                 }
             }
+            a{
+                color: #000;
+                text-decoration: none;
+                &:hover{
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
             h2{
                 font-weight: 700;
                 font-size: 1.3rem;
                 text-transform: capitalize;
+                width: 200px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             // Info
             .info{
