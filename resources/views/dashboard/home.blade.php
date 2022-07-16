@@ -159,7 +159,10 @@
                                             @endif
                                         </ul>
                                         <!-- ./tags -->
-                                        <h2>{{$article->name}}</h2>
+                                        <a href="#" data-bs-toggle="modal"
+                                            data-bs-target="#articleShow{{$article->id}}">
+                                            <h2>{{$article->name}}</h2>
+                                        </a>
                                         <div class="info">
                                             <p class="m-0">{{$article->full_text}}</p>
                                             @if (strlen($article->full_text)> 13)
@@ -175,12 +178,12 @@
                                     <div class="card-footer d-flex align-items-center">
                                         <!-- Image -->
                                         <div class="image">
-                                            <img class="img-fluid" src="{{asset("uploads/default.png")}}"
+                                            <img class="img-fluid" src="{{asset("uploads/users/". $article->user->image)}}"
                                                 alt="User avatar" width="30px">
                                         </div>
                                         <!-- Card Footer -->
                                         <div class="user-info">
-                                            <a href="#">User name</a>
+                                            <a href="#">{{$article->user->name}}</a>
                                         </div>
                                     </div>
                                     <!-- ./card-footer -->
