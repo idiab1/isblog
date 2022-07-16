@@ -26,6 +26,9 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="{{asset("libs/select2/css/select2.min.css")}}" />
 
+    <!-- Animate library -->
+    <link rel="stylesheet" href="{{asset("libs/animate/css/animate.min.css")}}"/>
+
     <!-- CSS custom -->
     <link rel="stylesheet" href="{{asset("dashboard/css/custom.css")}}" />
 

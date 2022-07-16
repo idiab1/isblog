@@ -14,10 +14,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
         <!-- Fontawesome -->
         <link rel="stylesheet" href="{{asset("libs/fontawesome-free/css/all.min.css")}}">
+        <!-- Animate library -->
+        <link rel="stylesheet" href="{{asset("libs/animate/css/animate.min.css")}}"/>
 
         <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         {{-- Other Styles --}}
         @yield('styles')
     </head>
