@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        "image",
         'password',
         "is_admin",
         "facebook_url",
@@ -32,7 +33,7 @@ class User extends Authenticatable
 
     // Get the path of image
     public function getImagePathAttr(){
-        return asset("uploads/" . $this->image);
+        return asset("uploads/users/" . $this->image);
     }
 
     public function IsAdmin(){
