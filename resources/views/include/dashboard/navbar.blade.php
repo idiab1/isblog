@@ -53,7 +53,8 @@
                         </div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="#"
+                        data-bs-toggle="modal" data-bs-target="#profile-{{Auth::user()->id}}">
                             {{ __('Setting') }}
                         </a>
                     </li>
