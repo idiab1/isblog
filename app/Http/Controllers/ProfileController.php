@@ -77,9 +77,11 @@ class ProfileController extends Controller
         $user = User::find($id);
         $request_date = $request->all();
 
-        if($request->has("image")){
-            if($user->image){
-                Storage::disk("public_uploads")->delete('/users/' . $user->image);
+        if($request->image && $request->image != null){
+
+            // Delete image from uploads folder
+            if($user->image && $user->image != 'default.png'){
+                Storage::disk('public_uploads')->delete('/users/' . $user->image);
             }
 
             Image::make($request->image)->resize(300, null, function ($constraint) {
@@ -111,11 +113,11 @@ class ProfileController extends Controller
                 "facebook_url" => $request->facebook_url,
                 "twitter_url" => $request->twitter_url,
             ]);
-    
+
             return redirect()->back();
         }
 
-        
+
     }
 
     /**
