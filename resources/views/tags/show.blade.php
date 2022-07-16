@@ -88,12 +88,12 @@
                                 <div class="card-footer d-flex align-items-center">
                                     <!-- Image -->
                                     <div class="image">
-                                        <img class="img-fluid" src="{{asset("uploads/default.png")}}"
+                                        <img class="img-fluid" src="{{asset("uploads/users/". $article->user->image)}}"
                                             alt="User avatar" width="30px">
                                     </div>
                                     <!-- Card Footer -->
                                     <div class="user-info">
-                                        <a href="#">User name</a>
+                                        <a href="#">{{$article->user->name}}</a>
                                     </div>
                                 </div>
                                 <!-- ./card-footer -->
