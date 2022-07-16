@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,6 +29,11 @@ class HomeController extends Controller
         $articles = Article::with("tags")->orderBy('created_at', 'desc')
             ->take(6)
             ->get();
-        return view('home', compact("articles"));
+        // Get all tags from database
+        $tags = Tag::with("articles")
+            ->orderBy('id', 'asc')
+            ->take(5)
+            ->get();
+        return view('home', compact("articles", "tags"));
     }
 }
