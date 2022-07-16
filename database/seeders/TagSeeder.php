@@ -235,6 +235,9 @@ class TagSeeder extends Seeder
                 "name" => "frontend"
             ],
             [
+                "name" => "backend"
+            ],
+            [
                 "name" => "graphql"
             ],
             [
@@ -302,6 +305,9 @@ class TagSeeder extends Seeder
             ],
             [
                 "name" => "deeplearning"
+            ],
+            [
+                "name" => "deno"
             ],
         ];
 
