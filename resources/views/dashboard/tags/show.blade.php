@@ -2,7 +2,7 @@
 
 {{-- Page Name --}}
 @section('page_name')
-    {{$tag->name . "/'s"}}
+    {{$tag->name . "'s"}}
 @endsection
 
 @section('content')
@@ -116,7 +116,7 @@
                                                         @endforeach
                                                     @endif
                                                 </div>
-                                                
+
                                             </div>
                                             <!-- ./model-body -->
                                             <!-- model footer -->
