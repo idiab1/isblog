@@ -7,6 +7,7 @@ use App\Models\Article;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -64,6 +65,7 @@ class ArticleController extends Controller
                 "name"          => $request->name,
                 "full_text"     => $request->full_text,
                 "category_id"   => $request->category_id,
+                "user_id"       => Auth::user()->id,
                 "image"         => $request->image->hashName(),
             ]);
 
@@ -76,6 +78,7 @@ class ArticleController extends Controller
                 "name"          => $request->name,
                 "full_text"     => $request->full_text,
                 "category_id"   => $request->category_id,
+                "user_id"       => Auth::user()->id,
             ]);
 
             $article->tags()->attach($request->tags);
@@ -142,6 +145,7 @@ class ArticleController extends Controller
                 "name"          => $request->name,
                 "full_text"     => $request->full_text,
                 "category_id"   => $request->category_id,
+                "user_id"       => Auth::user()->id,
                 "image"         => $request->image->hashName(),
             ]);
 
@@ -152,6 +156,7 @@ class ArticleController extends Controller
             $article->update([
                 "name"          => $request->name,
                 "full_text"     => $request->full_text,
+                "user_id"       => Auth::user()->id,
                 "category_id"   => $request->category_id,
             ]);
 
