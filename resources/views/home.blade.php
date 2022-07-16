@@ -89,7 +89,11 @@
                                         @endif
                                     </ul>
                                     <!-- ./tags -->
-                                    <h2>{{$article->name}}</h2>
+
+                                    <a href="#" data-bs-toggle="modal"
+                                        data-bs-target="#articleShow{{$article->id}}">
+                                        <h2>{{$article->name}}</h2>
+                                    </a>
                                     <div class="info">
                                         <p class="m-0">{{$article->full_text}}</p>
                                         @if (strlen($article->full_text)> 13)
