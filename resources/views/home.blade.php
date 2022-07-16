@@ -32,24 +32,13 @@
         <!-- Some Tags -->
         <div class="some-tags pt-4">
             <ul class="list-unstyled">
-                <li>
-                    <a href="#">#tag</a>
-                </li>
-                <li>
-                    <a href="#">#tag</a>
-                </li>
-                <li>
-                    <a href="#">#tag</a>
-                </li>
-                <li>
-                    <a href="#">#tag</a>
-                </li>
-                <li>
-                    <a href="#">#tag</a>
-                </li>
-                <li>
-                    <a href="#">#tag</a>
-                </li>
+                @foreach ($tags as $tag)
+                    <li>
+                        <a href="{{route("front.tags.show", ["id" => $tag->id])}}">
+                            {{"#".$tag->name}}
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </div>
         <!-- ./some-tags -->
@@ -159,7 +148,6 @@
                                                     @endforeach
                                                 @endif
                                             </div>
-
 
                                         </div>
                                         <!-- ./model-body -->
