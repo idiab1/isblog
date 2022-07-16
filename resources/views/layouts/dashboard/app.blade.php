@@ -264,6 +264,8 @@
                     <div class="modal-body">
                         @csrf
                         @method("POST")
+                        <input class="form-control" type="text" name="user_id"  hidden>
+
                         <!-- image -->
                         <div class="form-group">
                             <label class="form-label" for="image">Image</label>
