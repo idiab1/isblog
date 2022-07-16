@@ -150,18 +150,16 @@
                                                 <p class="m-0">{{$article->full_text}}</p>
                                             </div>
                                             <!-- Tags -->
-                                            <ul class="list-unstyled m-0">
-                                                {{-- {{$article->tags}} --}}
+                                            <div class="tags-content">
                                                 @if ($article->tags()->count() > 0)
                                                     @foreach ($article->tags as $tag)
-                                                        <li>
-                                                            <a href="{{route("front.tags.show", ["id" => $tag->id])}}">
-                                                                {{"#".$tag->name}}
-                                                            </a>
-                                                        </li>
+                                                        <a class="btn btn-sm tag-btn" href="{{route("front.tags.show", ["id" => $tag->id])}}">
+                                                            {{"#".$tag->name}}
+                                                        </a>
                                                     @endforeach
                                                 @endif
-                                            </ul>
+                                            </div>
+
 
                                         </div>
                                         <!-- ./model-body -->
