@@ -43,7 +43,7 @@
                         <div class="profile py-2">
                             <!-- Image -->
                             <div class="image mb-2">
-                                <img class="img-fluid" src="{{asset("uploads/" . Auth::user()->image)}}" alt="User Image"
+                                <img class="img-fluid" src="{{asset("uploads/users/" . Auth::user()->image)}}" alt="User Image"
                                     width="30px">
                             </div>
                             <!-- Info -->

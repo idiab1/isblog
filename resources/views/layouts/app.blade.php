@@ -76,7 +76,7 @@
                                         </label>
                                     </div>
                                     <div class="avatar-preview">
-                                        <div id="imagePreview" style="background-image: url({{asset('uploads/' . Auth::user()->image)}});">
+                                        <div id="imagePreview" style="background-image: url({{asset('uploads/users/' . Auth::user()->image)}});">
                                         </div>
                                     </div>
                                 </div>
