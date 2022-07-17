@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-12 mx-auto">
                     <!-- Card -->
-                    <div class="card">
+                    <div class="card animate__animated animate__backInUp animate__delay-1s">
                         <!-- /.card-header -->
                         <div class="card-body">
                             <!-- Table -->
