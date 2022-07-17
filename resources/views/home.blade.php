@@ -5,7 +5,9 @@
 
 {{-- Header Info --}}
 @section('header-info')
-    <h1>{{App\Models\Setting::first()->name}}</h1>
+    <h1 class="animate__animated animate__lightSpeedInRight animate__delay-1s">
+        {{App\Models\Setting::first()->name}}
+    </h1>
     <!-- Social Links -->
     <ul class="list-unstyled">
         <li>

@@ -24,7 +24,9 @@
 
 {{-- Header Info --}}
 @section('header-info')
-    <h1>Tags</h1>
+    <h1 class="animate__animated animate__lightSpeedInRight animate__delay-1s">
+        Tags
+    </h1>
 @endsection
 
 {{-- Content --}}
@@ -39,7 +41,8 @@
                 <div class="tags-content">
                     @if ($tags->count() > 0)
                         @foreach ($tags as $tag)
-                            <a class="btn btn-sm crayons-btn" href="{{route("front.tags.show", ["id" => $tag->id])}}">
+                            <a class="btn btn-sm crayons-btn animate__animated animate__backInUp animate__delay-1s"
+                            href="{{route("front.tags.show", ["id" => $tag->id])}}">
                                 {{$tag->name}}
                             </a>
                         @endforeach

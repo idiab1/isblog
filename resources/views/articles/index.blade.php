@@ -24,7 +24,9 @@
 
 {{-- Header Info --}}
 @section('header-info')
-    <h1>Articles</h1>
+    <h1 class="animate__animated animate__lightSpeedInRight animate__delay-1s">
+        Articles
+    </h1>
 @endsection
 
 {{-- Content --}}
