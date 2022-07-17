@@ -105,7 +105,9 @@
                                     </div>
                                     <!-- Card Footer -->
                                     <div class="user-info">
-                                        <a href="#">{{$article->user->name}}</a>
+                                        <a href="{{route("front.profile.show", ["id" => Auth::user()->id])}}">
+                                            {{$article->user->name}}
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- ./card-footer -->
