@@ -40,7 +40,7 @@
                     @foreach ($articles as $article)
                         <div class="col-12 col-md-4 mb-4">
                             <!-- card -->
-                            <div class="card card-article">
+                            <div class="card card-article animate__animated animate__backInUp animate__delay-1s">
                                 @if ($article->image)
                                     <!-- Card Header -->
                                     <div class="card-header p-0">
