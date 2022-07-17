@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProfileController;
+// use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -36,4 +36,12 @@ Route::resource('articles', ArticleController::class)->parameters([
 ]);
 
 // -->>> Profile Route
-Route::put('profile/{id}', [ProfileController::class, "update"])->name("front.profile.update");
+Route::resource('profile', ProfileController::class)->only([
+    "update", "show"
+])->parameters([
+    "profile" => "id"
+])->names([
+    "update" => "front.profile.update",
+    "show"   => "front.profile.show",
+]);
+
