@@ -13,10 +13,12 @@
             background-color: #fff;
             border-bottom: none;
         }
+
         h1{
             font-size: 1.7rem;
             font-weight: bold;
-            margin-bottom: 0;
+            margin-bottom: .7rem;
+            margin-top: .7rem;
             text-transform: uppercase;
         }
     </style>
