@@ -158,7 +158,7 @@
 
             <div class="col-lg-4">
                 <!-- Card -->
-                <div class="card mb-4">
+                <div class="card mb-4 animate__animated animate__backInUp animate__delay-1s">
                     <!-- Card Header -->
                     <div class="card-header pb-0 p-3">
                         <h6 class="mb-0">Categories</h6>
@@ -196,7 +196,7 @@
                 </div>
                 <!-- ./card -->
                 <!-- Card -->
-                <div class="card">
+                <div class="card animate__animated animate__backInUp animate__delay-1s">
                     <!-- Card Header -->
                     <div class="card-header pb-0 p-3">
                         <h6 class="mb-0">Tags</h6>

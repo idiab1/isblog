@@ -12,7 +12,7 @@
     <div class="container py-4">
         <div class="row">
             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <div class="card">
+                <div class="card animate__animated animate__backInLeft animate__delay-1s">
                     <div class="card-body p-3">
                         <div class="row">
                             <div class="col-8">
@@ -38,7 +38,7 @@
             </div>
             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                 <!-- Card -->
-                <div class="card">
+                <div class="card animate__animated animate__backInRight animate__delay-1s">
                     <!-- card body -->
                     <div class="card-body p-3">
                         <div class="row">
@@ -71,7 +71,7 @@
             </div>
             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                 <!-- Card -->
-                <div class="card">
+                <div class="card animate__animated animate__backInLeft animate__delay-1s">
                     <!-- Card body -->
                     <div class="card-body p-3">
                         <div class="row">
@@ -101,7 +101,7 @@
                 <!-- ./card -->
             </div>
             <div class="col-xl-3 col-sm-6">
-                <div class="card">
+                <div class="card animate__animated animate__backInRight animate__delay-1s">
                     <div class="card-body p-3">
                         <div class="row">
                             <div class="col-8">
@@ -136,7 +136,7 @@
                         @foreach ($articles as $article)
                             <div class="col-12 col-md-6 mb-4">
                                 <!-- card -->
-                                <div class="card card-article">
+                                <div class="card card-article animate__animated animate__backInDown animate__delay-1s">
                                     @if ($article->image)
                                         <!-- Card Header -->
                                         <div class="card-header p-0">
@@ -287,7 +287,7 @@
 
             <div class="col-lg-4">
                 <!-- Card -->
-                <div class="card mb-4">
+                <div class="card mb-4 animate__animated animate__backInUp animate__delay-1s">
                     <!-- Card Header -->
                     <div class="card-header pb-0 p-3">
                         <h6 class="mb-0">Categories</h6>
@@ -306,7 +306,9 @@
                                             <i class="fas fa-circle-dot text-white opacity-10"></i>
                                         </div>
                                         <div class="d-flex flex-column">
-                                            <h6 class="mb-1 text-dark text-sm">{{$category->name}}</h6>
+                                            <h6 class="mb-1 text-dark text-sm">
+                                                {{$category->name}}
+                                            </h6>
                                         </div>
                                     </div>
                                 </li>
@@ -317,7 +319,7 @@
                     </div>
                     <!-- ./card-body -->
                     <!-- Card Footer -->
-                    <div class="card-footer p-1 text-center">
+                    <div class="card-footer p-1 text-center animate__animated animate__bounceIn animate__delay-2s">
                         <a class="text-secondary text-sm font-weight-bolder"
                             href="{{route("categories.index")}}">All Categories</a>
                     </div>
@@ -325,7 +327,7 @@
                 </div>
                 <!-- ./card -->
                 <!-- Card -->
-                <div class="card">
+                <div class="card animate__animated animate__backInUp animate__delay-1s">
                     <!-- Card Header -->
                     <div class="card-header pb-0 p-3">
                         <h6 class="mb-0">Tags</h6>
@@ -369,7 +371,7 @@
                     </div>
                     <!-- ./card-body -->
                     <!-- Card Footer -->
-                    <div class="card-footer p-1 text-center">
+                    <div class="card-footer p-1 text-center animate__animated animate__bounceIn animate__delay-2s">
                         <a class="text-secondary text-sm font-weight-bolder"
                             href="{{route("tags.index")}}">All Tags</a>
                     </div>
