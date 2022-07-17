@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-8 m-auto">
                     <!-- Card -->
-                    <div class="card">
+                    <div class="card animate__animated animate__backInUp animate__delay-1s">
                         <!-- Card Header -->
                         <div class="card-header">
                             <h4 class="card-title m-0">{{$article->name . "'s"}}</h4>
