@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-12 mx-auto">
                     <!-- Card -->
-                    <div class="card animate__animated animate__backInUp animate__delay-1s">
+                    <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body">
                             <!-- Table -->
@@ -38,7 +38,7 @@
                                 </thead>
                                 <tbody class="text-center">
                                     @foreach ($categories as $index => $category)
-                                        <tr>
+                                        <tr class="animate__animated animate__backInUp animate__delay-1s">
                                             <td>{{$index + 1}}</td>
                                             <td>
                                                 {{$category->name}}

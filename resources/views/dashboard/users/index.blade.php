@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-12 mx-auto">
                     <!-- Card -->
-                    <div class="card animate__animated animate__backInUp animate__delay-1s">
+                    <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body">
                             <!-- Table -->
@@ -42,7 +42,7 @@
                                         $id = 1
                                     @endphp --}}
                                     @foreach ($users as $index => $user)
-                                        <tr>
+                                        <tr class="animate__animated animate__backInUp animate__delay-1s">
                                             <td>{{$index + 1}}</td>
                                             <td>
                                                 {{$user->name}}
