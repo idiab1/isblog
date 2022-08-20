@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(["register"=> false]);
 
 // -->>> Home route
-Route::redirect('/', '/home', 301);;
+Route::redirect('/', '/home');;
 Route::get('/home', [HomeController::class, "index"])->name('home');
 
 // -->>> Tags route
