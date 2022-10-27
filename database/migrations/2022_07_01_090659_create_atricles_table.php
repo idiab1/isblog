@@ -18,6 +18,7 @@ class CreateAtriclesTable extends Migration
             $table->string('name', 100);
             $table->text('full_text');
             $table->string('image')->nullable();
+            $table->string('slug');
 
             $table->integer('category_id')->unsigned();
             $table->integer('user_id')->unsigned();
