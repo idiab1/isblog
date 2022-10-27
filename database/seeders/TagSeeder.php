@@ -16,304 +16,315 @@ class TagSeeder extends Seeder
     {
         $tags = [
             [
-                "name" => 'javascript'
+                "name" => 'Javascript',
+                "slug" => "javascript"
             ],
             [
-                "name" => "webdev"
+                "name" => "webdev",
+                "slug" => "webdev"
             ],
             [
-                "name" => "beginners"
+                "name" => "beginners",
+                "slug" => "beginners"
             ],
             [
-                "name" => "react.js"
+                "name" => "React.js",
+                "slug" => "reactjs"
             ],
             [
-                "name" => "programming"
+                "name" => "programming",
+                "slug" => "programming"
             ],
             [
-                "name" => "tutorial"
+                "name" => "tutorial",
+                "slug" => "tutorial"
             ],
             [
-                "name" => "python"
+                "name" => "Python",
+                "slug" => "python"
             ],
             [
-                "name" => "css"
+                "name" => "CSS",
+                "slug" => "css"
             ],
             [
-                "name" => "codenewbie"
+                "name" => "Codenewbie",
+                "slug" => "codenewbie"
             ],
             [
-                "name" => "node.js"
+                "name" => "Node.js",
+                "slug" => "nodejs"
             ],
             [
-                "name" => "html"
+                "name" => "html",
+                "slug" => "html"
             ],
             [
-                "name" => "devops"
+                "name" => "Devops",
+                "slug" => "devops"
             ],
             [
-                "name" => "productivity"
+                "name" => "productivity",
+                "slug" => "productivity"
             ],
             [
-                "name" => "career"
+                "name" => "career",
+                "slug" => "career"
             ],
             [
-                "name" => "aws"
+                "name" => "AWS",
+                "slug" => "aws"
             ],
             [
-                "name" => "android"
+                "name" => "Android",
+                "slug" => "android"
             ],
             [
-                "name" => "discuss"
+                "name" => "Type Script",
+                "slug" => "typescript"
             ],
             [
-                "name" => "typescript"
+                "name" => "Java",
+                "slug" => "java"
             ],
             [
-                "name" => "java"
+                "name" => "Github",
+                "slug" => "github"
             ],
             [
-                "name" => "github"
+                "name" => "PHP",
+                "slug" => "php"
             ],
             [
-                "name" => "php"
+                "name" => "Security",
+                "slug" => "security"
             ],
             [
-                "name" => "showdev"
+                "name" => "Linux",
+                "slug" => "linux"
             ],
             [
-                "name" => "security"
+                "name" => "Testing",
+                "slug" => "testing"
             ],
             [
-                "name" => "linux"
+                "name" => "Docker",
+                "slug" => "docker"
             ],
             [
-                "name" => "testing"
+                "name" => "Angular.js",
+                "slug" => "angularjs"
             ],
             [
-                "name" => "docker"
+                "name" => "open source",
+                "slug" => "opensource"
             ],
             [
-                "name" => "angular.js"
+                "name" => "vue.js",
+                "slug" => "vuejs"
             ],
             [
-                "name" => "opensource"
+                "name" => "cloud",
+                "slug" => "cloud"
             ],
             [
-                "name" => "vue.js"
+                "name" => "machine learning",
+                "slug" => "machinelearning"
             ],
             [
-                "name" => "cloud"
+                "name" => "Git",
+                "slug" => "git"
             ],
             [
-                "name" => "machinelearning"
+                "name" => "Database",
+                "slug" => "database"
             ],
             [
-                "name" => "git"
+                "name" => "Computer Science",
+                "slug" => "computerscience"
             ],
             [
-                "name" => "database"
+                "name" => "archlinux",
+                "slug" => "archlinux"
             ],
             [
-                "name" => "computerscience"
-            ],
-            [
-                "name" => "archlinux"
-            ],
-            [
-                "name" => "laravel"
+                "name" => "Laravel",
+                "slug" => "laravel"
             ],
             [
                 "name" => "100daysofcode",
+                "slug" => "100daysofcode"
             ],
             [
-                "name" => "datascience"
+                "name" => "Data science",
+                "slug" => "datascience"
             ],
             [
-                "name" => "dotnet"
+                "name" => ".Net",
+                "slug" => "dotnet"
             ],
             [
-                "name" => "csharp"
+                "name" => "C#",
+                "slug" => "csharp"
             ],
             [
-                "name" => "kubernetes"
+                "name" => "kubernetes",
+                "slug" => "kubernetes"
             ],
             [
-                "name" => "codepen"
+                "name" => "codepen",
+                "slug" => "codepen"
             ],
             [
-                "name" => "ruby"
+                "name" => "Ruby",
+                "slug" => "ruby"
             ],
             [
-                "name" => "flutter"
+                "name" => "Flutter",
+                "slug" => "flutter"
             ],
             [
-                "name" => "go"
+                "name" => "Go Lang",
+                "slug" => "go-lang"
             ],
             [
-                "name" => "serverless"
+                "name" => "Algorithms",
+                "slug" => "algorithms"
             ],
             [
-                "name" => "algorithms"
+                "name" => "React Native",
+                "slug" => "reactnative"
             ],
             [
-                "name" => "startup"
+                "name" => "SQL",
+                "slug" => "sql"
             ],
             [
-                "name" => "mobile"
+                "name" => "Azure",
+                "slug" => "azure"
             ],
             [
-                "name" => "reactnative"
+                "name" => "VScode",
+                "slug" => "vscode"
             ],
             [
-                "name" => "rails"
+                "name" => "architecture",
+                "slug" => "architecture"
             ],
             [
-                "name" => "help"
+                "name" => "IOS",
+                "slug" => "ios"
             ],
             [
-                "name" => "blockchain"
+                "name" => "Django",
+                "slug" => "django"
             ],
             [
-                "name" => "sql"
+                "name" => "Wordpress",
+                "slug" => "wordpress"
             ],
             [
-                "name" => "azure"
+                "name" => "Coding",
+                "slug" => "coding"
             ],
             [
-                "name" => "vscode"
+                "name" => "Next.js",
+                "slug" => "nextjs"
             ],
             [
-                "name" => "architecture"
+                "name" => "challenges",
+                "slug" => "challenges"
             ],
             [
-                "name" => "news"
+                "name" => "Development",
+                "slug" => "development"
             ],
             [
-                "name" => "ios"
+                "name" => "Game Develeopment",
+                "slug" => "gamedev"
             ],
             [
-                "name" => "django"
+                "name" => "Kotlin",
+                "slug" => "kotlin"
             ],
             [
-                "name" => "learning"
+                "name" => "UI/UX",
+                "slug" => "ui-ux"
             ],
             [
-                "name" => "wordpress"
+                "name" => "Code Quality",
+                "slug" => "codequality"
             ],
             [
-                "name" => "coding"
+                "name" => "Performance",
+                "slug" => "performance"
             ],
             [
-                "name" => "next.js"
+                "name" => "Redux",
+                "slug" => "redux"
             ],
             [
-                "name" => "challenge"
+                "name" => "Frontend",
+                "slug" => "frontend"
             ],
             [
-                "name" => "development"
+                "name" => "Backend",
+                "slug" => "backend"
             ],
             [
-                "name" => "gamedev"
+                "name" => "graphql",
+                "slug" => "GraphQL"
             ],
             [
-                "name" => "kotlin"
+                "name" => "API",
+                "slug" => "api"
             ],
             [
-                "name" => "ui/ux"
+                "name" => "MongoDB",
+                "slug" => "mongodb"
             ],
             [
-                "name" => "codequality"
+                "name" => "Firebase",
+                "slug" => "firebase"
             ],
             [
-                "name" => "performance"
+                "name" => "Functional",
+                "slug" => "functional"
             ],
             [
-                "name" => "redux"
+                "name" => "TailwindCSS",
+                "slug" => "tailwindcss"
             ],
             [
-                "name" => "frontend"
+                "name" => "Rust",
+                "slug" => "rust"
             ],
             [
-                "name" => "backend"
+                "name" => "Dart",
+                "slug" => "dart"
             ],
             [
-                "name" => "graphql"
+                "name" => "Agile",
+                "slug" => "agile"
             ],
             [
-                "name" => "watercooler"
+                "name" => "Webpack",
+                "slug" => "webpack"
             ],
             [
-                "name" => "api"
+                "name" => "Deep Learning",
+                "slug" => "deep-learning"
             ],
             [
-                "name" => "npm"
-            ],
-            [
-                "name" => "devjournal"
-            ],
-            [
-                "name" => "mongodb"
-            ],
-            [
-                "name" => "firebase"
-            ],
-            [
-                "name" => "functional"
-            ],
-            [
-                "name" => "writing"
-            ],
-            [
-                "name" => "motivation"
-            ],
-            [
-                "name" => "tailwindcss"
-            ],
-            [
-                "name" => "rust"
-            ],
-            [
-                "name" => "dart"
-            ],
-            [
-                "name" => "bash"
-            ],
-            [
-                "name" => "postgres"
-            ],
-            [
-                "name" => "todayilearned"
-            ],
-            [
-                "name" => "ai"
-            ],
-            [
-                "name" => "ubuntu"
-            ],
-            [
-                "name" => "code"
-            ],
-            [
-                "name" => "technology"
-            ],
-            [
-                "name" => "agile"
-            ],
-            [
-                "name" => "webpack"
-            ],
-            [
-                "name" => "deeplearning"
-            ],
-            [
-                "name" => "deno"
+                "name" => "Deno",
+                "slug" => "denojs"
             ],
         ];
 
         foreach ($tags as $tag) {
             Tag::create([
-                'name' => $tag['name']
+                'name' => $tag['name'],
+                'slug' => $tag['slug']
             ]);
         }
     }
