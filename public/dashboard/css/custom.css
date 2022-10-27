@@ -28,7 +28,11 @@
 
 /* Sidebar */
 .navbar-vertical.navbar-expand-xs .navbar-collapse {
-    height: 100%;
+    height: inherit;
+}
+
+.navbar-vertical.bg-white .navbar-nav>.nav-item .nav-link:hover {
+    background-color: #f6f9fc;
 }
 /* End of Sidebar */
 
@@ -264,22 +268,42 @@ form label{
 .btn{
     margin-bottom: 0;
 }
-.btn-show{
+.btn i{
+    font-size: 0.86rem !important;
+}
+.btn-show, 
+.btn-show:hover,
+.btn-show:focus{
     color: #fff;
     background-color: #06153c;
 }
-.btn-add-plus{
-    background-color: #06153c;
+.btn-close,
+.btn-close:hover,
+.btn-close:focus{
+    color: #06153c;
 }
+.btn-close-modal,
+.btn-close-modal:hover,
+.btn-close-modal:focus{
+    color: #06153c;
+    background-color: #f6f9fc;
+}
+
+.btn-add-plus,
 .btn-add-plus:hover,
 .btn-add-plus:focus{
     background-color: #06153c;
 }
-.btn-delete{
+
+.btn-delete, 
+.btn-delete:hover,
+.btn-delete:focus{
     color: #e6e6e6;
     background-color: #D82148;
 }
-.btn-edit{
+.btn-edit, 
+.btn-edit:hover,
+.btn-edit:focus{
     color: #e6e6e6;
     background-color: #39A388;
 }
