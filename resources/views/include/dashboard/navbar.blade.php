@@ -16,8 +16,48 @@
         <!-- End of Navbar -->
 
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-            <!-- Search input -->
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+
+          
+          <!-- Search input -->
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+              <!-- Add Button -->
+              <div class="nav-item dropdown d-flex align-items-center px-3">
+                <!-- Profile Link -->
+                  <a href="#" class="nav-link btn btn-add-plus text-white dropdown-toggle"
+                      id="plusDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <!-- Icon -->
+                      <i class="fas fa-plus me-sm-1"></i>
+                      {{-- <span class="d-sm-inline d-none">{{Auth::user()->name}}</span> --}}
+                  </a>
+                  <!-- Menu -->
+                  <ul class="dropdown-menu mt-3" aria-labelledby="plusDropdown">
+                      <li>
+                          <a class="dropdown-item" href="{{route("users.create")}}" data-bs-toggle="modal"
+                              data-bs-target="#userCreate">
+                          {{ __('Users') }}
+                          </a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="{{route("categories.create")}}" data-bs-toggle="modal"
+                              data-bs-target="#categoryCreate">
+                          {{ __('Categories') }}
+                          </a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="{{route("articles.create")}}" data-bs-toggle="modal"
+                              data-bs-target="#articleCreate">
+                          {{ __('Articles') }}
+                          </a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="{{route("tags.create")}}" data-bs-toggle="modal"
+                              data-bs-target="#tagsCreate">
+                          {{ __('Tags') }}
+                          </a>
+                      </li>
+                  </ul>
+              </div>
                 <div class="input-group">
                     <!-- Icon -->
                     <span class="input-group-text text-body">
@@ -70,45 +110,6 @@
                             class="d-none">
                             @csrf
                         </form>
-                    </li>
-                </ul>
-            </li>
-
-            <!-- Add Button -->
-            <li class="nav-item dropdown d-flex align-items-center ps-3">
-                <!-- Profile Link -->
-                <a href="#" class="nav-link btn btn-add-plus text-white dropdown-toggle"
-                    id="plusDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <!-- Icon -->
-                    <i class="fas fa-plus me-sm-1"></i>
-                    {{-- <span class="d-sm-inline d-none">{{Auth::user()->name}}</span> --}}
-                </a>
-                <!-- Menu -->
-                <ul class="dropdown-menu mt-3" aria-labelledby="plusDropdown">
-                    <li>
-                        <a class="dropdown-item" href="{{route("users.create")}}" data-bs-toggle="modal"
-                            data-bs-target="#userCreate">
-                        {{ __('Users') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{{route("categories.create")}}" data-bs-toggle="modal"
-                            data-bs-target="#categoryCreate">
-                        {{ __('Categories') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{{route("articles.create")}}" data-bs-toggle="modal"
-                            data-bs-target="#articleCreate">
-                        {{ __('Articles') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{{route("tags.create")}}" data-bs-toggle="modal"
-                            data-bs-target="#tagsCreate">
-                        {{ __('Tags') }}
-                        </a>
                     </li>
                 </ul>
             </li>
