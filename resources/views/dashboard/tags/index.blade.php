@@ -41,7 +41,7 @@
                                         $id = 1
                                     @endphp --}}
                                     @foreach ($tags as $index => $tag)
-                                        <tr class="animate__animated animate__backInUp animate__delay-1s">
+                                        <tr class="">
                                             <td>{{$index + 1}}</td>
                                             <td>
                                                 {{$tag->name}}
