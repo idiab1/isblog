@@ -14,26 +14,44 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
+        // $categories = [
+        //     [
+        //         "name" => "Software Development",
+        //         "slug" => "software-development"
+        //     ],
+        //     [
+        //         "name" => "Back-end Development",
+        //         "slug" => "back-end-development"
+        //     ],
+        //     [
+        //         "name" => "Front-end Development",
+        //         "slug" => "front-end-development"
+        //     ],
+        //     [
+        //         "name" => "Web Development",
+        //         "slug" => "web-development"
+        //     ],
+        //     [
+        //         "name" => "Mobile Development",
+        //         "slug" => "mobile-development"
+        //     ],
+        // ];
+
         $categories = [
             [
-                "name" => "Software Development",
-                "slug" => "software-development"
+                "name" => "Software Development"
             ],
             [
-                "name" => "Back-end Development",
-                "slug" => "back-end-development"
+                "name" => "Back-end Development"
             ],
             [
-                "name" => "Front-end Development",
-                "slug" => "front-end-development"
+                "name" => "Front-end Development"
             ],
             [
-                "name" => "Web Development",
-                "slug" => "web-development"
+                "name" => "Web Development"
             ],
             [
-                "name" => "Mobile Development",
-                "slug" => "mobile-development"
+                "name" => "Mobile Development"
             ],
         ];
 

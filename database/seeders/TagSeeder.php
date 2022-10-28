@@ -14,317 +14,548 @@ class TagSeeder extends Seeder
      */
     public function run()
     {
+        // $tags = [
+        //     [
+        //         "name" => 'Javascript',
+        //         "slug" => "javascript"
+        //     ],
+        //     [
+        //         "name" => "webdev",
+        //         "slug" => "webdev"
+        //     ],
+        //     [
+        //         "name" => "beginners",
+        //         "slug" => "beginners"
+        //     ],
+        //     [
+        //         "name" => "React.js",
+        //         "slug" => "reactjs"
+        //     ],
+        //     [
+        //         "name" => "programming",
+        //         "slug" => "programming"
+        //     ],
+        //     [
+        //         "name" => "tutorial",
+        //         "slug" => "tutorial"
+        //     ],
+        //     [
+        //         "name" => "Python",
+        //         "slug" => "python"
+        //     ],
+        //     [
+        //         "name" => "CSS",
+        //         "slug" => "css"
+        //     ],
+        //     [
+        //         "name" => "Codenewbie",
+        //         "slug" => "codenewbie"
+        //     ],
+        //     [
+        //         "name" => "Node.js",
+        //         "slug" => "nodejs"
+        //     ],
+        //     [
+        //         "name" => "html",
+        //         "slug" => "html"
+        //     ],
+        //     [
+        //         "name" => "Devops",
+        //         "slug" => "devops"
+        //     ],
+        //     [
+        //         "name" => "productivity",
+        //         "slug" => "productivity"
+        //     ],
+        //     [
+        //         "name" => "career",
+        //         "slug" => "career"
+        //     ],
+        //     [
+        //         "name" => "AWS",
+        //         "slug" => "aws"
+        //     ],
+        //     [
+        //         "name" => "Android",
+        //         "slug" => "android"
+        //     ],
+        //     [
+        //         "name" => "Type Script",
+        //         "slug" => "typescript"
+        //     ],
+        //     [
+        //         "name" => "Java",
+        //         "slug" => "java"
+        //     ],
+        //     [
+        //         "name" => "Github",
+        //         "slug" => "github"
+        //     ],
+        //     [
+        //         "name" => "PHP",
+        //         "slug" => "php"
+        //     ],
+        //     [
+        //         "name" => "Security",
+        //         "slug" => "security"
+        //     ],
+        //     [
+        //         "name" => "Linux",
+        //         "slug" => "linux"
+        //     ],
+        //     [
+        //         "name" => "Testing",
+        //         "slug" => "testing"
+        //     ],
+        //     [
+        //         "name" => "Docker",
+        //         "slug" => "docker"
+        //     ],
+        //     [
+        //         "name" => "Angular.js",
+        //         "slug" => "angularjs"
+        //     ],
+        //     [
+        //         "name" => "open source",
+        //         "slug" => "opensource"
+        //     ],
+        //     [
+        //         "name" => "vue.js",
+        //         "slug" => "vuejs"
+        //     ],
+        //     [
+        //         "name" => "cloud",
+        //         "slug" => "cloud"
+        //     ],
+        //     [
+        //         "name" => "machine learning",
+        //         "slug" => "machinelearning"
+        //     ],
+        //     [
+        //         "name" => "Git",
+        //         "slug" => "git"
+        //     ],
+        //     [
+        //         "name" => "Database",
+        //         "slug" => "database"
+        //     ],
+        //     [
+        //         "name" => "Computer Science",
+        //         "slug" => "computerscience"
+        //     ],
+        //     [
+        //         "name" => "archlinux",
+        //         "slug" => "archlinux"
+        //     ],
+        //     [
+        //         "name" => "Laravel",
+        //         "slug" => "laravel"
+        //     ],
+        //     [
+        //         "name" => "100daysofcode",
+        //         "slug" => "100daysofcode"
+        //     ],
+        //     [
+        //         "name" => "Data science",
+        //         "slug" => "datascience"
+        //     ],
+        //     [
+        //         "name" => ".Net",
+        //         "slug" => "dotnet"
+        //     ],
+        //     [
+        //         "name" => "C#",
+        //         "slug" => "csharp"
+        //     ],
+        //     [
+        //         "name" => "kubernetes",
+        //         "slug" => "kubernetes"
+        //     ],
+        //     [
+        //         "name" => "codepen",
+        //         "slug" => "codepen"
+        //     ],
+        //     [
+        //         "name" => "Ruby",
+        //         "slug" => "ruby"
+        //     ],
+        //     [
+        //         "name" => "Flutter",
+        //         "slug" => "flutter"
+        //     ],
+        //     [
+        //         "name" => "Go Lang",
+        //         "slug" => "go-lang"
+        //     ],
+        //     [
+        //         "name" => "Algorithms",
+        //         "slug" => "algorithms"
+        //     ],
+        //     [
+        //         "name" => "React Native",
+        //         "slug" => "reactnative"
+        //     ],
+        //     [
+        //         "name" => "SQL",
+        //         "slug" => "sql"
+        //     ],
+        //     [
+        //         "name" => "Azure",
+        //         "slug" => "azure"
+        //     ],
+        //     [
+        //         "name" => "VScode",
+        //         "slug" => "vscode"
+        //     ],
+        //     [
+        //         "name" => "architecture",
+        //         "slug" => "architecture"
+        //     ],
+        //     [
+        //         "name" => "IOS",
+        //         "slug" => "ios"
+        //     ],
+        //     [
+        //         "name" => "Django",
+        //         "slug" => "django"
+        //     ],
+        //     [
+        //         "name" => "Wordpress",
+        //         "slug" => "wordpress"
+        //     ],
+        //     [
+        //         "name" => "Coding",
+        //         "slug" => "coding"
+        //     ],
+        //     [
+        //         "name" => "Next.js",
+        //         "slug" => "nextjs"
+        //     ],
+        //     [
+        //         "name" => "challenges",
+        //         "slug" => "challenges"
+        //     ],
+        //     [
+        //         "name" => "Development",
+        //         "slug" => "development"
+        //     ],
+        //     [
+        //         "name" => "Game Develeopment",
+        //         "slug" => "gamedev"
+        //     ],
+        //     [
+        //         "name" => "Kotlin",
+        //         "slug" => "kotlin"
+        //     ],
+        //     [
+        //         "name" => "UI/UX",
+        //         "slug" => "ui-ux"
+        //     ],
+        //     [
+        //         "name" => "Code Quality",
+        //         "slug" => "codequality"
+        //     ],
+        //     [
+        //         "name" => "Performance",
+        //         "slug" => "performance"
+        //     ],
+        //     [
+        //         "name" => "Redux",
+        //         "slug" => "redux"
+        //     ],
+        //     [
+        //         "name" => "Frontend",
+        //         "slug" => "frontend"
+        //     ],
+        //     [
+        //         "name" => "Backend",
+        //         "slug" => "backend"
+        //     ],
+        //     [
+        //         "name" => "graphql",
+        //         "slug" => "GraphQL"
+        //     ],
+        //     [
+        //         "name" => "API",
+        //         "slug" => "api"
+        //     ],
+        //     [
+        //         "name" => "MongoDB",
+        //         "slug" => "mongodb"
+        //     ],
+        //     [
+        //         "name" => "Firebase",
+        //         "slug" => "firebase"
+        //     ],
+        //     [
+        //         "name" => "Functional",
+        //         "slug" => "functional"
+        //     ],
+        //     [
+        //         "name" => "TailwindCSS",
+        //         "slug" => "tailwindcss"
+        //     ],
+        //     [
+        //         "name" => "Rust",
+        //         "slug" => "rust"
+        //     ],
+        //     [
+        //         "name" => "Dart",
+        //         "slug" => "dart"
+        //     ],
+        //     [
+        //         "name" => "Agile",
+        //         "slug" => "agile"
+        //     ],
+        //     [
+        //         "name" => "Webpack",
+        //         "slug" => "webpack"
+        //     ],
+        //     [
+        //         "name" => "Deep Learning",
+        //         "slug" => "deep-learning"
+        //     ],
+        //     [
+        //         "name" => "Deno",
+        //         "slug" => "denojs"
+        //     ],
+        // ];
+
         $tags = [
             [
-                "name" => 'Javascript',
-                "slug" => "javascript"
+                "name" => 'Javascript'
             ],
             [
-                "name" => "webdev",
-                "slug" => "webdev"
+                "name" => "webdev"
             ],
             [
-                "name" => "beginners",
-                "slug" => "beginners"
+                "name" => "beginners"
             ],
             [
-                "name" => "React.js",
-                "slug" => "reactjs"
+                "name" => "React.js"
             ],
             [
-                "name" => "programming",
-                "slug" => "programming"
+                "name" => "programming"
             ],
             [
-                "name" => "tutorial",
-                "slug" => "tutorial"
+                "name" => "tutorial"
             ],
             [
-                "name" => "Python",
-                "slug" => "python"
+                "name" => "Python"
             ],
             [
-                "name" => "CSS",
-                "slug" => "css"
+                "name" => "CSS"
             ],
             [
-                "name" => "Codenewbie",
-                "slug" => "codenewbie"
+                "name" => "Codenewbie"
             ],
             [
-                "name" => "Node.js",
-                "slug" => "nodejs"
+                "name" => "Node.js"
             ],
             [
-                "name" => "html",
-                "slug" => "html"
+                "name" => "html"
             ],
             [
-                "name" => "Devops",
-                "slug" => "devops"
+                "name" => "Devops"
             ],
             [
-                "name" => "productivity",
-                "slug" => "productivity"
+                "name" => "productivity"
             ],
             [
-                "name" => "career",
-                "slug" => "career"
+                "name" => "career"
             ],
             [
-                "name" => "AWS",
-                "slug" => "aws"
+                "name" => "AWS"
             ],
             [
-                "name" => "Android",
-                "slug" => "android"
+                "name" => "Android"
             ],
             [
-                "name" => "Type Script",
-                "slug" => "typescript"
+                "name" => "Type Script"
             ],
             [
-                "name" => "Java",
-                "slug" => "java"
+                "name" => "Java"
             ],
             [
-                "name" => "Github",
-                "slug" => "github"
+                "name" => "Github"
             ],
             [
-                "name" => "PHP",
-                "slug" => "php"
+                "name" => "PHP"
             ],
             [
-                "name" => "Security",
-                "slug" => "security"
+                "name" => "Security"
             ],
             [
-                "name" => "Linux",
-                "slug" => "linux"
+                "name" => "Linux"
             ],
             [
-                "name" => "Testing",
-                "slug" => "testing"
+                "name" => "Testing"
             ],
             [
-                "name" => "Docker",
-                "slug" => "docker"
+                "name" => "Docker"
             ],
             [
-                "name" => "Angular.js",
-                "slug" => "angularjs"
+                "name" => "Angular.js"
             ],
             [
-                "name" => "open source",
-                "slug" => "opensource"
+                "name" => "open source"
             ],
             [
-                "name" => "vue.js",
-                "slug" => "vuejs"
+                "name" => "vue.js"
             ],
             [
-                "name" => "cloud",
-                "slug" => "cloud"
+                "name" => "cloud"
             ],
             [
-                "name" => "machine learning",
-                "slug" => "machinelearning"
+                "name" => "machine learning"
             ],
             [
-                "name" => "Git",
-                "slug" => "git"
+                "name" => "Git"
             ],
             [
-                "name" => "Database",
-                "slug" => "database"
+                "name" => "Database"
             ],
             [
-                "name" => "Computer Science",
-                "slug" => "computerscience"
+                "name" => "Computer Science"
             ],
             [
-                "name" => "archlinux",
-                "slug" => "archlinux"
+                "name" => "archlinux"
             ],
             [
-                "name" => "Laravel",
-                "slug" => "laravel"
+                "name" => "Laravel"
             ],
             [
-                "name" => "100daysofcode",
-                "slug" => "100daysofcode"
+                "name" => "100daysofcode"
             ],
             [
-                "name" => "Data science",
-                "slug" => "datascience"
+                "name" => "Data science"
             ],
             [
-                "name" => ".Net",
-                "slug" => "dotnet"
+                "name" => ".Net"
             ],
             [
-                "name" => "C#",
-                "slug" => "csharp"
+                "name" => "C#"
             ],
             [
-                "name" => "kubernetes",
-                "slug" => "kubernetes"
+                "name" => "kubernetes"
             ],
             [
-                "name" => "codepen",
-                "slug" => "codepen"
+                "name" => "codepen"
             ],
             [
-                "name" => "Ruby",
-                "slug" => "ruby"
+                "name" => "Ruby"
             ],
             [
-                "name" => "Flutter",
-                "slug" => "flutter"
+                "name" => "Flutter"
             ],
             [
-                "name" => "Go Lang",
-                "slug" => "go-lang"
+                "name" => "Go Lang"
             ],
             [
-                "name" => "Algorithms",
-                "slug" => "algorithms"
+                "name" => "Algorithms"
             ],
             [
-                "name" => "React Native",
-                "slug" => "reactnative"
+                "name" => "React Native"
             ],
             [
-                "name" => "SQL",
-                "slug" => "sql"
+                "name" => "SQL"
             ],
             [
-                "name" => "Azure",
-                "slug" => "azure"
+                "name" => "Azure"
             ],
             [
-                "name" => "VScode",
-                "slug" => "vscode"
+                "name" => "VScode"
             ],
             [
-                "name" => "architecture",
-                "slug" => "architecture"
+                "name" => "architecture"
             ],
             [
-                "name" => "IOS",
-                "slug" => "ios"
+                "name" => "IOS"
             ],
             [
-                "name" => "Django",
-                "slug" => "django"
+                "name" => "Django"
             ],
             [
-                "name" => "Wordpress",
-                "slug" => "wordpress"
+                "name" => "Wordpress"
             ],
             [
-                "name" => "Coding",
-                "slug" => "coding"
+                "name" => "Coding"
             ],
             [
-                "name" => "Next.js",
-                "slug" => "nextjs"
+                "name" => "Next.js"
             ],
             [
-                "name" => "challenges",
-                "slug" => "challenges"
+                "name" => "challenges"
             ],
             [
-                "name" => "Development",
-                "slug" => "development"
+                "name" => "Development"
             ],
             [
-                "name" => "Game Develeopment",
-                "slug" => "gamedev"
+                "name" => "Game Develeopment"
             ],
             [
-                "name" => "Kotlin",
-                "slug" => "kotlin"
+                "name" => "Kotlin"
             ],
             [
-                "name" => "UI/UX",
-                "slug" => "ui-ux"
+                "name" => "UI/UX"
             ],
             [
-                "name" => "Code Quality",
-                "slug" => "codequality"
+                "name" => "Code Quality"
             ],
             [
-                "name" => "Performance",
-                "slug" => "performance"
+                "name" => "Performance"
             ],
             [
-                "name" => "Redux",
-                "slug" => "redux"
+                "name" => "Redux"
             ],
             [
-                "name" => "Frontend",
-                "slug" => "frontend"
+                "name" => "Frontend"
             ],
             [
-                "name" => "Backend",
-                "slug" => "backend"
+                "name" => "Backend"
             ],
             [
-                "name" => "graphql",
-                "slug" => "GraphQL"
+                "name" => "graphql"
             ],
             [
-                "name" => "API",
-                "slug" => "api"
+                "name" => "API"
             ],
             [
-                "name" => "MongoDB",
-                "slug" => "mongodb"
+                "name" => "MongoDB"
             ],
             [
-                "name" => "Firebase",
-                "slug" => "firebase"
+                "name" => "Firebase"
             ],
             [
-                "name" => "Functional",
-                "slug" => "functional"
+                "name" => "Functional"
             ],
             [
-                "name" => "TailwindCSS",
-                "slug" => "tailwindcss"
+                "name" => "TailwindCSS"
             ],
             [
-                "name" => "Rust",
-                "slug" => "rust"
+                "name" => "Rust"
             ],
             [
-                "name" => "Dart",
-                "slug" => "dart"
+                "name" => "Dart"
             ],
             [
-                "name" => "Agile",
-                "slug" => "agile"
+                "name" => "Agile"
             ],
             [
-                "name" => "Webpack",
-                "slug" => "webpack"
+                "name" => "Webpack"
             ],
             [
-                "name" => "Deep Learning",
-                "slug" => "deep-learning"
+                "name" => "Deep Learning"
             ],
             [
-                "name" => "Deno",
-                "slug" => "denojs"
+                "name" => "Deno"
             ],
         ];
 
         foreach ($tags as $tag) {
             Tag::create([
                 'name' => $tag['name'],
-                'slug' => $tag['slug']
+                // 'slug' => $tag['slug']
             ]);
         }
     }
