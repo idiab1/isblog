@@ -16,19 +16,24 @@ class CategorySeeder extends Seeder
     {
         $categories = [
             [
-                "name" => "Software Development"
+                "name" => "Software Development",
+                "slug" => "software-development"
             ],
             [
-                "name" => "Back-end Development"
+                "name" => "Back-end Development",
+                "slug" => "back-end-development"
             ],
             [
-                "name" => "Front-end Development"
+                "name" => "Front-end Development",
+                "slug" => "front-end-development"
             ],
             [
-                "name" => "Web Development"
+                "name" => "Web Development",
+                "slug" => "web-development"
             ],
             [
-                "name" => "Mobile Development"
+                "name" => "Mobile Development",
+                "slug" => "mobile-development"
             ],
         ];
 
