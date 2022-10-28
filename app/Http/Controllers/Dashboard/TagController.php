@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Tag;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,16 +23,6 @@ class TagController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -44,11 +35,16 @@ class TagController extends Controller
             "name" => ["required", "string"]
         ]);
 
-        Tag::create([
-            "name" => $request->name
-        ]);
+        try{
+            Tag::create([
+                "name" => $request->name
+            ]);
+  
+            return redirect()->back()->with('success', "Your tag was published successfully");
+        }catch(\Exception $e){
+            return redirect()->back()->with('error', $e);
 
-        return redirect()->route("tags.index");
+        }
     }
 
     /**
@@ -69,17 +65,6 @@ class TagController extends Controller
             ->take(5)
             ->get();
         return view("dashboard.tags.show", compact("tag", "categories", "tags"));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**
