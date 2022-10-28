@@ -54,6 +54,7 @@
         {{-- Footer --}}
         @include('include.dashboard.footer')
 
+        @include('sweetalert::alert')
     </main>
 
     <!-- Setting Modal -->
