@@ -99,9 +99,13 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        // Get Setting row by id
-        $tag = Tag::find($id);
-        $tag->delete();
-        return redirect()->back();
+        try{
+            // Get Setting row by id
+            $tag = Tag::find($id);
+            $tag->delete();
+            return redirect()->back()->with('success', "Your tag was deleted successfully");
+        }catch(\Exception $e){
+            return redirect()->back()->with('error', $e);
+        }
     }
 }
