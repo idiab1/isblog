@@ -35,15 +35,16 @@ class TagController extends Controller
             "name" => ["required", "string"]
         ]);
 
-        try{
+        try
+        {
             Tag::create([
                 "name" => $request->name
             ]);
   
             return redirect()->back()->with('success', "Your tag was published successfully");
-        }catch(\Exception $e){
+        }catch(\Exception $e)
+        {
             return redirect()->back()->with('error', $e);
-
         }
     }
 
@@ -76,13 +77,18 @@ class TagController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Get Setting row by id
-        $tag = Tag::find($id);
-        $tag->update([
-            "name" => $request->name,
-        ]);
-
-        return redirect()->back();
+        try{
+            // Get Setting row by id
+            $tag = Tag::find($id);
+            $tag->update([
+                "name" => $request->name,
+            ]);
+    
+            return redirect()->back()->with('success', "Your tag was updated successfully");
+            
+        }catch(\Exception $e){
+            return redirect()->back()->with('error', $e);
+        }
     }
 
     /**
