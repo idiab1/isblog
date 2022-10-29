@@ -19,7 +19,8 @@ class TagController extends Controller
     {
         // Get all Tags
         $tags = Tag::all();
-        return view("dashboard.tags.index", compact("tags"));
+        $articlesCount = DB::table("articles")->join("categories", 'articles.category_id', '=', 'categories.id')->count();
+        return view("dashboard.tags.index", compact("tags", "articlesCount"));
     }
 
     /**
