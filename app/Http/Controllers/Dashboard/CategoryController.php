@@ -20,15 +20,6 @@ class CategoryController extends Controller
         return view("dashboard.categories.index", compact("categories"));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -38,16 +29,23 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate on data coming from request
-        $this->validate($request, [
-            "name" => ["required", "string"]
-        ]);
+        try
+        {
+            // Validate on data coming from request
+            $this->validate($request, [
+                "name" => ["required", "string"]
+            ]);
 
-        Category::create([
-            "name" => $request->name
-        ]);
-
-        return redirect()->route("categories.index");
+            Category::create([
+                "name" => $request->name
+            ]);
+            
+            return redirect()->route("categories.index")->with('success', "Your category was created successfully");
+            
+        }catch(\Exception $e)
+        {
+            return redirect()->back()->with('error', $e);
+        }
 
     }
 
