@@ -38,7 +38,7 @@
                                 </thead>
                                 <tbody class="text-center">
                                     @foreach ($categories as $index => $category)
-                                        <tr class="animate__animated animate__backInUp animate__delay-1s">
+                                        <tr>
                                             <td>{{$index + 1}}</td>
                                             <td>
                                                 {{$category->name}}
