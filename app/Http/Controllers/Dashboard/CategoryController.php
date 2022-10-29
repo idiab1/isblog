@@ -83,9 +83,15 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        // Get Setting row by id
-        $category = Category::find($id);
-        $category->delete();
-        return redirect()->back();
+        try{
+            // Get Setting row by id
+            $category = Category::find($id);
+            $category->delete();
+            return redirect()->back()->with('success', "Your tag was deleted successfully");
+            
+        }catch(\Exception $e){
+            return redirect()->back()->with('error', $e);
+        }
+
     }
 }
