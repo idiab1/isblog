@@ -33,6 +33,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
+                                        <th>Articles Published</th>
                                         <th>Active</th>
                                     </tr>
                                 </thead>
@@ -45,6 +46,9 @@
                                             <td>{{$index + 1}}</td>
                                             <td>
                                                 {{$tag->name}}
+                                            </td>
+                                            <td>
+                                                {{$articlesCount}}
                                             </td>
                                             <td>
                                                 <!-- Edit button -->
@@ -120,6 +124,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
+                                        <th>Articles Published</th>
                                         <th>Active</th>
                                     </tr>
                                 </tfoot>
