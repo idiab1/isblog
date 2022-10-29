@@ -50,28 +50,6 @@ class CategoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -80,13 +58,21 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Get Setting row by id
-        $category = Category::find($id);
-        $category->update([
-            "name" => $request->name,
-        ]);
+        try
+        {
+            // Get Setting row by id
+            $category = Category::find($id);
+            $category->update([
+                "name" => $request->name,
+            ]);
+            
+            return redirect()->back()->with('success', "Your category was updated successfully");
+            
+        }catch(\Exception $e)
+        {
+            return redirect()->back()->with('error', $e);
+        }
 
-        return redirect()->back();
     }
 
     /**
