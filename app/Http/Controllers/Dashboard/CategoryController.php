@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -17,7 +18,8 @@ class CategoryController extends Controller
     {
         // Get all categories from database
         $categories = Category::all();
-        return view("dashboard.categories.index", compact("categories"));
+        $articlesCount = DB::table("articles")->join("categories", 'articles.category_id', '=', 'categories.id')->count();
+        return view("dashboard.categories.index", compact("categories", "articlesCount"));
     }
 
 
