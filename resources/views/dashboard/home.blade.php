@@ -10,8 +10,10 @@
 <section class="homepage section">
     <!-- Container -->
     <div class="container py-4">
+        <!-- Status -->
         <div class="row">
             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                <!-- card tags -->
                 <div class="card animate__animated animate__backInLeft animate__delay-1s">
                     <div class="card-body p-3">
                         <div class="row">
@@ -35,9 +37,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- ./card tags -->
             </div>
             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <!-- Card -->
+                <!-- Card users -->
                 <div class="card animate__animated animate__backInRight animate__delay-1s">
                     <!-- card body -->
                     <div class="card-body p-3">
@@ -67,10 +70,10 @@
                     </div>
                     <!-- ./card-body -->
                 </div>
-                <!-- ./card -->
+                <!-- ./card users -->
             </div>
             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                <!-- Card -->
+                <!-- Card Articles -->
                 <div class="card animate__animated animate__backInLeft animate__delay-1s">
                     <!-- Card body -->
                     <div class="card-body p-3">
@@ -98,9 +101,10 @@
                     </div>
                     <!-- ./card-body -->
                 </div>
-                <!-- ./card -->
+                <!-- ./card articles-->
             </div>
             <div class="col-xl-3 col-sm-6">
+                <!-- Card adminstrators-->
                 <div class="card animate__animated animate__backInRight animate__delay-1s">
                     <div class="card-body p-3">
                         <div class="row">
@@ -126,8 +130,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- ./card adminstrators-->
             </div>
         </div>
+        <!-- ./Status -->
 
         <div class="row mt-4">
             <div class="col-lg-8 mb-lg-0 mb-4">
@@ -243,7 +249,7 @@
                                             <!-- ./model-body -->
                                             <!-- model footer -->
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">Close</button>
                                             </div>
                                             <!-- ./model-footer -->
 
@@ -257,7 +263,7 @@
                     <!-- /.col -->
                     </div>
                     <!-- /.row -->
-                    @if ($articles->count() <= 6)
+                    @if ($articles->count() >= 5)
                         <div class="row">
                             <div class="col-12 text-center">
                                 <a class="btn btn-primary btn-sm" href="{{route("articles.index")}}">
