@@ -334,3 +334,9 @@
 </section>
 <!-- ./homepage -->
 @endsection
+
+@section('scripts')
+    <script>
+        document.body.style.marginTop = document.querySelector(".navbar").clientHeight + "px"
+    </script>
+@endsection
