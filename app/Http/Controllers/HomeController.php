@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -34,6 +35,9 @@ class HomeController extends Controller
             ->orderBy('id', 'asc')
             ->take(5)
             ->get();
-        return view('home', compact("articles", "tags"));
+        
+        // Get all categories from database
+        $categories = DB::table('categories')->orderBy('created_at', 'desc')->take(5)->get();
+        return view('home', compact("articles", "tags", "categories"));
     }
 }
