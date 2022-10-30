@@ -45,7 +45,7 @@
                                                 {{$category->name}}
                                             </td>
                                             <td>
-                                                {{$articlesCount}}
+                                                {{App\Models\Article::where('category_id', '=', $category->id)->count()}}
                                             </td>
                                             <td>
                                                 <!-- Edit button -->
