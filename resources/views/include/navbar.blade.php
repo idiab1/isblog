@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{App\Models\Setting::first()->name}}
@@ -76,3 +77,5 @@
         </div>
     </div>
 </nav>
+
+<!-- End of Navbar -->
