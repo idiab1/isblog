@@ -10482,6 +10482,10 @@ textarea.form-control-lg {
   color: #fff;
 }
 
+body {
+  background-color: #f5f5f5;
+}
+
 .empty {
   display: flex;
   justify-content: center;
