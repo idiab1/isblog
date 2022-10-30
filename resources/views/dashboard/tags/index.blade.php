@@ -48,7 +48,7 @@
                                                 {{$tag->name}}
                                             </td>
                                             <td>
-                                                {{$articlesCount}}
+                                                {{$tag->articles()->count()}}
                                             </td>
                                             <td>
                                                 <!-- Edit button -->
