@@ -121,4 +121,13 @@
         }
     }
     // End of Article Card
+
+    // Categories Card
+    &.card-categories{
+        .card-header, .card-footer{
+            background-color: #fff;
+        }
+    }
+    // End of categories Card
+
 }
