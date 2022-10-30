@@ -1,3 +1,11 @@
+:root{
+    --orange-color: #FF8C32;
+    --dark-blue: #06153c;
+    --light-blue: #5e72e4;
+    --green-color: #39A388;
+    --red-color: #D82148;
+    --off-white: #f5f5f5;
+}
 /* Navbar */
 .navbar .dropdown .dropdown-menu{
     margin-top: 15px !important;
@@ -10,7 +18,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #06153c;
+    background-color: var(--dark-blue);
 }
 .navbar .dropdown .dropdown-menu .profile .image img{
     border-radius: 50%;
@@ -18,11 +26,11 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    border: 3px solid #5e72e4;
+    border: 3px solid var(--light-blue);
 }
 .navbar .dropdown .dropdown-menu .profile .info span{
     font-weight: 700;
-    color: #f8f9fa;
+    color: var(--off-white);;
 }
 /* End of Navbar */
 
@@ -32,7 +40,7 @@
 }
 
 .navbar-vertical.bg-white .navbar-nav>.nav-item .nav-link:hover {
-    background-color: #f6f9fc;
+    background-color: var(--off-white);;
 }
 /* End of Sidebar */
 
@@ -69,7 +77,7 @@
     letter-spacing: 0.08rem;
     font-weight: 600;
     line-height: 1.2;
-    background-color: #FF8C32;
+    background-color: var(--orange-color);
 }
 .card-article .card-body ul li:first-of-type {
     margin-left: 0rem;
@@ -122,7 +130,7 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    border: 3px solid #8c8cfa;
+    border: 3px solid var(--light-blue);
 }
 .card-article .card-footer .user-info{
     margin-left: 10px;
@@ -170,10 +178,12 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
     margin-right: 0.25rem;
     margin-left: 0.25rem;
     margin-bottom: 0.5rem;
-    background-color: #FF8C32;
+    color: #000;
+    background-color: var(--orange-color);
 }
-.tags-content a:hover{
-    background-color: #FF8C32;
+.tags-content a:hover,.tags-content a:focus{
+    color: #000;
+    background-color: var(--orange-color);
 }
 .tags-content a:first-of-type{
     margin-left: 0;
@@ -201,7 +211,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
     line-height: 35px;
     margin-bottom: 0;
     border-radius: 100%;
-    background-color: #040534;
+    background-color: var(--dark-blue);
     color: #fff;
     border: 1px solid transparent;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
@@ -215,7 +225,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination li:last-of-type a{
     height: 150px;
     position: relative;
     border-radius: 100%;
-    border: 6px solid #040534;
+    border: 6px solid var(--dark-blue);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .avatar-preview div {
@@ -238,7 +248,7 @@ form label{
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-    background-color: #5e72e4;
+    background-color: var(--light-blue);
     border: 1px solid #fff;
     color: #212529;
     font-weight: 400;
@@ -246,7 +256,7 @@ form label{
     letter-spacing: .07rem;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #5e72e4;
+    background-color: var(--light-blue);
     color: white;
 }
 /* End of form */
@@ -275,36 +285,36 @@ form label{
 .btn-show:hover,
 .btn-show:focus{
     color: #fff;
-    background-color: #06153c;
+    background-color: var(--dark-blue);
 }
 .btn-close,
 .btn-close:hover,
 .btn-close:focus{
-    color: #06153c;
+    color: var(--dark-blue);
 }
 .btn-close-modal,
 .btn-close-modal:hover,
 .btn-close-modal:focus{
-    color: #06153c;
-    background-color: #f6f9fc;
+    color: var(--dark-blue);
+    background-color: var(--off-white);;
 }
 
 .btn-add-plus,
 .btn-add-plus:hover,
 .btn-add-plus:focus{
-    background-color: #06153c;
+    background-color: var(--dark-blue);
 }
 
 .btn-delete, 
 .btn-delete:hover,
 .btn-delete:focus{
-    color: #e6e6e6;
-    background-color: #D82148;
+    color: var(--off-white);;
+    background-color: var(--red-color)
 }
 .btn-edit, 
 .btn-edit:hover,
 .btn-edit:focus{
-    color: #e6e6e6;
-    background-color: #39A388;
+    color: var(--off-white);;
+    background-color: var(--green-color);
 }
 /* End of Buttons */
