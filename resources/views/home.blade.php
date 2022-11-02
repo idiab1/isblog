@@ -263,12 +263,7 @@
                         </ul>
                     </div>
                     <!-- ./card-body -->
-                    <!-- Card Footer -->
-                    <div class="card-footer p-1 text-center animate__animated animate__bounceIn animate__delay-2s">
-                        <a class="text-secondary text-sm font-weight-bolder"
-                            href="{{route("categories.index")}}">All Categories</a>
-                    </div>
-                    <!-- ./card-footer -->
+                
                 </div>
                 <!-- ./card-categories -->
 
@@ -319,7 +314,7 @@
                     <!-- Card Footer -->
                     <div class="card-footer p-1 text-center animate__animated animate__bounceIn animate__delay-2s">
                         <a class="text-secondary text-sm font-weight-bolder"
-                            href="{{route("tags.index")}}">All Tags</a>
+                            href="{{route("tags")}}">All Tags</a>
                     </div>
                     <!-- ./card-footer -->
                 </div>
@@ -336,7 +331,6 @@
 @endsection
 
 @section('scripts')
-    <script>
-        document.body.style.marginTop = document.querySelector(".navbar").clientHeight + "px"
-    </script>
+    <!-- Scripts -->
+    <script src="{{ asset('js/custom.js') }}"></script>
 @endsection
