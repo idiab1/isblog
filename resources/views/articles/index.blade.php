@@ -3,6 +3,13 @@
 {{-- Title --}}
 @section('page_name') Articles @endsection
 
+
+{{-- header --}}
+@section('header')
+    
+@endsection
+
+
 {{-- Styles --}}
 @section('styles')
     <style>
@@ -21,6 +28,8 @@
         }
     </style>
 @endsection
+
+
 
 {{-- Header Info --}}
 @section('header-info')
@@ -94,7 +103,7 @@
                                     </div>
                                     <!-- Card Footer -->
                                     <div class="user-info">
-                                        <a href="{{route("front.profile.show", ["id" => Auth::user()->id])}}">
+                                        <a href="{{route("front.profile.show", ["id" => $article->user->id])}}">
                                             {{$article->user->name}}
                                         </a>
                                     </div>
@@ -196,4 +205,9 @@
     <!-- ./container -->
 </section>
 <!-- ./articles -->
+@endsection
+
+@section('scripts')
+    <!-- Scripts -->
+    <script src="{{ asset('js/custom.js') }}"></script>
 @endsection
