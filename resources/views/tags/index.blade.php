@@ -22,6 +22,11 @@
     </style>
 @endsection
 
+{{-- header --}}
+@section('header')
+    
+@endsection
+
 {{-- Header Info --}}
 @section('header-info')
     <h1 class="animate__animated animate__lightSpeedInRight animate__delay-1s">
@@ -56,4 +61,9 @@
     <!-- ./container -->
 </section>
 <!-- ./tagspage -->
+@endsection
+
+@section('scripts')
+    <!-- Scripts -->
+    <script src="{{ asset('js/custom.js') }}"></script>
 @endsection
