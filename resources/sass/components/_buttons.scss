@@ -10,6 +10,22 @@
     }
 }
 
+// Tag buttons
+.tag-btn{
+    font-weight: 700;
+    line-height: 1.69;
+    color: $navy-color;
+    border-color: $dark-color;
+    background-color: $dark-color;
+    @include prefixer(border-radius, 15px, webkit moz ms o);
+    &:hover, &:focus{
+        box-shadow: none;
+        color: $dark-color;
+        border-color: $navy-color;
+        background-color: $navy-color;
+    }
+}
+
 // Login Button
 .login-btn{
     color: #fff;
