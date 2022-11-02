@@ -46,7 +46,7 @@
                 <div class="tags-content">
                     @if ($tags->count() > 0)
                         @foreach ($tags as $tag)
-                            <a class="btn btn-sm crayons-btn animate__animated animate__backInUp animate__delay-1s"
+                            <a class="btn btn-sm tag-btn animate__animated animate__backInUp animate__delay-1s"
                             href="{{route("front.tags.show", ["id" => $tag->id])}}">
                                 {{$tag->name}} - ({{$tag->articles()->count()}})
                             </a>
