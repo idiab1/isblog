@@ -10259,6 +10259,21 @@ textarea.form-control-lg {
   box-shadow: none;
 }
 
+.tag-btn {
+  font-weight: 700;
+  line-height: 1.69;
+  color: #8c8cfa;
+  border-color: #06113C;
+  background-color: #06113C;
+  border-radius: 15px;
+}
+.tag-btn:hover, .tag-btn:focus {
+  box-shadow: none;
+  color: #06113C;
+  border-color: #8c8cfa;
+  background-color: #8c8cfa;
+}
+
 .login-btn {
   color: #fff;
   font-weight: 700;
