@@ -93,32 +93,31 @@ class ProfileController extends Controller
             $request_date["image"] = $request->image->hashName();
 
             $user->update([
-                "image"         => $request->image->hashName(),
-                "name" => $request->name,
-                "email" => $request->email,
-                "password" => Hash::make($request->password),
+                "image"        => $request->image->hashName(),
+                "name"         => $request->name,
+                "email"        => $request->email,
+                "password"     => Hash::make($request->password),
                 "linkedin_url" => $request->linkedin_url,
-                "github_url" => $request->github_url,
+                "github_url"   => $request->github_url,
                 "facebook_url" => $request->facebook_url,
-                "twitter_url" => $request->twitter_url,
+                "twitter_url"  => $request->twitter_url,
             ]);
 
             return redirect()->back();
 
         }else{
             $user->update([
-                "name" => $request->name,
-                "email" => $request->email,
-                "password" => Hash::make($request->password),
+                "name"         => $request->name,
+                "email"        => $request->email,
+                "password"     => Hash::make($request->password),
                 "linkedin_url" => $request->linkedin_url,
-                "github_url" => $request->github_url,
+                "github_url"   => $request->github_url,
                 "facebook_url" => $request->facebook_url,
-                "twitter_url" => $request->twitter_url,
+                "twitter_url"  => $request->twitter_url,
             ]);
 
             return redirect()->back();
         }
-
 
     }
 
