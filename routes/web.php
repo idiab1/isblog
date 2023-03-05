@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TagController;
@@ -23,9 +24,14 @@ Auth::routes(["register"=> false]);
 Route::redirect('/', '/home');;
 Route::get('/home', [HomeController::class, "index"])->name('home');
 
+// // -->>> Categories route
+// Route::get('/categories', [CategoryController::class, "index"])->name('categories');
+// Route::get('/categories/{id}', [CategoryController::class, "show"])->name('front.categories.show');
+
 // -->>> Tags route
 Route::get('/tags', [TagController::class, "index"])->name('tags');
 Route::get('/tags/{id}', [TagController::class, "show"])->name('front.tags.show');
+
 
 
 // -->>> Articles Route
