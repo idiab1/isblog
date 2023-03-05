@@ -58,7 +58,7 @@
     </main>
 
     <!-- Setting Modal -->
-    <div class="modal fade" id="setting-{{App\Models\Setting::first()->id}}" data-bs-backdrop="static"
+    <div class="modal fade" id="setting-{{$settings->id}}" data-bs-backdrop="static"
         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
         aria-hidden="true">
         <!-- model dialog -->
@@ -74,7 +74,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("settings.update", ["id" => App\Models\Setting::first()->id])}}"
+                <form action="{{route("settings.update", ["id" => $settings->id])}}"
                     method="POST">
 
                     <!-- model body -->
@@ -85,7 +85,7 @@
                         <div class="form-group">
                             <label class="form-label" for="name">Name</label>
                             <input class="form-control" type="text" name="name" id="name"
-                                value="{{App\Models\Setting::first()->name}}">
+                                value="{{$settings->name}}">
                         </div>
 
                         <!-- Linkedin -->
@@ -97,7 +97,7 @@
                             <!-- Input -->
                             <input class="form-control" type="text" aria-label="linkedin_url"
                                 aria-describedby="linkedin_url" name="linkedin_url"
-                                value="{{App\Models\Setting::first()->linkedin_url}}">
+                                value="{{$settings->linkedin_url}}">
                         </div>
 
                         <!-- Github -->
@@ -109,7 +109,7 @@
                             <!-- Input -->
                             <input class="form-control" type="text" aria-label="github_url"
                                 aria-describedby="github_url" name="github_url"
-                                value="{{App\Models\Setting::first()->github_url}}">
+                                value="{{$settings->github_url}}">
                         </div>
 
                     </div>
