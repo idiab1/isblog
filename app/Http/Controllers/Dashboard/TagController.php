@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TagRequest;
 use App\Models\Tag;
 use Exception;
 use Illuminate\Http\Request;
@@ -28,17 +29,15 @@ class TagController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TagRequest $request)
     {
         // Validate on data coming from request
-        $this->validate($request, [
-            "name" => ["required", "string"]
-        ]);
+        $data = $request->validated();
 
         try
         {
             Tag::create([
-                "name" => $request->name
+                "name" => $data['name']
             ]);
   
             return redirect()->back()->with('success', "Your tag was published successfully");
