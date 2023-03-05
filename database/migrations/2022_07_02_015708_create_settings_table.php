@@ -16,6 +16,8 @@ class CreateSettingsTable extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->increments("id");
             $table->string('name', 70)->default('IsBlog');
+            $table->string('logo')->nullable();
+            $table->string('favicon')->nullable();
             $table->string('linkedin_url')->nullable();
             $table->string('github_url')->nullable();
             $table->timestamps();
