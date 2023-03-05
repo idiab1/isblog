@@ -11,19 +11,19 @@
 {{-- Header Info --}}
 @section('header-info')
     <h1 class="animate__animated animate__lightSpeedInRight animate__delay-1s">
-        {{App\Models\Setting::first()->name}}
+        {{$settings->name}}
     </h1>
     <!-- Social Links -->
     <ul class="list-unstyled">
         <li>
             <!-- Github -->
-            <a href="{{App\Models\Setting::first()->github_url}}" target="_blank">
+            <a href="{{$settings->github_url}}" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
         </li>
         <li>
             <!-- Linkin -->
-            <a href="{{App\Models\Setting::first()->linkedin_url}}" target="_blank">
+            <a href="{{$settings->linkedin_url}}" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
         </li>
@@ -45,20 +45,24 @@
                 <div class="card card-profile mb-3">
                     <!-- Card body -->
                     <div class="card-body">
+                        <!-- Image -->
+                        {{-- <div class="image">
+                            <img src="{{}}" alt="{{Auth::user()->name}}">
+                        </div> --}}
                         <h1 class="animate__animated animate__lightSpeedInRight animate__delay-1s">
-                            {{App\Models\Setting::first()->name}}
+                            {{$settings->name}}
                         </h1>
                         <!-- Social Links -->
                         <ul class="list-unstyled">
                             <li>
                                 <!-- Github -->
-                                <a href="{{App\Models\Setting::first()->github_url}}" target="_blank">
+                                <a href="{{$settings->github_url}}" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </li>
                             <li>
                                 <!-- Linkin -->
-                                <a href="{{App\Models\Setting::first()->linkedin_url}}" target="_blank">
+                                <a href="{{$settings->linkedin_url}}" target="_blank">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
                             </li>
