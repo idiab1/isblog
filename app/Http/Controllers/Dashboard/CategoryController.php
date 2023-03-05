@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryRequest;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -30,17 +31,16 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
         try
         {
             // Validate on data coming from request
-            $this->validate($request, [
-                "name" => ["required", "string"]
-            ]);
+            $data = $request->validated();
+
 
             Category::create([
-                "name" => $request->name
+                "name" => $data['name']
             ]);
             
             return redirect()->route("categories.index")->with('success', "Your category was created successfully");
