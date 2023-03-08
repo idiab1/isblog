@@ -52,13 +52,13 @@
                                             </td>
                                             <td>
                                                 <!-- Edit button -->
-                                                <a class="btn btn-edit me-3 btn-sm" href="{{route("tags.edit", ["id" => $tag->id])}}" data-bs-toggle="modal"
+                                                <a class="btn btn-edit me-3 btn-sm" href="{{route("dashboard.tags.edit", ["id" => $tag->id])}}" data-bs-toggle="modal"
                                                     data-bs-target="#tagUpdate{{$tag->id}}">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
 
                                                 <!-- Delete button -->
-                                                <form class="d-inline-block" action="{{route('tags.destroy', ['id' => $tag->id])}}"
+                                                <form class="d-inline-block" action="{{route('dashboard.tags.destroy', ['id' => $tag->id])}}"
                                                     method="POST">
                                                     @csrf
                                                     @method('DELETE')
@@ -86,7 +86,7 @@
                                                     <!-- ./model-header -->
 
                                                     <!-- form -->
-                                                    <form action="{{route("tags.update", ["id" => $tag->id])}}" method="POST">
+                                                    <form action="{{route("dashboard.tags.update", ["id" => $tag->id])}}" method="POST">
 
                                                         <!-- model body -->
                                                         <div class="modal-body">

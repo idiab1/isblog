@@ -34,7 +34,7 @@
                                             @if ($article->tags()->count() > 0)
                                                 @foreach ($article->tags as $index => $tag)
                                                     <li>
-                                                        <a href="{{route("tags.show", ["id" => $tag->id])}}">
+                                                        <a href="{{route("dashboard.tags.show", ["id" => $tag->id])}}">
                                                             {{"#".$tag->name}}
                                                         </a>
                                                     </li>
@@ -112,7 +112,7 @@
                                                 <div class="tags-content">
                                                     @if ($article->tags()->count() > 0)
                                                         @foreach ($article->tags as $tag)
-                                                            <a class="btn btn-sm tag-btn" href="{{route("tags.show", ["id" => $tag->id])}}">
+                                                            <a class="btn btn-sm tag-btn" href="{{route("dashboard.tags.show", ["id" => $tag->id])}}">
                                                                 {{"#".$tag->name}}
                                                             </a>
                                                         @endforeach
@@ -192,7 +192,7 @@
                     <!-- Card Footer -->
                     <div class="card-footer p-1 text-center">
                         <a class="text-secondary text-sm font-weight-bolder"
-                            href="{{route("categories.index")}}">All Categories</a>
+                            href="{{route("dashboard.categories.index")}}">All Categories</a>
                     </div>
                     <!-- ./card-footer -->
                 </div>
@@ -217,7 +217,7 @@
                                             <i class="fas fa-hashtag text-white opacity-10"></i>
                                         </div>
                                         <div class="d-flex flex-column">
-                                            <a href="{{route("tags.show", ["id" => $tag->id])}}">
+                                            <a href="{{route("dashboard.tags.show", ["id" => $tag->id])}}">
                                                 <h6 class="mb-1 text-dark text-sm">{{$tag->name}}</h6>
                                             </a>
                                         </div>
@@ -225,7 +225,7 @@
                                     <div class="d-flex">
                                         <a class="btn btn-link btn-icon-only btn-rounded btn-sm
                                             text-dark icon-move-right my-auto"
-                                            href="{{route("tags.show", ["id" => $tag->id])}}">
+                                            href="{{route("dashboard.tags.show", ["id" => $tag->id])}}">
                                             {{-- <i class="ni ni-bold-right" aria-hidden="true"></i> --}}
                                             <span class="text-xs">
                                                 <span class="font-weight-bold badge bg-primary">
@@ -244,7 +244,7 @@
                     <!-- Card Footer -->
                     <div class="card-footer p-1 text-center">
                         <a class="text-secondary text-sm font-weight-bolder"
-                            href="{{route("tags.index")}}">All Tags</a>
+                            href="{{route("dashboard.tags.index")}}">All Tags</a>
                     </div>
                     <!-- ./card-footer -->
                 </div>

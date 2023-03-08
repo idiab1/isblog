@@ -6,7 +6,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                 <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white"
-                    href="{{route("admin.home")}}">{{App\Models\Setting::first()->name}}</a></li>
+                    href="{{route("dashboard.admin.home")}}">{{App\Models\Setting::first()->name}}</a></li>
                 <li class="breadcrumb-item text-sm text-white active" aria-current="page">
                     @yield('page_name', "Unknown page")
                 </li>
@@ -33,25 +33,25 @@
                   <!-- Menu -->
                   <ul class="dropdown-menu mt-3" aria-labelledby="plusDropdown">
                       <li>
-                          <a class="dropdown-item" href="{{route("users.create")}}" data-bs-toggle="modal"
+                          <a class="dropdown-item" href="{{route("dashboard.users.create")}}" data-bs-toggle="modal"
                               data-bs-target="#userCreate">
                           {{ __('Users') }}
                           </a>
                       </li>
                       <li>
-                          <a class="dropdown-item" href="{{route("categories.create")}}" data-bs-toggle="modal"
+                          <a class="dropdown-item" href="{{route("dashboard.categories.create")}}" data-bs-toggle="modal"
                               data-bs-target="#categoryCreate">
                           {{ __('Categories') }}
                           </a>
                       </li>
                       <li>
-                          <a class="dropdown-item" href="{{route("articles.create")}}" data-bs-toggle="modal"
+                          <a class="dropdown-item" href="{{route("dashboard.articles.create")}}" data-bs-toggle="modal"
                               data-bs-target="#articleCreate">
                           {{ __('Articles') }}
                           </a>
                       </li>
                       <li>
-                          <a class="dropdown-item" href="{{route("tags.create")}}" data-bs-toggle="modal"
+                          <a class="dropdown-item" href="{{route("dashboard.tags.create")}}" data-bs-toggle="modal"
                               data-bs-target="#tagsCreate">
                           {{ __('Tags') }}
                           </a>

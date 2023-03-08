@@ -46,18 +46,18 @@
                                             <td>{{$article->name}}</td>
                                             <td>
                                                 <!-- show button -->
-                                                <a class="btn btn-show me-3 btn-sm" href="{{route("articles.show", ["id" => $article->id])}}" data-bs-toggle="modal"
+                                                <a class="btn btn-show me-3 btn-sm" href="{{route("dashboard.articles.show", ["id" => $article->id])}}" data-bs-toggle="modal"
                                                     data-bs-target="#articleShow{{$article->id}}">
                                                     <i class="fas fa-list"></i>
                                                 </a>
 
                                                 <!-- Edit button -->
-                                                <a class="btn btn-edit me-3 btn-sm" href="{{route("articles.edit", ["id" => $article->id])}}">
+                                                <a class="btn btn-edit me-3 btn-sm" href="{{route("dashboard.articles.edit", ["id" => $article->id])}}">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
 
                                                 <!-- Delete button -->
-                                                <form class="d-inline-block" action="{{route('articles.destroy', ['id' => $article->id])}}"
+                                                <form class="d-inline-block" action="{{route('dashboard.articles.destroy', ['id' => $article->id])}}"
                                                     method="POST">
                                                     @csrf
                                                     @method('DELETE')

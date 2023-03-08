@@ -74,7 +74,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("settings.update", ["id" => $settings->id])}}"
+                <form action="{{route("dashboard.settings.update", ["id" => $settings->id])}}"
                     method="POST">
 
                     <!-- model body -->
@@ -148,7 +148,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("tags.store")}}" method="POST">
+                <form action="{{route("dashboard.tags.store")}}" method="POST">
 
                     <!-- model body -->
                     <div class="modal-body">
@@ -195,7 +195,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("users.store")}}" method="POST">
+                <form action="{{route("dashboard.users.store")}}" method="POST">
 
                     <!-- model body -->
                     <div class="modal-body">
@@ -262,7 +262,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("articles.store")}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route("dashboard.articles.store")}}" method="POST" enctype="multipart/form-data">
 
                     <!-- model body -->
                     <div class="modal-body">
@@ -343,7 +343,7 @@
                 <!-- ./model-header -->
 
                 <!-- form -->
-                <form action="{{route("categories.store")}}" method="POST">
+                <form action="{{route("dashboard.categories.store")}}" method="POST">
 
                     <!-- model body -->
                     <div class="modal-body">

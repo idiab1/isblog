@@ -33,7 +33,7 @@
                         <!-- ./card-header -->
 
                         <!-- Form -->
-                        <form action="{{route("articles.update", ["id" => $article->id])}}" method="POST"
+                        <form action="{{route("dashboard.articles.update", ["id" => $article->id])}}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
                             @method("PUT")
