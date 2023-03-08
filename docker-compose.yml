@@ -1,0 +1,101 @@
+version: "3"
+
+services:
+
+#PHP Service
+  app:
+    build:
+      args:
+        user: idiab
+        uid: 1000
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    container_name: app
+    tty: true
+    working_dir: /var/www/html/
+    volumes:
+      - ./:/var/www/html/
+      - ./docker/php/laravel.ini:/usr/local/etc/php/conf.d/laravel.ini
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    networks:
+      - laravel
+
+# nginx server
+  nginxserver:
+    build: 
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 8080:80
+      - 443:443
+    container_name: nginxserver
+    volumes:
+      - ./:/var/www/html/
+      - ./docker/nginx/conf.d/app.conf:/etc/nginx/conf.d/app.conf
+    depends_on:
+      - app
+      - npm
+    networks:
+      - laravel
+
+  # npm service
+  npm:
+    tty: true
+    build: 
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    container_name: npm
+    volumes:
+      - ./:/var/www/html/
+    working_dir: /var/www/html/
+    networks:
+      - laravel
+
+  # mysql
+  mysql:
+    image: mariadb:10.5.8
+    container_name: db
+    volumes:
+      - myblogdata:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=${DB_PASSWORD}"
+      - "MYSQL_DATABASE=${DB_DATABASE}"
+      - "MYSQL_PASSWORD=${DB_PASSWORD}"
+      - "MYSQL_USER=${DB_USERNAME}"
+      - SERVICE_TAGS=dev
+      - SERVICE_NAME=mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - laravel
+
+  # phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin:5.2.1
+    container_name: phpmyadmin
+    ports:
+      - 8081:80
+    depends_on:
+      - mysql
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+    networks:
+      - laravel
+    
+
+#Docker Networks
+networks:
+  laravel:
+    driver: bridge
+
+#Volumes
+volumes:
+  myblogdata:
+    driver: local
+
