@@ -6,8 +6,8 @@
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute
             end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-        <a class="navbar-brand m-0" href="{{route("admin.home")}}" target="_blank">
-            <span class="ms-1 font-weight-bold">{{App\Models\Setting::first()->name}}</span>
+        <a class="navbar-brand m-0" href="{{route("dashboard.admin.home")}}" target="_blank">
+            <span class="ms-1 font-weight-bold">{{$settings->name}}</span>
         </a>
     </div>
     <!-- ./sidebar-header -->
@@ -17,7 +17,7 @@
         <ul class="navbar-nav">
             <!-- Dashboard -->
             <li class="nav-item">
-                <a class="nav-link active" href="{{route("admin.home")}}">
+                <a class="nav-link active" href="{{route("dashboard.admin.home")}}">
                     <!-- Icon -->
                     <div class="icon icon-shape icon-sm border-radius-md text-center
                         me-2 d-flex align-items-center justify-content-center">
@@ -29,7 +29,7 @@
 
             <!-- users -->
             <li class="nav-item">
-                <a class="nav-link " href="{{route("users.index")}}">
+                <a class="nav-link " href="{{route("dashboard.users.index")}}">
                     <!-- Icon -->
                     <div class="icon icon-shape icon-sm border-radius-md text-center
                         me-2 d-flex align-items-center justify-content-center">
@@ -41,7 +41,7 @@
 
             <!-- Categories -->
             <li class="nav-item">
-                <a class="nav-link " href="{{route("categories.index")}}">
+                <a class="nav-link " href="{{route("dashboard.categories.index")}}">
                     <!-- Icon -->
                     <div class="icon icon-shape icon-sm border-radius-md text-center
                         me-2 d-flex align-items-center justify-content-center">
@@ -53,7 +53,7 @@
 
             <!-- Articles -->
             <li class="nav-item">
-                <a class="nav-link " href="{{route("articles.index")}}">
+                <a class="nav-link " href="{{route("dashboard.articles.index")}}">
                     <!-- Icon -->
                     <div class="icon icon-shape icon-sm border-radius-md text-center
                         me-2 d-flex align-items-center justify-content-center">
@@ -65,7 +65,7 @@
 
             <!-- Tags -->
             <li class="nav-item">
-                <a class="nav-link " href="{{route("tags.index")}}">
+                <a class="nav-link " href="{{route("dashboard.tags.index")}}">
                     <!-- Icon -->
                     <div class="icon icon-shape icon-sm border-radius-md text-center
                         me-2 d-flex align-items-center justify-content-center">
@@ -77,8 +77,8 @@
 
             <!-- Settings -->
             <li class="nav-item">
-                <a class="nav-link" href="{{route("settings.edit", ["id" => App\Models\Setting::first()->id])}}"
-                    data-bs-toggle="modal" data-bs-target="#setting-{{App\Models\Setting::first()->id}}">
+                <a class="nav-link" href="{{route("dashboard.settings.edit", ["id" => $settings->id])}}"
+                    data-bs-toggle="modal" data-bs-target="#setting-{{$settings->id}}">
                     <!-- Icon -->
                     <div class="icon icon-shape icon-sm border-radius-md text-center
                         me-2 d-flex align-items-center justify-content-center">
