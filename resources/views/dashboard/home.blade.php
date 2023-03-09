@@ -24,7 +24,7 @@
                                     </p>
                                     <h5 class="font-weight-bolder">{{$tagsCount}}</h5>
                                     <a class="text-primary text-sm font-weight-bolder"
-                                        href="{{route("tags.index")}}">Show More</a>
+                                        href="{{route("dashboard.tags.index")}}">Show More</a>
                                 </div>
                             </div>
                         <div class="col-4 text-end">
@@ -55,7 +55,7 @@
                                         {{$usersCount}}
                                     </h5>
                                     <a class="text-danger text-sm font-weight-bolder"
-                                        href="{{route("users.index")}}">Show More</a>
+                                        href="{{route("dashboard.users.index")}}">Show More</a>
                                 </div>
                                 <!-- ./Numbers -->
                             </div>
@@ -86,7 +86,7 @@
                                         {{$articlesCount}}
                                     </h5>
                                     <a class="text-success text-sm font-weight-bolder"
-                                        href="{{route("articles.index")}}">Show More</a>
+                                        href="{{route("dashboard.articles.index")}}">Show More</a>
                                 </div>
                                 <!-- ./numbers -->
                             </div>
@@ -116,7 +116,7 @@
                                         {{$adminsCount}}
                                     </h5>
                                     <a class="text-warning text-sm font-weight-bolder"
-                                        href="{{route("users.index")}}">Show More</a>
+                                        href="{{route("dashboard.users.index")}}">Show More</a>
                                 </div>
                                 <!-- ./numbers -->
                             </div>
@@ -159,7 +159,7 @@
                                             @if ($article->tags()->count() > 0)
                                                 @foreach ($article->tags as $index => $tag)
                                                     <li>
-                                                        <a href="{{route("tags.show", ["id" => $tag->id])}}">
+                                                        <a href="{{route("dashboard.tags.show", ["id" => $tag->id])}}">
                                                             {{"#".$tag->name}}
                                                         </a>
                                                     </li>
@@ -238,7 +238,7 @@
                                                 <div class="tags-content">
                                                     @if ($article->tags()->count() > 0)
                                                         @foreach ($article->tags as $tag)
-                                                            <a class="btn btn-sm tag-btn" href="{{route("tags.show", ["id" => $tag->id])}}">
+                                                            <a class="btn btn-sm tag-btn" href="{{route("dashboard.tags.show", ["id" => $tag->id])}}">
                                                                 {{"#".$tag->name}}
                                                             </a>
                                                         @endforeach
@@ -266,7 +266,7 @@
                     @if ($articles->count() >= 5)
                         <div class="row">
                             <div class="col-12 text-center">
-                                <a class="btn btn-primary btn-sm" href="{{route("articles.index")}}">
+                                <a class="btn btn-primary btn-sm" href="{{route("dashboard.articles.index")}}">
                                     All Articles
                                 </a>
                             </div>
@@ -329,7 +329,7 @@
                     <!-- Card Footer -->
                     <div class="card-footer p-1 text-center animate__animated animate__bounceIn animate__delay-2s">
                         <a class="text-secondary text-sm font-weight-bolder"
-                            href="{{route("categories.index")}}">All Categories</a>
+                            href="{{route("dashboard.categories.index")}}">All Categories</a>
                     </div>
                     <!-- ./card-footer -->
                 </div>
@@ -354,7 +354,7 @@
                                             <i class="fas fa-hashtag text-white opacity-10"></i>
                                         </div>
                                         <div class="d-flex flex-column">
-                                            <a href="{{route("tags.show", ["id" => $tag->id])}}">
+                                            <a href="{{route("dashboard.tags.show", ["id" => $tag->id])}}">
                                                 <h6 class="mb-1 text-dark text-sm">{{$tag->name}}</h6>
                                             </a>
                                         </div>
@@ -362,7 +362,7 @@
                                     <div class="d-flex">
                                         <a class="btn btn-link btn-icon-only btn-rounded btn-sm
                                             text-dark icon-move-right my-auto"
-                                            href="{{route("tags.show", ["id" => $tag->id])}}">
+                                            href="{{route("dashboard.tags.show", ["id" => $tag->id])}}">
                                             {{-- <i class="ni ni-bold-right" aria-hidden="true"></i> --}}
                                             <span class="text-xs">
                                                 <span class="font-weight-bold badge bg-primary">
@@ -381,7 +381,7 @@
                     <!-- Card Footer -->
                     <div class="card-footer p-1 text-center animate__animated animate__bounceIn animate__delay-2s">
                         <a class="text-secondary text-sm font-weight-bolder"
-                            href="{{route("tags.index")}}">All Tags</a>
+                            href="{{route("dashboard.tags.index")}}">All Tags</a>
                     </div>
                     <!-- ./card-footer -->
                 </div>
