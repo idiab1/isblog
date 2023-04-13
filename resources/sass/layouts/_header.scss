@@ -1,72 +1,10 @@
 // Header
-.header{
+.header {
+    height: 100vh;
     width: 100%;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    background-color: $navy-color;
-    border-bottom: 4px solid #444;
-    // Header info
-    .header-info{
-        ul{
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            li{
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                border-radius: 50%;
-                background-color: #222;
-                color: #fff;
-                text-align: center;
-                margin-right: 0.5rem;
-                margin-left: 0.5rem;
-                a{
-                    color: #fff;
-                }
-            }
-        }
-    }
-    /*
-    .header-info{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        // User Image
-        .user-image{
-
-        }
-        // User Info
-        .user-info{
-            h1{
-                font-size: 1.5rem;
-                font-weight: 700;
-            }
-            p{
-
-            }
-            ul{
-                display: flex;
-                justify-content: center;
-                flex-direction: row;
-                li{
-                    width: 30px;
-                    height: 30px;
-                    line-height: 30px;
-                    border-radius: 50%;
-                    background-color: #222;
-                    color: #fff;
-                    text-align: center;
-                    margin-right: 0.5rem;
-                    margin-left: 0.5rem;
-                    a{
-                        color: #fff;
-                    }
-                }
-            }
-        }
-    }
-    */
+    background: linear-gradient(347deg, rgb(20 99 86 / 61%), rgb(163 218 141 / 66%)), 
+    url("../images/bg.jpg") center center no-repeat;
+    background-size: cover;
 }
+
+// End of header

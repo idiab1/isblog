@@ -1,133 +1,159 @@
-// Cards
-.card{
-    // Article Card
-    &.card-article{
-        box-shadow: 0 0 10px 0px rgb(0 0 0 / 10%);
-        border-color: transparent;
-        // Card Header
-        .card-header{
-            padding: 0;
-            height: 200px;
+// Article card
+.card.article {
+    margin-bottom: 1.5rem;
+    .card-header{
+        position: relative;
+        padding: 0;
+        aspect-ratio: 9/6;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .card-body{
+        h3 {
+            font-size: 1.55rem;
+            font-weight: 600;
+            a {
+                text-decoration: none;
+                color: $dark-color;
+            }
+        }
+        p{
+            margin-bottom: 0;
+            color: $gray-color;
+            width: 355px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
             overflow: hidden;
-            background-color: transparent;
-            img{
-                height: 100%;
+        }
+    }
+    .card-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding-top: .7rem;
+        padding-bottom: .7rem;
+        .user {
+            display: flex;
+            align-items: center;        
+            // User Image
+            .user-image {
+                width: 35px;
+                border-radius: 50%;
+                border: 1px solid $dark-color;
+                margin-right: 5px;
+            }
+
+            // User name
+            .user-name {
+                font-weight: 600;
+                color: $dark-color;
+            }
+        }
+    }
+}
+// End of Article card
+
+// User Card
+.card.user-info {
+    .card-header {
+        height: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark-green;
+        // User Image
+        .user-image {
+            border-radius: 50%;
+            width: 110px;
+            border: 2px solid $mint-green;
+            img {
                 width: 100%;
             }
         }
-        // Card Body
+    }
+    .card-body {
+        h4 {
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+        p {
+            margin-bottom: 0.5rem;
+            color: $gray-color;
+        }
+
+        ul {
+            margin: 0;
+            padding-top: 10px;
+            li {
+                display: inline-block;
+                &:nth-child(2) {
+                    padding: 0 10px;
+                }
+
+                a {
+                    color: $dark-color;
+                    transition: all .25s ease-in;
+                    &:hover {
+                        color: $dark-green;
+                    }
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Large devices (up and desktops, 992px)
+@media (max-width: 767.98px) {
+    // Article card
+    .card.article {
+        margin-bottom: 1.5rem;
+        .card-header{
+            padding: 0;
+            aspect-ratio: 9/6;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
         .card-body{
-            ul{
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                margin-bottom: 0.7rem;
-                li{
-                    padding: 0.35rem 0.5rem;
-                    margin-right: 0.25rem;
-                    margin-left: 0.25rem;
-                    font-size: 0.7rem;
-                    letter-spacing: .07rem;
-                    font-weight: 500;
-                    line-height: 1.2;
-                    background-color: $orange-color;
-                    &:first-of-type{
-                        margin-left: 0rem;
-                    }
-                    a{
-                        color: #000;
-                        text-decoration: none;
-                    }
+            h3 {
+                font-size: 1.55rem;
+                a {
+                    color: $dark-color;
                 }
             }
-            a{
-                color: #000;
-                text-decoration: none;
-                &:hover{
-                    color: #000;
-                    text-decoration: none;
-                }
-            }
-            h2{
-                font-weight: 700;
-                font-size: 1.3rem;
-                text-transform: capitalize;
-                width: 200px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            // Info
-            .info{
-                display: flex;
-                align-items: center;
-                p{
-                    width: 170px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    margin: 0;
-                    font-size: .85rem;
-                    color: #595858;
-                }
-                a{
-                    display: block;
-                    font-size: .8rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                    color: #000;
-                    &:hover{
-                        color: $navy-color;
-                    }
-                }
-            }
-
-        }
-        // Card Footer
-        .card-footer{
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            background-color: transparent;
-            border-top: 1px solid rgb(0 0 0 / 8%);
-            // Image
-            .image{
-                width: 30px;
-                height: 30px;
-                @include prefixer(border-radius, 50%, webkit moz ms o);
-                img{
-                    width: 100%;
-                    height: 100%;
-                    border: 3px solid $navy-color;
-                    @include prefixer(border-radius, 50%, webkit moz ms o);
-                }
-            }
-            // User info
-            .user-info{
-                margin-left: 10px;
-                margin-right: 10px;
-                a{
-                    margin: 0;
-                    font-weight: 700;
-                    font-size: .85rem;
-                    color: #000;
-                    text-transform: capitalize;
-                    text-decoration: none;
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                }
+            p{
+                width: 459px;
+                -webkit-line-clamp: 2;
             }
         }
+        
     }
-    // End of Article Card
+    // End of Article card
+}
 
-    // Categories Card
-    &.card-categories{
-        .card-header, .card-footer{
-            background-color: #fff;
+@media (min-width: 768px) and (max-width: 991.98px){
+    // Article card
+    .card.article {
+        margin-bottom: 1.5rem;
+        .card-body{
+            h3 {
+                font-size: 1.37rem;
+            }
+            p{
+                width: 270px;
+                -webkit-line-clamp: 2;
+            }
         }
+        
     }
-    // End of categories Card
-
+    // End of Article card
 }

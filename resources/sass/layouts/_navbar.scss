@@ -1,25 +1,103 @@
 // Navbar
-.navbar{
-    // Navbar Brand
-    .navbar-brand{
-        font-weight: 700;
-        color: $dark-color;
-        &:hover{
+.navbar {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 1;
+    transition: all .25s ease-in;
+    &.scrolled {
+        background-color: $dark-color;
+        box-shadow: 0px 3px 7px 2px rgb(25 135 84 / 22%);
+        .navbar-toggler {
             color: $dark-color;
+            border-color: rgb(25 135 84 / 50%);
         }
     }
+    // Navbar brand
+    .navbar-brand {
+        color: $dark-color;
+    }
 
-    // Nav links
-    .navbar-nav{
-        .nav-item{
-            .nav-link{
-                color: $dark-color;
-                &:hover{
-                    color: $dark-color;
+    // Navbar nav
+    .navbar-nav {
+        // navbar link 
+        .nav-item {
+            .nav-link
+            {
+                color: rgb(1 31 49 / 90%);
+                font-weight: 500;
+                // &.active{
+                //     color: rgb(1 31 49 / 90%);
+                // }
+            }
+        }
+
+        .dropdown {
+            .dropdown-menu {
+                background-color: $dark-color;
+                border: 1px solid $dark-color;
+                .dropdown-item {
+                    color: $dark-green;
+                    background-color: transparent;
+                    border: 0;
+                    transition: all .26s ease-in;
+                    &:hover {
+                        color: $dark-color;
+                        background-color: $mint-green;
+
+                    }
                 }
+                .dropdown-divider {
+                    border-top: 1px solid rgb(30 150 130 / 58%);
+                }
+            }
+        }
+
+        // .show > .nav-link {
+        //     color: rgb(1 31 49 / 90%);
+        // }
+    }
+
+    &.scrolled {
+        background-color: $dark-color;
+        // Navbar brand
+        .navbar-brand {
+            color: $dark-green;
+        }
+        .navbar-nav {
+            // navbar link 
+            .nav-link
+            {
+                color: $dark-green;
+            }
+        }
+    }
+    
+}
+// End of Navbar
+
+@media (max-width: 991.98px){
+    .navbar {
+        background-color: $dark-color;
+        box-shadow: 0px 3px 7px 2px rgb(25 135 84 / 22%);
+        .navbar-toggler {
+            color: $dark-color;
+            border-color: rgb(25 135 84 / 50%);
+        }
+
+        // Navbar brand
+        .navbar-brand {
+            color: $dark-green;
+        }
+        .navbar-nav {
+            text-align: center;
+            // navbar link 
+            .nav-link
+            {
+                color: $dark-green !important;
             }
         }
     }
 }
-
-// End of Navbar

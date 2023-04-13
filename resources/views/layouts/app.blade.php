@@ -18,7 +18,9 @@
         <link rel="stylesheet" href="{{asset("libs/animate/css/animate.min.css")}}"/>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
         {{-- Other Styles --}}
         @yield('styles')
     </head>
@@ -193,7 +195,7 @@
         @endauth
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
         <script src="{{asset("libs/jquery/js/jquery-3.5.1.js")}}"></script>
         <script>
             $(document).ready(function(){

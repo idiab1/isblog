@@ -1,0 +1,46 @@
+// Heading
+.heading {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        left: 0;
+        bottom: -10px;
+        background-color: $mint-green;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 115px;
+        height: 4px;
+        bottom: -18px;
+        background-color: $dark-green;
+    }
+}
+
+// Article header
+.article-header,
+.tags-header {
+    // Heading
+    .heading {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        position: relative;
+        &::after{
+            width: 170px;
+            height: 4px;
+            left: calc((100% / 2) - 85px);
+        }
+        &::before{
+            width: 120px;
+            height: 4px;
+            left: calc((100% / 2) - 60px);
+        }
+    }
+}

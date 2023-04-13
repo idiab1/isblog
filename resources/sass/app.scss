@@ -2,44 +2,41 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
-// -->> Helpers
-// Variables
-@import './helpers/variables';
+// -->>> Helpers
+// ->> Variables
+@import "./helpers/variables";
 
-// Mixins
-@import './helpers/mixins';
+// -->>> Components
+// ->> Buttons
+@import "./components/buttons";
 
-// -->> Components
-// Buttons
-@import './components/buttons';
-
-// Cards
+// ->> Card
 @import "./components/cards";
 
-// Modals
-@import "./components/modals";
+// ->> Heading
+@import "./components/heading";
 
-// -->> Layouts
-// Navbar
-@import './layouts/navbar';
+// -->>> Layouts
+// ->> Navbar
+@import "./layouts/navbar";
 
-// Header
-@import './layouts/header';
+// ->> Header
+@import "./layouts/header";
 
-// Styles
-@import "./layouts/styles";
+// Footer
+@import "./layouts/footer";
 
+// ->> Styles 
+@import "./layouts/style";
 
-// -->> Pages
-// Login
+// ->>> Pages
+// ->> Article Details
 @import "./pages/login";
 
-// Home
-@import "./pages/home";
+// ->> Article Details
+@import "./pages/article";
 
-// Tag
+// ->> Tags
 @import "./pages/tags";
-
-

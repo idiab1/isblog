@@ -1,41 +1,64 @@
-// Crayons Button
-.crayons-btn{
-    background-color: $navy-color;
-    border-color: $navy-color;
-    font-weight: 700;
-    &:hover, &:focus{
-        background-color: $navy-color;
-        border-color: $navy-color;
-        box-shadow: none;
-    }
-}
-
-// Tag buttons
-.tag-btn{
-    font-weight: 700;
-    line-height: 1.69;
-    color: $navy-color;
-    border-color: $dark-color;
-    background-color: $dark-color;
-    @include prefixer(border-radius, 15px, webkit moz ms o);
-    &:hover, &:focus{
-        box-shadow: none;
+// Button Search
+.btn-search{
+    color: $dark-color;
+    border: 2px solid $dark-color;
+    border-radius: 20px;
+    transition: all .075s ease-in;
+    &:hover{
         color: $dark-color;
-        border-color: $navy-color;
-        background-color: $navy-color;
+        border-color: $dark-green;
+        background-color: $dark-green;
+    }
+}
+.scrolled {
+    .btn-search{
+        color: $dark-color;
+        border-color: $dark-green;
+        background-color: $dark-green;
+        
     }
 }
 
-// Login Button
-.login-btn{
+// End of Button Search
+
+// Btn tags
+.btn-tag {
+    font-weight: 500;
+    color: #fefffd;
+    border-radius: 20px;
+    padding: .275rem .65rem;
+    background-color: $dark-green;
+    &:hover{
+        background-color: $mint-green;
+        color: $dark-color;
+    }
+}
+
+// show more btn
+.btn-show-more {
+    border-radius: 20px;
+}
+
+.btn-colored {
+    font-weight: 500;
     color: #fff;
-    font-weight: 700;
-    background-color: $dark-blue;
-    border-color: $dark-blue;
-    &:focus, &:hover{
-        color: #fff;
-        box-shadow: none;
-        background-color: $dark-blue;
-        border-color: $dark-blue;
+    padding: .275rem .65rem;
+    background-color: $green-color;
+    &:hover{
+        background-color: $mint-green;
+        color: $dark-color;
+    }
+}
+// login btn
+.btn-sign {
+    width: 100%;
+}
+
+@media (max-width: 991.98px){
+    .btn-search{
+        color: $dark-color;
+        border-color: $dark-green;
+        background-color: $dark-green;
+        
     }
 }

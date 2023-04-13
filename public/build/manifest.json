@@ -1,0 +1,20 @@
+{
+  "resources/images/bg.jpg": {
+    "file": "assets/bg-246ab3e0.jpg",
+    "src": "resources/images/bg.jpg"
+  },
+  "resources/images/loginBG.jpg": {
+    "file": "assets/loginBG-97c15593.jpg",
+    "src": "resources/images/loginBG.jpg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-69201d4c.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-72392705.css",
+    "isEntry": true,
+    "src": "resources/sass/app.scss"
+  }
+}

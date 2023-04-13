@@ -1,80 +1,100 @@
-// loign
-.login-page{
+// Sign page
+.sign-section {
+    width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(../../images/pattern-background.svg) no-repeat;
-    background-color: #3e348f;
-    // Form Container
-    .form-container{
-        // Card Form
-        .card-form{
-
-            // Card Header
-            .card-header{
-                padding-top: 1.5rem;
-                border-bottom: none;
-                background-color: transparent;
-                h2{
-                    font-size: 1.3rem;
+    background: linear-gradient(45deg, rgb(25 135 84 / 30%), rgb(25 135 84 / 30%)), 
+    url("../images/loginBG.jpg") no-repeat center center;
+    background-size: cover;
+    // Sign container
+    .sign-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // Sign content
+        .sign-content {
+            background-color: #dee2e6;
+            width: 575px;
+            // Sign header
+            .sign-header{
+                height: 150px;
+                background-color: $green-color;
+                padding: 1rem;
+                color: $mint-green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                h1 {
                     font-weight: 700;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-size: 17px;
+                    line-height: 1.6;
                     text-transform: capitalize;
-                    color: $dark-blue;
                 }
             }
-
-            // Card Body
-            .card-body{
-                padding: 2rem 1.2rem;
-                // Form
-                form{
-
-                    .input-group-text{
+            // Sign form
+            .sign-form {
+                padding: 1.7rem 1.7rem;
+                form {
+                    input {
                         background-color: transparent;
-                    }
-
-                    input{
-
-                        &:focus{
+                        border: 1px solid #adb7b2;
+                        padding: .45rem .75rem;
+                        &:focus {
+                            color: #212529;
+                            background-color: transparent;
+                            border-color: $green-color;
+                            outline: 0;
                             box-shadow: none;
-                            border-color: none;
                         }
                     }
-                    a.btn-link{
+                    .btn-link {
                         padding: 0;
-                        font-size: .9rem;
-                        color: $dark-blue;
-                        &:focus{
-                            box-shadow: none;
-                        }
-
+                        color: $dark-color;
                     }
                 }
             }
         }
 
-        // Card Info
-        .card-info{
-            height: 100%;
-            position: relative;
-            background: url("../../images/bg.jpg") center center no-repeat;
-            background-size: cover;
+    }
+    
+}
+// End of Sign page
 
-            .card-body{
-                display: FLEX;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                h1{
-                    color: #fff;
+// Large devices (up and desktops, 992px)
+@media (max-width: 992px) {
+    // Sign page
+    .sign-section {
+        // Sign container
+        .sign-container {
+            // Sign content
+            .sign-content {
+                width: 430px;
+                .sign-header{
+                    height: 100px;
+                    padding: 1rem;
+                    h1 {
+                        text-transform: uppercase;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 1.6;
+                    }
                 }
-                p{
-                    color: #c1c1c1;
+                .sign-form {
+                    padding: 1.55rem;
+                    form {
+                        input {
+                            padding: 0.37rem 0.75rem;
+                        }
+                    }
                 }
+                
+                
             }
         }
     }
 }
-
-// End of loign

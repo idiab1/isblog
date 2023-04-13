@@ -11,7 +11,39 @@
 
 @section('content')
 <!-- Login page -->
-<section class="login-page section">
+<section class="sign-section">
+    <!-- Container fluid -->
+    <div class="container-fluid">
+        <div class="sign-container">
+            <!-- Login content -->
+            <div class="sign-content">
+                <!-- Login header -->
+                <div class="sign-header text-center">
+                    <h1>Welcome!</h1>
+                    <p class="m-0">To keep connected with us please login with your personal info.</p>
+                </div>
+                <!-- Login form -->
+                <div class="sign-form">
+                    <form action="" method="POST">
+                        <!-- Email -->
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="email" placeholder="Type your E-mail" name="email" required>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="password" placeholder="Type your password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-colored btn-sign" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{-- <section class="login-page section">
     <div class="container">
         <div class="row">
             <div class="col-md-9 m-auto">
@@ -110,6 +142,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- ./login-page -->
 @endsection

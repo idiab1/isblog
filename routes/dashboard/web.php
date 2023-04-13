@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -15,8 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () {
-
+Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => ['auth', 'is_admin']], function() {
     // -->>> Admin Home Route
     Route::get('/home', [HomeController::class, "index"])->name("admin.home");
 
@@ -27,11 +27,12 @@ Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () 
         "users" => "id"
     ]);
 
+
     // -->>> Categories Route
+    Route::get('/categories/all', [CategoryController::class, 'getCategoriesDatatable'])->name('categories.all');
+    Route::post('/categories/delete', [CategoryController::class, 'delete'])->name('categories.delete');
     Route::resource('categories', CategoryController::class)->except([
-        "show"
-    ])->parameters([
-        "categories" => "id"
+        "show", 'destroy'
     ]);
 
     // -->>> Tags Route
@@ -51,5 +52,10 @@ Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () 
         "settings" => "id"
     ]);
 
-
 });
+
+// Route::prefix("Dashboard")->middleware(['auth', 'is_admin'])->group(function () {
+
+    
+
+// });

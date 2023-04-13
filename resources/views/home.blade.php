@@ -291,7 +291,7 @@
                                             <i class="fas fa-hashtag text-white opacity-10"></i>
                                         </div>
                                         <div class="d-flex flex-column">
-                                            <a href="{{route("tags.show", ["id" => $tag->id])}}">
+                                            <a href="{{route("front.tags.show", ["id" => $tag->id])}}">
                                                 <h6 class="mb-1 text-dark text-sm">{{$tag->name}}</h6>
                                             </a>
                                         </div>
@@ -299,7 +299,7 @@
                                     <div class="d-flex">
                                         <a class="btn btn-link btn-icon-only btn-rounded btn-sm
                                             text-dark icon-move-right my-auto"
-                                            href="{{route("tags.show", ["id" => $tag->id])}}">
+                                            href="{{route("front.tags.show", ["id" => $tag->id])}}">
                                             {{-- <i class="ni ni-bold-right" aria-hidden="true"></i> --}}
                                             <span class="text-xs">
                                                 <span class="font-weight-bold badge bg-primary">

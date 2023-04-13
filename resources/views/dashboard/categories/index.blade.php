@@ -33,12 +33,12 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
-                                        <th>Articles Published</th>
+                                        {{-- <th>Articles</th> --}}
                                         <th>Active</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-center">
-                                    @foreach ($categories as $index => $category)
+                                    {{-- @foreach ($categories as $index => $category)
                                         <tr>
                                             <td>{{$index + 1}}</td>
                                             <td>
@@ -114,14 +114,14 @@
                                             <!-- ./model-dialog -->
                                         </div>
 
-                                    @endforeach
+                                    @endforeach --}}
 
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
-                                        <th>Articles Published</th>
+                                        {{-- <th>Articles</th> --}}
                                         <th>Active</th>
                                     </tr>
                                 </tfoot>
@@ -172,15 +172,67 @@
     <!-- Page specific script -->
     <script>
         $(function () {
-            $("#example1").DataTable({
+            var table = $("#example1").DataTable({
                 "responsive": true,
                 "autoWidth": false,
                 "ordering": true,
                 "info": true,
                 // "lengthChange": false,
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                processing: true,
+                serverSide: true,
+                ajax: "{{Route('dashboard.categories.all')}}",
+                columns: [
+                    {
+                        data: 'id',
+                        name: 'id'
+                    },
+                    {
+                        data: 'name',
+                        name: 'name'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action'
+                    }
+                ]
             });
 
         });
+
+        $('#example1 tbody').on('click', '#deleteBtn', function(arg) {
+            var id = $(this).attr('data-id');
+            console.log(id);
+            $('#deleteModal #id').val(id);
+        })
+
     </script>
 @endsection
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <form action="{{Route('dashboard.categories.delete')}}" method="POST">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-secondary" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                {{-- @method('DELETE') --}}
+                @csrf
+                <div class="form-group">
+                    <p>Are you sure?</p>
+                    <input type="hidden" name="id" id="id" />
+                </div>
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

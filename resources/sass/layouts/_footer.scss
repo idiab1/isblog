@@ -1,0 +1,32 @@
+// Footer
+.footer {
+    padding: 1.5rem 0;
+    background-color: $dark-color;
+    // Copyright
+    .copyright {
+        p {
+            color: $dark-green;
+            a {
+                font-weight: bold;
+                color: $mint-green;
+            }
+        }
+    }
+    // links
+    .footer-links {
+        ul {
+             li {
+                display: inline-block;
+                &:nth-of-type(2)
+                {
+                    padding: 0 10px;
+                }
+                a {
+                    color: $dark-green;
+                    font-size: 22px;
+                }
+             }
+        }
+    }
+}
+// End of footer
